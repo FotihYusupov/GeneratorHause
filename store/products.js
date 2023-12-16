@@ -7,16 +7,16 @@ export const useProductsStore = defineStore({
     data: {
       loading: false,
       error: false,
-      data: [],
+      products: [],
     }
   }),
   actions: {
     async getProducts() {
       try {
         this.data.loading = true;
-        const response = await axios.get('https://gh-admin.onrender.com/api/products');
+        const response = await axios.get('https://gh-server.vercel.app/api/products');
         if(response.status == 200) {
-          this.data.data = response.data;
+          this.data.products = response.data;
           this.data.loading = false;
         } else {
           this.data.error = true;
