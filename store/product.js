@@ -14,7 +14,7 @@ export const useProductStore = defineStore({
     async getProduct(id) {
       try {
         this.data.loading = true;
-        const response = await axios.get(`https://gh-server.vercel.app/api/product/${id}`);
+        const response = await axios.get(`https://gh-server-83lb.onrender.com/api/product/${id}`);
         if(response.status == 200) {
           this.data.product = response.data;
           this.data.loading = false;
