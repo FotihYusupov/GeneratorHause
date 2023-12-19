@@ -1,0 +1,21 @@
+$primary-yellow: #FFD60A;
+
+@font-face {
+    font-family: 'DM Sans 9pt';
+    src: url('../fonts/DMSans-9ptRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans 9pt';
+    src: url('../fonts/DMSans-9ptItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+body {
+    font-family: 'DM Sans 9pt';
+}

@@ -13,6 +13,7 @@ export const useProductStore = defineStore({
   actions: {
     async getProduct(id) {
       try {
+        this.data.product = []ru
         this.data.loading = true;
         const response = await axios.get(`https://gh-server-83lb.onrender.com/api/product/${id}`);
         if(response.status == 200) {

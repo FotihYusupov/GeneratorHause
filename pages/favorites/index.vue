@@ -13,6 +13,8 @@
 </template>
 
 <script setup>
+    import { useCounterStore } from '~/store/counter'
+    const counterStore = useCounterStore()
     const favorites = ref(null)
     onMounted(async() => {
         favorites.value = await JSON.parse(localStorage.getItem('favorites'))
@@ -22,10 +24,12 @@
         const id = e.target.closest('.products-list__item').id;
         favorites.value = favorites.value.filter(e => e._id !== id)
         localStorage.setItem('favorites', JSON.stringify(favorites.value))
+        counterStore.deleteOne('favorites')
     }
 
     const removeAllFavorites = () => {
         localStorage.setItem('favorites', JSON.stringify([]))
         favorites.value = []
+        counterStore.deleteMany('favorites')
     }
 </script>

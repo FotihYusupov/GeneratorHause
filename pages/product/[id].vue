@@ -1,6 +1,6 @@
 <template>
     <div>
-        {{ product }}
+        {{ product.data }}
     </div>
 </template>
 
