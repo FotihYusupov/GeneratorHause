@@ -32,6 +32,12 @@ export const useProductsStore = defineStore({
       } catch(err) {
         console.log('Error: ', err)
       }
-    }
+    },
+    updateProductInFavorites(productId, value) {
+      const productIndex = this.data.products.findIndex(product => product._id === productId);
+      if (productIndex !== -1) {
+        this.data.products[productIndex].inFavorites = value;
+      }
+    },
   },
 });

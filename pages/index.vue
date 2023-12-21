@@ -1,56 +1,33 @@
 <template>
     <div>
-        <!-- <p>Categories: {{ categoriesStore.data.data }}</p> -->
         <h2>Products List</h2>
-        <ul class="products-list">
-            <li v-for="product in productsStore.data.products" class="products-list__item" :key="product._id" :id="product._id">
-                <img class="products-list__item-img" :src="product.product_img[0]" width="200" height="200"/>
-                <h3>{{ product.product_title }}</h3>
-                <p>{{ product.product_desc }}</p>
-                <p v-if="product.product_price > 0"><b>Price: </b>{{ product.product_price }} so'm</p>
-                <button @click="(e) => addBasked(e.target.closest('.products-list__item').id)" :disabled="product.inCart">Savatcha</button>
-                <button @click="(e) => addFavorites(e.target.closest('.products-list__item').id)">Sevimlilar</button>
-                <br>
-                <NuxtLink :to="'/product/' + product._id">view more</NuxtLink>
-            </li>
+        <ul class="cards-list">
+            <card v-for="product in productsStore.data.products" 
+                :id="product._id"
+                :title="product.product_title"
+                :img="product.product_img[0]"
+                :description="product.product_desc"
+                :views="product.views"
+                :price="product.product_price"
+                :inCart="product.inCart"
+                :inFavorites="product.inFavorites"
+            />
         </ul>
-        <!-- <card title="title" description="desc"/> -->
 </div>
 </template>
 
 <script setup>
     import { useCategoriesStore } from '~/store/categories';
     import { useProductsStore } from '~/store/products';
-    
-    import addBasked from '~/utils/backed';
-    import addFavorites from '~/utils/favorites'
 
-    // import card from '../components/cardComponent.vue'
+    import card from '../components/cardComponent.vue'
 
     const categoriesStore = useCategoriesStore();
     categoriesStore.getCategories()
     
     const productsStore = useProductsStore();
     productsStore.getProducts()
-
 </script>
 
 <style>
-    .products-list {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .products-list__item {
-        padding: 8px;
-        border-radius: 8px;
-        border: 2px solid;
-    }
-
-    .products-list__item-img {
-        background-color: #c1c1c1;
-    }
 </style>
