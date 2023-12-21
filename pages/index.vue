@@ -1,9 +1,13 @@
 <template>
-    <div>
+    <div class="main">
+        <div class="hero_swiper">
+            <HeroSwiper/>
+        </div>
         <h2>Products List</h2>
         <ul class="cards-list">
             <card v-for="product in productsStore.data.products" 
                 :id="product._id"
+                v-bind:key="product._id"
                 :title="product.product_title"
                 :img="product.product_img[0]"
                 :description="product.product_desc"
