@@ -10,7 +10,7 @@ const addBasked = (id) => {
     basked.value = JSON.parse(localStorage.getItem('basked'))
     if(basked.value !== null) {
         const findProduct = productsStore.data.products.find(e => e._id == id);
-        findProduct.count = 0
+        findProduct.count = 1
         basked.value.push(findProduct);
         localStorage.setItem('basked', JSON.stringify(basked.value))
     } else {

@@ -14,7 +14,7 @@ export const useCounterStore = defineStore({
             if (typeof localStorage !== 'undefined') {
                 const basked = JSON.parse(localStorage.getItem('basked'))
                 const favorites = JSON.parse(localStorage.getItem('favorites'))
-                if(basked || favorites) {
+                if(basked && favorites) {
                     this.data.basked = basked.length
                     this.data.favorites = favorites.length
                 } else {

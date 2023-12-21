@@ -7,7 +7,7 @@
                 <h3>{{ product.product_title }}</h3>
                 <p>{{ product.product_desc }}</p>
                 <p>{{ product.count }}</p>
-                <p v-if="product.product_price > 0"><b>Price: </b>{{ product.product_price }} so'm</p>
+                <p v-if="product.product_price > 0"><b>Price: </b>{{ product.product_price * product.count }} so'm</p>
                 <button @click="removeBasked">Ochirish</button>
                 <button @click="(e) => addOne(e.target.closest('.products-list__item').id)">add one</button>
                 <button @click="(e) => removeOne(e.target.closest('.products-list__item').id)">remove one</button>

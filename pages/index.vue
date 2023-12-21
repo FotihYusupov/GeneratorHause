@@ -8,12 +8,13 @@
                 <h3>{{ product.product_title }}</h3>
                 <p>{{ product.product_desc }}</p>
                 <p v-if="product.product_price > 0"><b>Price: </b>{{ product.product_price }} so'm</p>
-                <button @click="(e) => addBasked(e.target.closest('.products-list__item').id)">Savatcha</button>
+                <button @click="(e) => addBasked(e.target.closest('.products-list__item').id)" :disabled="product.inCart">Savatcha</button>
                 <button @click="(e) => addFavorites(e.target.closest('.products-list__item').id)">Sevimlilar</button>
                 <br>
                 <NuxtLink :to="'/product/' + product._id">view more</NuxtLink>
             </li>
         </ul>
+        <!-- <card title="title" description="desc"/> -->
 </div>
 </template>
 
@@ -23,6 +24,8 @@
     
     import addBasked from '~/utils/backed';
     import addFavorites from '~/utils/favorites'
+
+    // import card from '../components/cardComponent.vue'
 
     const categoriesStore = useCategoriesStore();
     categoriesStore.getCategories()

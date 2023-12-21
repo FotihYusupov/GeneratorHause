@@ -132,9 +132,13 @@
 }
 
 .footer__categories-link {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     text-decoration: none;
     color: #b3b3b3;
+    transition: 0.3s ease;
+    &:hover {
+        color: $primary-yellow;
+    }
 }
 
 .footer__contact-wrapper {
@@ -163,6 +167,10 @@
 
 .footer__messenger {
     margin-right: 20px;
+    transition: opacity 0.3s ease;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .footer__map-wrapper {
