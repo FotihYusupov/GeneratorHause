@@ -2,34 +2,50 @@
     <h1>Sevimlilar</h1>
     <button @click="removeAllFavorites">Barchasini O'chirish</button>
     <ul class="products-list">
-            <li v-for="product in favorites" class="products-list__item" :key="product._id" :id="product._id">
-                <img class="products-list__item-img" :src="product.product_img[0]" width="200" height="200"/>
-                <h3>{{ product.product_title }}</h3>
-                <p>{{ product.product_desc }}</p>
-                <p v-if="product.product_price > 0"><b>Price: </b>{{ product.product_price }} so'm</p>
-                <button @click="removeFavorites">Ochirish</button>
-            </li>
+        <card v-for="product in data" 
+                :id="product._id"
+                :title="product.product_title"
+                :img="product.product_img[0]"
+                :description="product.product_desc"
+                :views="product.views"
+                :price="product.product_price"
+                :inCart="product.inCart"
+                :inFavorites="product.inFavorites"
+                removeBtn="true"
+                @click="click"
+            />
         </ul>
 </template>
 
 <script setup>
+    import card from '~/components/cardComponent.vue'
+    import { useProductsStore } from '~/store/products'
     import { useCounterStore } from '~/store/counter'
+    const productsStore = useProductsStore()
     const counterStore = useCounterStore()
-    const favorites = ref(null)
-    onMounted(async() => {
-        favorites.value = await JSON.parse(localStorage.getItem('favorites'))
+    
+    const data = ref([])
+    onMounted(() => {
+        data.value = JSON.parse(localStorage.getItem('favorites'))
     })
-
-    const removeFavorites = (e) => {
-        const id = e.target.closest('.products-list__item').id;
-        favorites.value = favorites.value.filter(e => e._id !== id)
-        localStorage.setItem('favorites', JSON.stringify(favorites.value))
-        counterStore.deleteOne('favorites')
-    }
 
     const removeAllFavorites = () => {
         localStorage.setItem('favorites', JSON.stringify([]))
-        favorites.value = []
+        data.value = []
         counterStore.deleteMany('favorites')
+    }
+
+    const removeFavorites = (id) => {
+        data.value = data.value.filter(product => product._id !== id);
+        localStorage.setItem('favorites', JSON.stringify(data.value));
+
+        productsStore.updateProductInFavorites(id, false);
+
+        counterStore.deleteOne('favorites');
+    };
+    function click (e) {
+        if(e.target.id == 'removeBtn') {
+            removeFavorites(e.target.closest('.card').id);
+        }
     }
 </script>

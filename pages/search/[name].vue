@@ -15,21 +15,20 @@
 </template>
 
 <script setup>
-    import axios from 'axios';
     import Card from '~/components/cardComponent.vue'
+
+    import { useProductsStore } from '~/store/products';
+    const productsStore = useProductsStore();
 
     const { name } = useRoute().params;
 
     const data = ref([])
-    async function getData () {
-        try {
-            const res = await axios.get(`https://gh-server-83lb.onrender.com/api/search/${name}`)
-            if(res.status === 200) {
-                data.value = res.data
-            }
-        } catch (err) {
-            console.log(err)
-        }
-    }
-    getData()
+    const filteredData = async () => {
+        await productsStore.getProducts()
+        const filteredProducts = productsStore.data.products.filter(product => {
+            return product.product_title.toLowerCase().includes(name.toLowerCase());
+        });
+        data.value = filteredProducts;
+    };
+    filteredData();
 </script>

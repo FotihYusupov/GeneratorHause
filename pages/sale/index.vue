@@ -10,7 +10,6 @@
     productsStore.getProducts()
 
     const saleProducts = productsStore.data.products.filter(e => e.offer === true)
-    console.log(saleProducts)
 </script>
 
 <style lang="scss" scoped>
