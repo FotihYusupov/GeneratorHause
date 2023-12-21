@@ -7,6 +7,10 @@
     color: #000;
 }
 
+.pointer-events {
+    pointer-events: none;
+}
+
 .header__wrapper {
     display: flex;
     justify-content: space-between;
