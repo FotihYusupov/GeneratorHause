@@ -24,6 +24,7 @@
                         </svg>  
                     </button>
                     <button id="removeBtn" class="card__favorites-btn" v-show="removeBtn">
+                        
                         <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                             <path d="M14.7233 24.2784C14.3266 24.4184 13.6733 24.4184 13.2766 24.2784C9.89331 23.1234 2.33331 18.305 2.33331 10.1384C2.33331 6.53337 5.23831 3.6167 8.81998 3.6167C10.9433 3.6167 12.8216 4.64337 14 6.23003C15.1783 4.64337 17.0683 3.6167 19.18 3.6167C22.7616 3.6167 25.6666 6.53337 25.6666 10.1384C25.6666 18.305 18.1066 23.1234 14.7233 24.2784Z" fill="#FFD60A" stroke="#FFD60A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>  
