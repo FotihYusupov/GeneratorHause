@@ -73,7 +73,13 @@
           </div>
           <div class="footer__categories">
             <h3 class="footer__categories-title">Categories</h3>
-            <NuxtLink class="footer__categories-link" v-for="category in categoriesStore.data.categories" :to="'/category/' + category._id">{{ category.category_name }}</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657aef6f7633bfd3cdb02765'">Karcher stabilizator</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657aef9a7633bfd3cdb02766'">Motokultivator</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657aefb47633bfd3cdb02767'">Betona meshalka</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657aefcd7633bfd3cdb02768'">Invertor Generator</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657aeff97633bfd3cdb0276a'">Dizelni generator</NuxtLink>
+            <NuxtLink class="footer__categories-link"  :to="'/category/657af00c7633bfd3cdb0276b'">Gazvi generator</NuxtLink>
           </div>
           <div class="footer__contact-wrapper">
             <h3 class="footer__categories-title">Contacts</h3>
