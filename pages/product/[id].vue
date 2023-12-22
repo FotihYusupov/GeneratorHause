@@ -1,9 +1,6 @@
 <template>
-    <div>
-        {{ product.data }}
-    </div>
+    
 </template>
-
 <script setup>
     import { useProductStore } from '~/store/product';
     const { id } = useRoute().params;

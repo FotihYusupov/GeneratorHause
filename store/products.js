@@ -21,6 +21,9 @@ export const useProductsStore = defineStore({
             const favorites = JSON.parse(localStorage.getItem('favorites'))
             response.data.forEach((product) => {
                 product.inCart = basked.some((item) => item._id === product._id);
+                if(basked.some((item) => item._id === product._id)) {
+                  product.count = 1
+                }
                 product.inFavorites = favorites.some((item) => item._id === product._id);
             });
             this.data.products = response.data;
@@ -37,6 +40,12 @@ export const useProductsStore = defineStore({
       const productIndex = this.data.products.findIndex(product => product._id === productId);
       if (productIndex !== -1) {
         this.data.products[productIndex].inFavorites = value;
+      }
+    },
+    updateProductIBasked(productId, value) {
+      const productIndex = this.data.products.findIndex(product => product._id === productId);
+      if (productIndex !== -1) {
+        this.data.products[productIndex].inCart = value;
       }
     },
   },
