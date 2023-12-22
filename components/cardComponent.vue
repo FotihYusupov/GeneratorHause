@@ -1,6 +1,6 @@
 <template>
     <li class="card" :id="id" :key="id">
-            <img class="card__img" :src="img">
+            <CardSwiper :images="imm"/>
             <div class="card__content-wrapper">
                 <NuxtLink class="link" :to="'/product/' + id"><h3 class="card__title">{{ title }}</h3></NuxtLink>
                 <p class="card__desc">{{ description }}</p>
@@ -52,6 +52,7 @@
 
     const { img, id, title, description, views, price, inCart, inFavorites, removeBtn } = 
         defineProps(['id', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn']);
+        console.log(img);
     const removeFavorites = (id) => {
         favorites.value = favorites.value.filter(product => product._id !== id);
         localStorage.setItem('favorites', JSON.stringify(favorites.value));
