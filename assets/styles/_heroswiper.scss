@@ -1,27 +1,31 @@
 .swiper {
   width: 100%;
   height: 100%;
+  border-radius: 16px;
 }
 
 .swiper-slide {
   text-align: center;
+  position: relative;
+  border-radius: 16px;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("/public/heroimg.png") center no-repeat;
+  background-size: cover;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-.swiper-slide button {
-  margin: 30% 0 0 20%;
+.swiper-slide a {
+  position: absolute;
+  background-color: #ececec;
+  top: 70%;
+  left: 12%;
   font-family: "DM Sans 9pt";
   display: flex;
-  padding: 12px 32px;
+  width: fit-content;
+  height: 10%;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -31,13 +35,34 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
+  cursor: pointer;
+  padding: 0px 32px;
+  svg {
+    width: 31px;
+  }
+  p {
+    padding: 0;
+  }
 }
-.bullets {
+
+.swiper-pagination-bullets{
+  width: 190%;
+  gap: 20%;
   position: absolute;
   right: 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .swiper-pagination-bullet-active{
+    content: url('/public/active.svg');
+    width: 40px;
+    background-color: transparent;
+    height: 40px;
+  }
 }

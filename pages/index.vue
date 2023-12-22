@@ -3,6 +3,12 @@
         <div class="hero_swiper">
             <HeroSwiper/>
         </div>
+        <div>
+            <h2>Shop by categories</h2>
+            <div>
+                
+            </div>
+        </div>
         <h2>Products List</h2>
         <ul class="cards-list">
             <card v-for="product in productsStore.data.products" 
