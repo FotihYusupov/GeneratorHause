@@ -1,8 +1,8 @@
 <template>
     <h1>Sevimlilar</h1>
     <button @click="removeAllFavorites">Barchasini O'chirish</button>
-    <ul class="products-list">
-        <card v-for="product in data" 
+    <ul class="cards-list">
+        <card v-for="product in productsStore.data.products.filter(e => e.inFavorites == true)"
                 :id="product._id"
                 :title="product.product_title"
                 :img="product.product_img[0]"
@@ -24,20 +24,17 @@
     const productsStore = useProductsStore()
     const counterStore = useCounterStore()
     
-    const data = ref([])
-    onMounted(() => {
-        data.value = JSON.parse(localStorage.getItem('favorites'))
-    })
-
+    productsStore.getProducts()
+    
     const removeAllFavorites = () => {
+        productsStore.data.products = []
         localStorage.setItem('favorites', JSON.stringify([]))
-        data.value = []
         counterStore.deleteMany('favorites')
     }
 
     const removeFavorites = (id) => {
-        data.value = data.value.filter(product => product._id !== id);
-        localStorage.setItem('favorites', JSON.stringify(data.value));
+        productsStore.data.products = productsStore.data.products.filter(product => product._id !== id);
+        localStorage.setItem('favorites', JSON.stringify(productsStore.data.products));
 
         productsStore.updateProductInFavorites(id, false);
 

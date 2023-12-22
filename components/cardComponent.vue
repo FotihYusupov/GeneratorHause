@@ -1,6 +1,6 @@
 <template>
     <li class="card" :id="id" :key="id">
-            <img class="card__img" :src="img" >
+            <img class="card__img" :src="img">
             <div class="card__content-wrapper">
                 <NuxtLink class="link" :to="'/product/' + id"><h3 class="card__title">{{ title }}</h3></NuxtLink>
                 <p class="card__desc">{{ description }}</p>
