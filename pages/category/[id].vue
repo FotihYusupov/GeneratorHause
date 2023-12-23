@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
       <h1>Products in Category: {{ id }}</h1>
       <p>{{ filteredProducts }}</p>
     </div>

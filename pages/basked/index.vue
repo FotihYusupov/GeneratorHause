@@ -1,5 +1,6 @@
 <template>
-    <div v-if="basked.length > 0">
+    <div class="container">
+        <div v-if="basked.length > 0">
         <div class="basked-header-wrapper">
             <h1>Savat</h1>
             <button @click="removeAllBasked" class="clear-btn">Barchasini O'chirish</button>
@@ -78,7 +79,8 @@
                 :inCart="product.inCart"
                 :inFavorites="product.inFavorites"
             />
-    </ul>
+        </ul>
+    </div>
 </template>
 
 <script setup>
@@ -143,6 +145,7 @@
         basked.value = []
         counterStore.deleteMany('basked')
         totalSum.value = 0;
+        productsStore.getProducts()
     }
 
     function calculateTotalCost(products) {

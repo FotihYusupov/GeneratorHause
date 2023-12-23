@@ -1,20 +1,22 @@
 <template>
-    <h1>Sevimlilar</h1>
-    <button @click="removeAllFavorites">Barchasini O'chirish</button>
-    <ul class="cards-list">
-        <card v-for="product in productsStore.data.products.filter(e => e.inFavorites == true)"
-                :id="product._id"
-                :title="product.product_title"
-                :img="product.product_img[0]"
-                :description="product.product_desc"
-                :views="product.views"
-                :price="product.product_price"
-                :inCart="product.inCart"
-                :inFavorites="product.inFavorites"
-                removeBtn="true"
-                @click="click"
-            />
-        </ul>
+    <div class="container">
+        <h1>Sevimlilar</h1>
+        <button @click="removeAllFavorites">Barchasini O'chirish</button>
+        <ul class="cards-list">
+            <card v-for="product in productsStore.data.products.filter(e => e.inFavorites == true)"
+                    :id="product._id"
+                    :title="product.product_title"
+                    :img="product.product_img[0]"
+                    :description="product.product_desc"
+                    :views="product.views"
+                    :price="product.product_price"
+                    :inCart="product.inCart"
+                    :inFavorites="product.inFavorites"
+                    removeBtn="true"
+                    @click="click"
+                />
+            </ul>
+    </div>
 </template>
 
 <script setup>
