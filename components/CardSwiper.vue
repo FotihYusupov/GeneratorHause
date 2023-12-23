@@ -1,7 +1,7 @@
 <template>
     <swiper :pagination="true" :modules="modules" class="mySwiper">
         <swiper-slide><img :src="images[0]" alt=""></swiper-slide>
-        
+
     </swiper>
 </template>
 <script >
@@ -31,6 +31,6 @@ export default {
 </script>
 <script setup>
 import { defineProps } from 'vue';
-const {images} = defineProps(['images'])
+const { images } = defineProps(['images'])
 </script>
   
