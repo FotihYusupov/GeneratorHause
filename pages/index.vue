@@ -3,10 +3,37 @@
         <div class="hero_swiper">
             <HeroSwiper/>
         </div>
-        <div class="sale_items">
+        <div class="sales_wrapper">
+            <div class="sale_items">
             <div class="sale_item">
-                
+                <img src="/dizel.png" alt="">
+                <div class="sale_item_details">
+                    <p class="sale_item_name">Gasonline generator</p>
+                    <p class="sale_discount">Discount 30%</p>
+                </div>
             </div>
+            <div class="sale_item">
+                <img src="/dizel.png" alt="">
+                <div class="sale_item_details">
+                    <p class="sale_item_name">Gasonline generator</p>
+                    <p class="sale_discount">Discount 30%</p>
+                </div>
+            </div>
+            <div class="sale_item">
+                <img src="/dizel.png" alt="">
+                <div class="sale_item_details">
+                    <p class="sale_item_name">Gasonline generator</p>
+                    <p class="sale_discount">Discount 30%</p>
+                </div>
+            </div>
+            <div class="sale_item">
+                <img src="/dizel.png" alt="">
+                <div class="sale_item_details">
+                    <p class="sale_item_name">Gasonline generator</p>
+                    <p class="sale_discount">Discount 30%</p>
+                </div>
+            </div>
+        </div>
         </div>
         <div>
             <h2>Shop by categories</h2>
