@@ -7,7 +7,7 @@
             <div class="wrapper">
                 <ul class="items-list">
                     <li v-for="product in basked" class="item" :key="product._id" :id="product._id">
-                        <img :src="product.product_img[0]" alt="" width="170" height="100">
+                        <img :src="product.product_img" alt="" width="170" height="100">
                         <div class="item__title-wrapper">
                             <NuxtLink class="link" :to="'/product/' + product._id">
                                 <h3 class="item__title">{{ product.product_title }}</h3>
@@ -71,7 +71,7 @@
                 @click="cardClick"
                 :id="product._id"
                 :title="product.product_title"
-                :img="product.product_img[0]"
+                :img="product.product_img"
                 :description="product.product_desc"
                 :views="product.views"
                 :price="product.product_price"
@@ -88,6 +88,7 @@
     import { addCount, removeCount } from '~/utils/countBasked';
     const counterStore = useCounterStore()
     const productsStore = useProductsStore()
+
     productsStore.getProducts()
     const basked = ref([])
     const totalSum = ref(0)

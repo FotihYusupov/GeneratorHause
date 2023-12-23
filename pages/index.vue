@@ -6,7 +6,7 @@
         <div>
             <h2>Shop by categories</h2>
             <div>
-                
+
             </div>
         </div>
         <h2>Products List</h2>
@@ -15,7 +15,7 @@
                 :id="product._id"
                 v-bind:key="product._id"
                 :title="product.product_title"
-                :img="product.product_img[0]"
+                :img="product.product_img"
                 :description="product.product_desc"
                 :views="product.views"
                 :price="product.product_price"

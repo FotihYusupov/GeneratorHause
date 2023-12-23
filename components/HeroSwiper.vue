@@ -6,7 +6,7 @@
     }" :spaceBetween="40" :direction="'vertical'" :pagination="{
         clickable: true,
 
-    }" :modules="modules" class="mySwiper">
+    }" :modules="modules" class="hero-swiper">
         <swiper-slide>
             <a>
                 <p>view more</p>
