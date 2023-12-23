@@ -3,6 +3,11 @@
         <div class="hero_swiper">
             <HeroSwiper/>
         </div>
+        <div class="sale_items">
+            <div class="sale_item">
+                
+            </div>
+        </div>
         <div>
             <h2>Shop by categories</h2>
             <div>
