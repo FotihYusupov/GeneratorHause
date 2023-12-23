@@ -100,9 +100,7 @@
     })
 
     const cardClick = (e) => {
-        console.log(e.target);
         if(e.target.id == 'addBaskedBtn') {
-            console.log('hello');
             basked.value = JSON.parse(localStorage.getItem('basked'))
         }
     }

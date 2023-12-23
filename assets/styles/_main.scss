@@ -22,7 +22,20 @@
     align-items: center;
     margin-top: 20px;
 
+    .header__category-btn-wrapper {
+      .header__categories-wrapper {
+        display: none;
+      }
+    }
+
+    .header__category-btn-wrapper--active {
+      .header__categories-wrapper {
+        display: block;
+      }
+    }
+
     .header__category-wrapper {
+      position: relative;
       display: flex;
       align-items: center;
       padding: 14px 20px;
@@ -35,6 +48,31 @@
     .header__category-text {
       margin: 0;
       margin-left: 12px;
+    }
+
+    .header__categories {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 1%;
+      width: 15%;
+      top: 12%;
+      left: 10%;
+      z-index: 10;
+      border-radius: 3%;
+      background-color: #ffffff;
+      .header__categories-link {
+        padding: 5%;
+        text-decoration: none;
+        color: #AFB0B4;
+        margin-bottom: 3%;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #000000;
+          background-color: #f5f5f5;
+        }
+      }
     }
 
     .header__search-wrapper {
@@ -222,9 +260,38 @@
   }
 
   .main {
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
     .hero_swiper {
       margin-top: 4%;
+      margin-bottom: 4%;
       height: 70vh;
+    }
+    .title-wrapper {
+      &:nth-child(2) {
+        display: flex;
+        justify-content: flex-start;
+        h2 {
+          margin-right: 1%;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      .title-wrapper__line {
+        height: 1px;
+        width: 73%;
+        background-color: #b3b3b3;
+      }
+      .SeeAll {
+        padding: 0.8% 1.2%;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20;
+        color: #000;
+        background-color: $primary-yellow;
+      }
     }
     .products-list {
       display: grid;
@@ -243,7 +310,12 @@
     .products-list__item-img {
       background-color: #c1c1c1;
     }
+    .list-category {
+      margin-top: 0;
+    }
     .list-category-wrapper {
+      padding: 1% 0% 0.1% 0%;
+      margin-bottom: 3%;
       width: 100%;
       background-color: #f5f5f5;
     }

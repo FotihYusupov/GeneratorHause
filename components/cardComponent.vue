@@ -52,7 +52,6 @@
 
     const { img, id, title, description, views, price, inCart, inFavorites, removeBtn } = 
         defineProps(['id', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn']);
-        console.log(img);
     const removeFavorites = (id) => {
         favorites.value = favorites.value.filter(product => product._id !== id);
         localStorage.setItem('favorites', JSON.stringify(favorites.value));

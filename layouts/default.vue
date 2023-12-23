@@ -7,7 +7,8 @@
             <nuxt-link to="/">
               <img src="~/public/Logo.png" alt="">
             </nuxt-link>
-            <button class="header__category-wrapper">
+            <div class="header__category-btn-wrapper" id="btnWrapper">
+              <button @click="openCategories" class="header__category-wrapper" id="opCategories">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.8327 8.95832H14.166C12.1493 8.95832 11.041 7.84999 11.041 5.83332V4.16666C11.041 2.14999 12.1493 1.04166 14.166 1.04166H15.8327C17.8493 1.04166 18.9577 2.14999 18.9577 4.16666V5.83332C18.9577 7.84999 17.8493 8.95832 15.8327 8.95832ZM14.166 2.29166C12.8493 2.29166 12.291 2.84999 12.291 4.16666V5.83332C12.291 7.14999 12.8493 7.70832 14.166 7.70832H15.8327C17.1493 7.70832 17.7077 7.14999 17.7077 5.83332V4.16666C17.7077 2.84999 17.1493 2.29166 15.8327 2.29166H14.166Z" fill="#000814"/>
                 <path d="M5.83268 18.9583H4.16602C2.14935 18.9583 1.04102 17.85 1.04102 15.8333V14.1667C1.04102 12.15 2.14935 11.0417 4.16602 11.0417H5.83268C7.84935 11.0417 8.95768 12.15 8.95768 14.1667V15.8333C8.95768 17.85 7.84935 18.9583 5.83268 18.9583ZM4.16602 12.2917C2.84935 12.2917 2.29102 12.85 2.29102 14.1667V15.8333C2.29102 17.15 2.84935 17.7083 4.16602 17.7083H5.83268C7.14935 17.7083 7.70768 17.15 7.70768 15.8333V14.1667C7.70768 12.85 7.14935 12.2917 5.83268 12.2917H4.16602Z" fill="#000814"/>
@@ -16,6 +17,18 @@
               </svg>
               <p class="header__category-text">Category</p>
             </button>
+            <div class="header__categories-wrapper">
+              <div class="header__categories">
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher stabilizator</NuxtLink>
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657aef9a7633bfd3cdb02766'">Motokultivator</NuxtLink>
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657aefb47633bfd3cdb02767'">Betona meshalka</NuxtLink>
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657aefcd7633bfd3cdb02768'">Invertor Generator</NuxtLink>
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator</NuxtLink>
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657aeff97633bfd3cdb0276a'">Dizelni generator</NuxtLink>
+                <NuxtLink class="header__categories-link" @click="openCategories" :to="'/category/657af00c7633bfd3cdb0276b'">Gazvi generator</NuxtLink>
+              </div>
+            </div>
+            </div>
               <form @submit="search" class="header__search-wrapper">
                 <input class="header__search-input" id="searchInput" type="text" name="search" placeholder="What are you looking for..." required>
                 <button class="header__search-btn">
@@ -195,5 +208,9 @@
       await navigateTo(`/search/${searchInput.value}`)
     }
 
+    const openCategories = () => {
+      btnWrapper.classList.toggle('header__category-btn-wrapper--active')
+      
+    }
 
 </script>
