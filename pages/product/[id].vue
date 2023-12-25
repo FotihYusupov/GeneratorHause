@@ -1,5 +1,7 @@
 <template>
-    
+    <div class="container">
+        
+    </div>
 </template>
 <script setup>
     import { useProductStore } from '~/store/product';

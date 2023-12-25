@@ -3,3 +3,47 @@
 @import 'card';
 @import 'heroswiper';
 @import 'basked';
+
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'DM Sans 9pt';
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Arial", sans-serif;
+    background-color: #ffffff;
+    font-family: 'DM Sans 9pt';
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}

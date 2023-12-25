@@ -1,5 +1,6 @@
 <template>
-    <div v-if="basked.length > 0">
+    <div class="container">
+        <div v-if="basked.length > 0">
         <div class="basked-header-wrapper">
             <h1>Savat</h1>
             <button @click="removeAllBasked" class="clear-btn">Barchasini O'chirish</button>
@@ -79,7 +80,8 @@
                 :inCart="product.inCart"
                 :inFavorites="product.inFavorites"
             />
-    </ul>
+        </ul>
+    </div>
 </template>
 
 <script setup>
@@ -99,9 +101,7 @@
     })
 
     const cardClick = (e) => {
-        console.log(e.target);
         if(e.target.id == 'addBaskedBtn') {
-            console.log('hello');
             basked.value = JSON.parse(localStorage.getItem('basked'))
         }
     }
