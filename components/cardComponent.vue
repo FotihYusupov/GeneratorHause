@@ -5,7 +5,11 @@
                 <NuxtLink class="link" :to="'/product/' + id"><h3 class="card__title">{{ title }}</h3></NuxtLink>
                 <p class="card__desc">{{ description }}</p>
                 <p class="card__views">{{ views }} views</p>
-                <p class="card__price">{{ price }} So'm</p>
+                <p v-if="!newPrice" class="card__price">{{ price }} So'm</p>
+                <div v-if="newPrice" class="card__newPrice-wrapper">
+                    <p>{{ newPrice }} So'm</p>
+                    <p>{{ price }} So'm</p>
+                </div>
                 <button @click="e => addBasked(e.target.closest('.card').id)" class="card__basked-btn" id="addBaskedBtn" :disabled="inCart">
                     <p>Add to card</p>
                     <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 15 18" fill="none">
@@ -50,8 +54,8 @@
         favorites.value = await JSON.parse(localStorage.getItem('favorites'));
     });
 
-    const { img, id, title, description, views, price, inCart, inFavorites, removeBtn } = 
-        defineProps(['id', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn']);
+    const { img, id, title, description, views, price, inCart, inFavorites, removeBtn, newPrice } = 
+        defineProps(['id', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn', 'newPrice']);
     const removeFavorites = (id) => {
         favorites.value = favorites.value.filter(product => product._id !== id);
         localStorage.setItem('favorites', JSON.stringify(favorites.value));

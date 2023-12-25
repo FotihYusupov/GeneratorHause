@@ -1,7 +1,9 @@
 <template>
     <div class="container">
-        <h1>Sevimlilar</h1>
-        <button @click="removeAllFavorites">Barchasini O'chirish</button>
+        <div class="basked-header-wrapper">
+            <h1>Sevimlilar</h1>
+            <button @click="removeAllFavorites" class="clear-btn">Barchasini O'chirish</button>
+        </div>
         <ul class="cards-list">
             <card v-for="product in productsStore.data.products.filter(e => e.inFavorites == true)"
                     :id="product._id"

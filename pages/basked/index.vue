@@ -35,7 +35,8 @@
                                 </svg>
                             </button>
                         </div>
-                        <p class="item__price"><b>{{ product.product_price * product.count }}</b> So'm</p>
+                        <p v-if="!product.new_price" class="item__price"><b>{{ product.count * product.product_price }}</b> So'm</p>
+                        <p v-if="product.new_price"  class="item__price"><b>{{ product.count * product.new_price }}</b> So'm</p>
                         <button @click="removeBasked" class="item__remove-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clip-path="url(#clip0_391_10589)">
@@ -150,7 +151,9 @@
         let totalCost = 0;
 
         for (const product of products) {
-            totalCost += product.product_price * product.count;
+            const price = product.new_price !== undefined ? product.new_price : product.product_price;
+
+            totalCost += price * product.count;
         }
 
         return totalCost;
