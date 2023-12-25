@@ -30,7 +30,7 @@
             </div>
             </div>
               <form @submit="search" class="header__search-wrapper">
-                <input class="header__search-input" id="searchInput" type="text" name="search" placeholder="What are you looking for..." required>
+                <input @input="searchProductsFn" class="header__search-input" id="searchInput" type="text" name="search" placeholder="What are you looking for..." required>
                 <button class="header__search-btn">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.58268 18.125C4.87435 18.125 1.04102 14.2917 1.04102 9.58332C1.04102 4.87499 4.87435 1.04166 9.58268 1.04166C14.291 1.04166 18.1243 4.87499 18.1243 9.58332C18.1243 14.2917 14.291 18.125 9.58268 18.125ZM9.58268 2.29166C5.55768 2.29166 2.29102 5.56666 2.29102 9.58332C2.29102 13.6 5.55768 16.875 9.58268 16.875C13.6077 16.875 16.8743 13.6 16.8743 9.58332C16.8743 5.56666 13.6077 2.29166 9.58268 2.29166Z" fill="#000814"/>
@@ -39,6 +39,18 @@
                   <p class="header__search-text">Search</p>
                 </button>
               </form>
+              <ul v-if="searchProducts.length > 0" id="searchList" class="search-products">
+                <li class="search-products__item" v-for="product in searchProducts.slice(0, 4)">
+                  <NuxtLink class="link" :to="'/product/' + product._id">
+                    <img class="search-products__item-img" :src="product.product_img[0]" alt="">
+                    <div>
+                      <h3>{{ product.product_title }}</h3>
+                      <p>{{ product.product_desc }}</p>
+                    </div>
+                    <p>{{ product.product_price }} So'm</p>
+                  </NuxtLink>
+                </li>
+              </ul>
             <div class="header__storage-wrapper">
               <NuxtLink class="header__storage" to="/favorites">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +70,7 @@
                 </NuxtLink>
                 <div v-if="counterStore.data.basked > 0" class="header__store-products">
                   <ul class="header__store-products-list">
-                    <li class="header__store-item" v-for="product in productsStore.data.products.filter(e => e.inCart === true)" :id="product._id">
+                    <li class="header__store-item" v-for="product in productsStore.data.products.filter(e => e.inCart === true).slice(0, 4)" :id="product._id">
                       <img :src="product.product_img[0]">
                       <div class="header__store-item-wrapper">
                         <h3 class="header__store-item-title">{{ product.product_title }}</h3>
@@ -236,9 +248,19 @@
     const categoriesStore = useCategoriesStore()
     categoriesStore.getCategories()
 
+    const searchProducts = ref([])
+
     const search = async (e) => {
       e.preventDefault()
       await navigateTo(`/search/${searchInput.value}`)
+    }
+
+    const searchProductsFn = () => {
+      const filteredProducts = productsStore.data.products.filter(product => {
+        return product.product_title.toLowerCase().includes(searchInput.value.toLowerCase());
+      });
+      searchProducts.value = filteredProducts;
+      searchList.classList.add('search-products--open')
     }
 
     const openCategories = () => {
@@ -248,6 +270,7 @@
     const closeCategories = (e) => {
       if(e.target.id !== 'openCategories') {
         btnWrapper.classList.remove('header__category-btn-wrapper--active')
+        searchList.classList.remove('search-products--open')
       }
     }
 
