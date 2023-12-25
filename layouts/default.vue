@@ -4,9 +4,9 @@
       <header>
         <section class="header">
           <div class="header__wrapper">
-            <nuxt-link to="/">
+            <NuxtLink to="/">
               <img src="~/public/Logo.png" alt="">
-            </nuxt-link>
+            </NuxtLink>
             <div class="header__category-btn-wrapper" id="btnWrapper">
               <button @click="openCategories" class="header__category-wrapper" id="openCategories">
                 <svg class="pointer-events" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
                   <p class="header__search-text">Search</p>
                 </button>
               </form>
-              <ul v-if="searchProducts.length > 0" id="searchList" class="search-products">
+              <ul id="searchList" v-if="searchProducts.length > 0" class="search-products">
                 <li class="search-products__item" v-for="product in searchProducts.slice(0, 4)">
                   <NuxtLink class="link" :to="'/product/' + product._id">
                     <img class="search-products__item-img" :src="product.product_img[0]" alt="">
@@ -270,6 +270,8 @@
     const closeCategories = (e) => {
       if(e.target.id !== 'openCategories') {
         btnWrapper.classList.remove('header__category-btn-wrapper--active')
+      }
+      if(searchProducts.value.length > 0) {
         searchList.classList.remove('search-products--open')
       }
     }
