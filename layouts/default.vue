@@ -1,7 +1,9 @@
 <template>
   <div @click="closeCategories">
-    <div class="container">
-      <header>
+    <header>
+
+      <div class="container">
+
         <section class="header">
           <div class="header__wrapper">
             <nuxt-link to="/">
@@ -46,83 +48,98 @@
               </div>
             </div>
             <form @submit="search" class="header__search-wrapper">
-              <input class="header__search-input" id="searchInput" type="text" name="search"
-                placeholder="What are you looking for..." required>
-              <button class="header__search-btn">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9.58268 18.125C4.87435 18.125 1.04102 14.2917 1.04102 9.58332C1.04102 4.87499 4.87435 1.04166 9.58268 1.04166C14.291 1.04166 18.1243 4.87499 18.1243 9.58332C18.1243 14.2917 14.291 18.125 9.58268 18.125ZM9.58268 2.29166C5.55768 2.29166 2.29102 5.56666 2.29102 9.58332C2.29102 13.6 5.55768 16.875 9.58268 16.875C13.6077 16.875 16.8743 13.6 16.8743 9.58332C16.8743 5.56666 13.6077 2.29166 9.58268 2.29166Z"
-                    fill="#000814" />
-                  <path
-                    d="M18.3326 18.9583C18.1742 18.9583 18.0159 18.9 17.8909 18.775L16.2242 17.1083C15.9826 16.8667 15.9826 16.4667 16.2242 16.225C16.4659 15.9833 16.8659 15.9833 17.1076 16.225L18.7742 17.8917C19.0159 18.1333 19.0159 18.5333 18.7742 18.775C18.6492 18.9 18.4909 18.9583 18.3326 18.9583Z"
-                    fill="#000814" />
-                </svg>
-                <p class="header__search-text">Search</p>
-              </button>
-            </form>
-            <div class="header__storage-wrapper">
-              <NuxtLink class="header__storage" to="/favorites">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M10.516 17.3417C10.2327 17.4417 9.76602 17.4417 9.48268 17.3417C7.06602 16.5167 1.66602 13.075 1.66602 7.24168C1.66602 4.66668 3.74102 2.58334 6.29935 2.58334C7.81602 2.58334 9.15768 3.31668 9.99935 4.45001C10.841 3.31668 12.191 2.58334 13.6993 2.58334C16.2577 2.58334 18.3327 4.66668 18.3327 7.24168C18.3327 13.075 12.9327 16.5167 10.516 17.3417Z"
-                    stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <p class="header__storage-text">favorites</p>
-                <span class="header__storage-num">{{ counterStore.data.favorites }}</span>
-              </NuxtLink>
-              <div class="header__basked-wrapper">
-                <NuxtLink class="header__storage" to="/basked">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.46512 6.44185C4.34952 6.44185 4.25581 6.53556 4.25581 6.65115V17.5349C4.25581 17.6505 4.34952 17.7442 4.46512 17.7442H16.186C16.3017 17.7442 16.3953 17.6505 16.3953 17.5349V6.65115C16.3953 6.53556 16.3017 6.44185 16.186 6.44185H4.46512ZM3 6.65115C3 5.84199 3.65595 5.18604 4.46512 5.18604H16.186C16.9952 5.18604 17.6512 5.84199 17.6512 6.65115V17.5349C17.6512 18.344 16.9952 19 16.186 19H4.46512C3.65595 19 3 18.344 3 17.5349V6.65115Z"
-                      fill="black" />
-                    <path
-                      d="M10.3257 2.25581C9.05416 2.25581 8.02339 3.2866 8.02339 4.55814V7.48837C8.02339 7.83515 7.74227 8.11628 7.39549 8.11628C7.0487 8.11628 6.76758 7.83515 6.76758 7.48837V4.55814C6.76758 2.59303 8.36061 1 10.3257 1C12.2908 1 13.8839 2.59303 13.8839 4.55814V7.48837C13.8839 7.83515 13.6027 8.11628 13.256 8.11628C12.9092 8.11628 12.628 7.83515 12.628 7.48837V4.55814C12.628 3.2866 11.5973 2.25581 10.3257 2.25581Z"
-                      fill="black" />
-                  </svg>
-                  <p class="header__storage-text">basked</p>
-                  <span class="header__storage-num">{{ counterStore.data.basked }}</span>
-                </NuxtLink>
-                <div v-if="counterStore.data.basked > 0" class="header__store-products">
-                  <ul class="header__store-products-list">
-                    <li class="header__store-item"
-                      v-for="product in productsStore.data.products.filter(e => e.inCart === true)" :id="product._id" v-bind:key="product._id">
-                      <img :src="product.product_img[0]">
-                      <div class="header__store-item-wrapper">
-                        <h3 class="header__store-item-title">{{ product.product_title }}</h3>
-                        <p class="header__store-item-price">{{ product.product_price }} So'm</p>
-                      </div>
-                      <button @click="removeBasked" class="header__store-item-delete">
-                        <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                          viewBox="0 0 21 21" fill="none">
-                          <g opacity="0.3" clip-path="url(#clip0_502_10609)">
-                            <path
-                              d="M13.4274 7.7381C13.1687 7.7381 12.959 7.94777 12.959 8.20648V17.0589C12.959 17.3174 13.1687 17.5273 13.4274 17.5273C13.6861 17.5273 13.8957 17.3174 13.8957 17.0589V8.20648C13.8957 7.94777 13.6861 7.7381 13.4274 7.7381Z"
-                              fill="#000814" />
-                            <path
-                              d="M7.90002 7.7381C7.64132 7.7381 7.43164 7.94777 7.43164 8.20648V17.0589C7.43164 17.3174 7.64132 17.5273 7.90002 17.5273C8.15873 17.5273 8.36841 17.3174 8.36841 17.0589V8.20648C8.36841 7.94777 8.15873 7.7381 7.90002 7.7381Z"
-                              fill="#000814" />
-                            <path
-                              d="M3.8713 6.4462V17.9862C3.8713 18.6682 4.12141 19.3088 4.55832 19.7684C4.99322 20.2293 5.59846 20.4909 6.23187 20.492H15.0938C15.7274 20.4909 16.3327 20.2293 16.7674 19.7684C17.2043 19.3088 17.4544 18.6682 17.4544 17.9862V6.4462C18.3229 6.21567 18.8857 5.3766 18.7695 4.48539C18.6532 3.59437 17.8941 2.92784 16.9953 2.92766H14.5973V2.34218C14.6 1.84983 14.4053 1.37705 14.0568 1.02924C13.7082 0.681615 13.2347 0.488041 12.7424 0.492066H8.5833C8.09095 0.488041 7.61744 0.681615 7.2689 1.02924C6.92036 1.37705 6.72569 1.84983 6.72843 2.34218V2.92766H4.33035C3.43164 2.92784 2.67253 3.59437 2.55617 4.48539C2.43999 5.3766 3.00278 6.21567 3.8713 6.4462ZM15.0938 19.5552H6.23187C5.43105 19.5552 4.80806 18.8673 4.80806 17.9862V6.48736H16.5176V17.9862C16.5176 18.8673 15.8946 19.5552 15.0938 19.5552ZM7.6652 2.34218C7.66209 2.09829 7.75796 1.86355 7.93104 1.69138C8.10394 1.51921 8.33923 1.42462 8.5833 1.42883H12.7424C12.9865 1.42462 13.2218 1.51921 13.3947 1.69138C13.5677 1.86337 13.6636 2.09829 13.6605 2.34218V2.92766H7.6652V2.34218ZM4.33035 3.86442H16.9953C17.461 3.86442 17.8384 4.24187 17.8384 4.70751C17.8384 5.17315 17.461 5.5506 16.9953 5.5506H4.33035C3.86471 5.5506 3.48726 5.17315 3.48726 4.70751C3.48726 4.24187 3.86471 3.86442 4.33035 3.86442Z"
-                              fill="#000814" />
-                            <path
-                              d="M10.6637 7.7381C10.405 7.7381 10.1953 7.94777 10.1953 8.20648V17.0589C10.1953 17.3174 10.405 17.5273 10.6637 17.5273C10.9224 17.5273 11.1321 17.3174 11.1321 17.0589V8.20648C11.1321 7.94777 10.9224 7.7381 10.6637 7.7381Z"
-                              fill="#000814" />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_502_10609">
-                              <rect width="20" height="20" fill="white" transform="translate(0.667969 0.492065)" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                  <NuxtLink class="header__store-products-btn" to="/basked">Buy Now</NuxtLink>
+            <input @input="searchProductsFn" class="header__search-input" id="searchInput" type="text" name="search"
+              placeholder="What are you looking for..." required>
+            <button class="header__search-btn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.58268 18.125C4.87435 18.125 1.04102 14.2917 1.04102 9.58332C1.04102 4.87499 4.87435 1.04166 9.58268 1.04166C14.291 1.04166 18.1243 4.87499 18.1243 9.58332C18.1243 14.2917 14.291 18.125 9.58268 18.125ZM9.58268 2.29166C5.55768 2.29166 2.29102 5.56666 2.29102 9.58332C2.29102 13.6 5.55768 16.875 9.58268 16.875C13.6077 16.875 16.8743 13.6 16.8743 9.58332C16.8743 5.56666 13.6077 2.29166 9.58268 2.29166Z"
+                  fill="#000814" />
+                <path
+                  d="M18.3326 18.9583C18.1742 18.9583 18.0159 18.9 17.8909 18.775L16.2242 17.1083C15.9826 16.8667 15.9826 16.4667 16.2242 16.225C16.4659 15.9833 16.8659 15.9833 17.1076 16.225L18.7742 17.8917C19.0159 18.1333 19.0159 18.5333 18.7742 18.775C18.6492 18.9 18.4909 18.9583 18.3326 18.9583Z"
+                  fill="#000814" />
+              </svg>
+              <p class="header__search-text">Search</p>
+            </button>
+          </form>
+          <ul v-if="searchProducts.length > 0" id="searchList" class="search-products">
+            <li class="search-products__item" v-for="product in searchProducts.slice(0, 4)" v-bind:key="product._id">
+              <NuxtLink class="link" :to="'/product/' + product._id">
+                <img class="search-products__item-img" :src="product.product_img[0]" alt="">
+                <div>
+                  <h3>{{ product.product_title }}</h3>
+                  <p>{{ product.product_desc }}</p>
                 </div>
+                <p>{{ product.product_price }} So'm</p>
+              </NuxtLink>
+            </li>
+          </ul>
+          <div class="header__storage-wrapper">
+            <NuxtLink class="header__storage" to="/favorites">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.516 17.3417C10.2327 17.4417 9.76602 17.4417 9.48268 17.3417C7.06602 16.5167 1.66602 13.075 1.66602 7.24168C1.66602 4.66668 3.74102 2.58334 6.29935 2.58334C7.81602 2.58334 9.15768 3.31668 9.99935 4.45001C10.841 3.31668 12.191 2.58334 13.6993 2.58334C16.2577 2.58334 18.3327 4.66668 18.3327 7.24168C18.3327 13.075 12.9327 16.5167 10.516 17.3417Z"
+                  stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="header__storage-text">favorites</p>
+              <span class="header__storage-num">{{ counterStore.data.favorites }}</span>
+            </NuxtLink>
+            <div class="header__basked-wrapper">
+              <NuxtLink class="header__storage" to="/basked">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.46512 6.44185C4.34952 6.44185 4.25581 6.53556 4.25581 6.65115V17.5349C4.25581 17.6505 4.34952 17.7442 4.46512 17.7442H16.186C16.3017 17.7442 16.3953 17.6505 16.3953 17.5349V6.65115C16.3953 6.53556 16.3017 6.44185 16.186 6.44185H4.46512ZM3 6.65115C3 5.84199 3.65595 5.18604 4.46512 5.18604H16.186C16.9952 5.18604 17.6512 5.84199 17.6512 6.65115V17.5349C17.6512 18.344 16.9952 19 16.186 19H4.46512C3.65595 19 3 18.344 3 17.5349V6.65115Z"
+                    fill="black" />
+                  <path
+                    d="M10.3257 2.25581C9.05416 2.25581 8.02339 3.2866 8.02339 4.55814V7.48837C8.02339 7.83515 7.74227 8.11628 7.39549 8.11628C7.0487 8.11628 6.76758 7.83515 6.76758 7.48837V4.55814C6.76758 2.59303 8.36061 1 10.3257 1C12.2908 1 13.8839 2.59303 13.8839 4.55814V7.48837C13.8839 7.83515 13.6027 8.11628 13.256 8.11628C12.9092 8.11628 12.628 7.83515 12.628 7.48837V4.55814C12.628 3.2866 11.5973 2.25581 10.3257 2.25581Z"
+                    fill="black" />
+                </svg>
+                <p class="header__storage-text">basked</p>
+                <span class="header__storage-num">{{ counterStore.data.basked }}</span>
+              </NuxtLink>
+              <div v-if="counterStore.data.basked > 0" class="header__store-products">
+                <ul class="header__store-products-list">
+                  <li class="header__store-item"
+                    v-for="product in productsStore.data.products.filter(e => e.inCart === true).slice(0, 4)"
+                    :id="product._id" v-bind:key="product._id">
+                    <img :src="product.product_img[0]">
+                    <div class="header__store-item-wrapper">
+                      <h3 class="header__store-item-title">{{ product.product_title }}</h3>
+                      <p class="header__store-item-price">{{ product.product_price }} So'm</p>
+                    </div>
+                    <button @click="removeBasked" class="header__store-item-delete">
+                      <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        viewBox="0 0 21 21" fill="none">
+                        <g opacity="0.3" clip-path="url(#clip0_502_10609)">
+                          <path
+                            d="M13.4274 7.7381C13.1687 7.7381 12.959 7.94777 12.959 8.20648V17.0589C12.959 17.3174 13.1687 17.5273 13.4274 17.5273C13.6861 17.5273 13.8957 17.3174 13.8957 17.0589V8.20648C13.8957 7.94777 13.6861 7.7381 13.4274 7.7381Z"
+                            fill="#000814" />
+                          <path
+                            d="M7.90002 7.7381C7.64132 7.7381 7.43164 7.94777 7.43164 8.20648V17.0589C7.43164 17.3174 7.64132 17.5273 7.90002 17.5273C8.15873 17.5273 8.36841 17.3174 8.36841 17.0589V8.20648C8.36841 7.94777 8.15873 7.7381 7.90002 7.7381Z"
+                            fill="#000814" />
+                          <path
+                            d="M3.8713 6.4462V17.9862C3.8713 18.6682 4.12141 19.3088 4.55832 19.7684C4.99322 20.2293 5.59846 20.4909 6.23187 20.492H15.0938C15.7274 20.4909 16.3327 20.2293 16.7674 19.7684C17.2043 19.3088 17.4544 18.6682 17.4544 17.9862V6.4462C18.3229 6.21567 18.8857 5.3766 18.7695 4.48539C18.6532 3.59437 17.8941 2.92784 16.9953 2.92766H14.5973V2.34218C14.6 1.84983 14.4053 1.37705 14.0568 1.02924C13.7082 0.681615 13.2347 0.488041 12.7424 0.492066H8.5833C8.09095 0.488041 7.61744 0.681615 7.2689 1.02924C6.92036 1.37705 6.72569 1.84983 6.72843 2.34218V2.92766H4.33035C3.43164 2.92784 2.67253 3.59437 2.55617 4.48539C2.43999 5.3766 3.00278 6.21567 3.8713 6.4462ZM15.0938 19.5552H6.23187C5.43105 19.5552 4.80806 18.8673 4.80806 17.9862V6.48736H16.5176V17.9862C16.5176 18.8673 15.8946 19.5552 15.0938 19.5552ZM7.6652 2.34218C7.66209 2.09829 7.75796 1.86355 7.93104 1.69138C8.10394 1.51921 8.33923 1.42462 8.5833 1.42883H12.7424C12.9865 1.42462 13.2218 1.51921 13.3947 1.69138C13.5677 1.86337 13.6636 2.09829 13.6605 2.34218V2.92766H7.6652V2.34218ZM4.33035 3.86442H16.9953C17.461 3.86442 17.8384 4.24187 17.8384 4.70751C17.8384 5.17315 17.461 5.5506 16.9953 5.5506H4.33035C3.86471 5.5506 3.48726 5.17315 3.48726 4.70751C3.48726 4.24187 3.86471 3.86442 4.33035 3.86442Z"
+                            fill="#000814" />
+                          <path
+                            d="M10.6637 7.7381C10.405 7.7381 10.1953 7.94777 10.1953 8.20648V17.0589C10.1953 17.3174 10.405 17.5273 10.6637 17.5273C10.9224 17.5273 11.1321 17.3174 11.1321 17.0589V8.20648C11.1321 7.94777 10.9224 7.7381 10.6637 7.7381Z"
+                            fill="#000814" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_502_10609">
+                            <rect width="20" height="20" fill="white" transform="translate(0.667969 0.492065)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <NuxtLink class="header__store-products-btn" to="/basked">Buy Now</NuxtLink>
               </div>
             </div>
           </div>
+          </div>
+          
+
         </section>
         <section class="bottom-header">
           <NuxtLink class="bottom-header-link">
@@ -150,8 +167,9 @@
             Gaseous stabilizator
           </NuxtLink>
         </section>
-      </header>
-    </div>
+
+      </div>
+    </header>
 
     <main>
       <slot />
@@ -294,36 +312,37 @@
                   </defs>
                 </svg>
               </a>
-          </div>
-          <span class="footer__map-wrapper">
-            <p class="footer__map-text">Toshkent Xalqa Avtomabil Yo'li</p>
-            <a class="footer__map-link" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8" target="_blank"
-              rel="noopener noreferrer">
-              <p class="footer__map">Map</p>
-              <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="fi_11515688" clip-path="url(#clip0_229_3343)">
-                  <g id="Group">
-                    <path id="Vector"
-                      d="M7.9987 0.5C4.87403 0.5 2.33203 3.042 2.33203 6.16667C2.33203 11.6787 7.59937 14.9793 7.82404 15.1173C7.87737 15.15 7.93804 15.1667 7.9987 15.1667C8.05937 15.1667 8.12004 15.15 8.17337 15.1173C8.39804 14.9793 13.6654 11.6787 13.6654 6.16667C13.6654 3.042 11.1234 0.5 7.9987 0.5ZM7.9987 9.16667C6.3447 9.16667 4.9987 7.82067 4.9987 6.16667C4.9987 4.51267 6.3447 3.16667 7.9987 3.16667C9.6527 3.16667 10.9987 4.51267 10.9987 6.16667C10.9987 7.82067 9.6527 9.16667 7.9987 9.16667Z"
-                      fill="white" />
-                    <path id="Vector_2"
-                      d="M11.3987 13.4334C11.2867 13.4121 11.1727 13.4487 11.094 13.5307C9.78133 14.9081 8.57466 15.6541 8.52332 15.6854C8.36599 15.7827 8.18466 15.8334 7.99999 15.8334C7.81532 15.8334 7.63399 15.7821 7.47599 15.6854C7.42532 15.6541 6.21865 14.9081 4.90598 13.5307C4.82798 13.4494 4.71198 13.4114 4.60132 13.4334C3.09665 13.7241 2.33398 14.1947 2.33398 14.8334C2.33398 16.1521 6.04065 16.5001 8.00066 16.5001C9.96066 16.5001 13.6673 16.1521 13.6673 14.8334C13.666 14.1947 12.9027 13.7241 11.3987 13.4334Z"
-                      fill="white" />
+            </div>
+            <span class="footer__map-wrapper">
+              <p class="footer__map-text">Toshkent Xalqa Avtomabil Yo'li</p>
+              <a class="footer__map-link" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8" target="_blank"
+                rel="noopener noreferrer">
+                <p class="footer__map">Map</p>
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="fi_11515688" clip-path="url(#clip0_229_3343)">
+                    <g id="Group">
+                      <path id="Vector"
+                        d="M7.9987 0.5C4.87403 0.5 2.33203 3.042 2.33203 6.16667C2.33203 11.6787 7.59937 14.9793 7.82404 15.1173C7.87737 15.15 7.93804 15.1667 7.9987 15.1667C8.05937 15.1667 8.12004 15.15 8.17337 15.1173C8.39804 14.9793 13.6654 11.6787 13.6654 6.16667C13.6654 3.042 11.1234 0.5 7.9987 0.5ZM7.9987 9.16667C6.3447 9.16667 4.9987 7.82067 4.9987 6.16667C4.9987 4.51267 6.3447 3.16667 7.9987 3.16667C9.6527 3.16667 10.9987 4.51267 10.9987 6.16667C10.9987 7.82067 9.6527 9.16667 7.9987 9.16667Z"
+                        fill="white" />
+                      <path id="Vector_2"
+                        d="M11.3987 13.4334C11.2867 13.4121 11.1727 13.4487 11.094 13.5307C9.78133 14.9081 8.57466 15.6541 8.52332 15.6854C8.36599 15.7827 8.18466 15.8334 7.99999 15.8334C7.81532 15.8334 7.63399 15.7821 7.47599 15.6854C7.42532 15.6541 6.21865 14.9081 4.90598 13.5307C4.82798 13.4494 4.71198 13.4114 4.60132 13.4334C3.09665 13.7241 2.33398 14.1947 2.33398 14.8334C2.33398 16.1521 6.04065 16.5001 8.00066 16.5001C9.96066 16.5001 13.6673 16.1521 13.6673 14.8334C13.666 14.1947 12.9027 13.7241 11.3987 13.4334Z"
+                        fill="white" />
+                    </g>
                   </g>
-                </g>
-                <defs>
-                  <clipPath id="clip0_229_3343">
-                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-          </span>
+                  <defs>
+                    <clipPath id="clip0_229_3343">
+                      <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </span>
+          </div>
         </div>
-      </div>
-    </section>
-  </footer>
-</div></template>
+      </section>
+    </footer>
+  </div>
+</template>
 
 <script setup>
 import { useCounterStore } from '~/store/counter'
@@ -339,9 +358,19 @@ productsStore.getProducts()
 const categoriesStore = useCategoriesStore()
 categoriesStore.getCategories()
 
+const searchProducts = ref([])
+
 const search = async (e) => {
   e.preventDefault()
   await navigateTo(`/search/${searchInput.value}`)
+}
+
+const searchProductsFn = () => {
+  const filteredProducts = productsStore.data.products.filter(product => {
+    return product.product_title.toLowerCase().includes(searchInput.value.toLowerCase());
+  });
+  searchProducts.value = filteredProducts;
+  searchList.classList.add('search-products--open')
 }
 
 const openCategories = () => {
@@ -351,6 +380,7 @@ const openCategories = () => {
 const closeCategories = (e) => {
   if (e.target.id !== 'openCategories') {
     btnWrapper.classList.remove('header__category-btn-wrapper--active')
+    searchList.classList.remove('search-products--open')
   }
 }
 
@@ -367,5 +397,6 @@ const removeBasked = (e) => {
   })
   productsStore.updateProductIBasked(id, false)
 }
+
 
 </script>
