@@ -1,8 +1,22 @@
 <template>
     <li class="card" :id="id" :key="id">
-        <img :src="img" alt="">
+        <Carousel class="card-carousel" v-bind="settings">
+            <Slide class="custom-slide" v-for="slide in img" :key="slide">
+                <div class="carousel__item">
+                    <img :src="slide" alt="">
+                </div>
+            </Slide>
+
+            <template #addons>
+                <div class="carousel_pagination">
+                    <Pagination class="custom-pagination" />
+                </div>
+
+            </template>
+        </Carousel>
 
         <div class="card__content-wrapper">
+
             <NuxtLink class="link" :to="'/product/' + id">
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
@@ -53,6 +67,7 @@ import { useProductsStore } from '~/store/products';
 import addBasked from '~/utils/backed';
 import addFavorites from '~/utils/favorites';
 
+
 const counterStore = useCounterStore();
 const productsStore = useProductsStore();
 
@@ -74,6 +89,20 @@ const removeFavorites = (id) => {
 };
 
 </script>
+<script>
+import { defineComponent } from 'vue'
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+export default defineComponent({
+    name: 'ExamplePagination',
+    components: {
+        Pagination,
+        Carousel,
+        Slide,
+    },
+})
+</script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
