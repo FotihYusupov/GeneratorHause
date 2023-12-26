@@ -98,6 +98,22 @@
     }
 }
 
+.basked-wrapper {
+    margin: 7% 0;
+    h2 {
+        margin: 0;
+    }
+    .basked-wrapper__link {
+        display: block;
+        width: 10%;
+        padding: 1% 2%;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #000000;
+        background-color: $primary-yellow;
+    }
+}
+
 .orders-wrapper {
     position: -webkit-sticky;
     position: sticky;
