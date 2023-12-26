@@ -170,6 +170,17 @@
                     </div>
                 </div>
             </div>
+            <div class="popular_brands">
+                <div class="title-wrapper">
+                    <h2>Popular brands</h2>
+                    <span class="title-wrapper__line"></span>
+                </div>
+                <div class="swipers_wrapper">
+                    <RightSwiper/>
+                    <LeftSwiper/>
+                    <RightSwiper/>
+                </div>
+            </div>
             <div class="title-wrapper">
                 <h2>Newest Products</h2>
                 <span class="title-wrapper__line"></span>

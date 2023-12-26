@@ -5,7 +5,7 @@
         <section class="header">
           <div class="header__wrapper">
             <nuxt-link to="/">
-              <img src="~/public/Logo.png" alt="" />
+              <img width="60" src="~/public/logotip.png" alt="" />
             </nuxt-link>
             <div class="header__category-btn-wrapper" id="btnWrapper">
               <button

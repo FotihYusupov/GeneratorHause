@@ -3,7 +3,7 @@
         <Carousel class="card-carousel" v-bind="settings">
             <Slide class="custom-slide" v-for="slide in img" :key="slide">
                 <div class="carousel__item">
-                    <img :src="slide" alt="">
+                    <img :src="slide" alt="product img">
                 </div>
             </Slide>
 

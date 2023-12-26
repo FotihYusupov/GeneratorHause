@@ -588,6 +588,21 @@
         }
       }
     }
+    .popular_brands{
+      margin-bottom: 5%;
+      .swipers_wrapper{
+        background-color: $primary-yellow;
+        padding: 5% 0;
+        border-radius: 16px;
+        .brand_swiper{
+          margin-bottom: 5%;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      
+    }
     .title-wrapper {
       padding-bottom: 15px;
       &:nth-child(2) {
