@@ -44,11 +44,10 @@
                 <div class="categories_container">
                     <div class="categories_item">
                         <p class="category_name">
-                            Gasoline
-                            generator
+                            Gazvi generator
                         </p>
                         <img class="category_img" src="/public/gasoline.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657af00c7633bfd3cdb0276b" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -66,7 +65,7 @@
                             generator
                         </p>
                         <img class="category_img" src="/public/invertor.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657aefcd7633bfd3cdb02768" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -80,11 +79,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Diesel
-                            generator
+                            Dizelni generator
                         </p>
                         <img class="category_img" src="/public/dizel.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657aeff97633bfd3cdb0276a" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -98,10 +96,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Stabilizer
+                            Motokultivator
                         </p>
                         <img class="category_img" src="/public/stabilizer.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657aef9a7633bfd3cdb02766" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -113,14 +111,12 @@
                             </svg>
                         </NuxtLink>
                     </div>
-
                     <div class="categories_item">
                         <p class="category_name">
-                            Karcher
-                            stabilizer
+                            Karcher stabilizator
                         </p>
                         <img class="category_img" src="/public/karcher.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657aef6f7633bfd3cdb02765" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -134,11 +130,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Concrete
-                            geshalka
+                            Betona meshalka
                         </p>
                         <img class="category_img" src="/public/geshalka.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657aefb47633bfd3cdb02767" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -152,11 +147,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Gaseous
-                            generator
+                            Benzinli generator
                         </p>
                         <img class="category_img" src="/public/gasgenerator.png" alt="">
-                        <NuxtLink class="category_link">
+                        <NuxtLink to="category/657aefe47633bfd3cdb02769" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -193,10 +187,7 @@
                     :inCart="product.inCart" :inFavorites="product.inFavorites" />
             </ul>
         </div>
-
         <div>
-
-
             <div class="container title-wrapper">
                 <h2>Best sellers</h2>
                 <span class="title-wrapper__line"></span>
@@ -204,11 +195,37 @@
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
-                        <card v-for="product in productsStore.data.products.reverse().slice(0, 4)" :id="product._id"
+                        <card v-for="product in productsStore.data.products.reverse().slice(start, end)" :id="product._id"
                             v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
                             :description="product.product_desc" :views="product.views" :price="product.product_price"
                             :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
+                    <div class="card-btns-wrapper">
+                        <button class="pagination-btn" @click="removeCount" :disabled="start === 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <g clip-path="url(#clip0_52_1446)">
+                                    <path d="M24 48C37.234 48 48 37.234 48 24C48 10.766 37.234 0 24 0C10.766 0 0 10.766 0 24C0 37.234 10.766 48 24 48ZM16.586 22.586L26.586 12.586C26.976 12.196 27.488 12 28 12C28.512 12 29.0241 12.196 29.4141 12.586C30.196 13.368 30.196 14.632 29.4141 15.414L20.828 24L29.414 32.586C30.1959 33.368 30.1959 34.632 29.414 35.414C28.632 36.1959 27.368 36.1959 26.586 35.414L16.586 25.4139C15.804 24.632 15.804 23.368 16.586 22.586Z" fill="#FFD60A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_52_1446">
+                                    <rect width="48" height="48" fill="white" transform="matrix(-1 0 0 -1 48 48)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <button class="pagination-btn" @click="addCount" :disabled="end === 8">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <g clip-path="url(#clip0_52_1398)">
+                                    <path d="M24 0C10.766 0 0 10.766 0 24C0 37.234 10.766 48 24 48C37.234 48 48 37.234 48 24C48 10.766 37.234 0 24 0ZM31.414 25.414L21.414 35.414C21.024 35.804 20.512 36 20 36C19.488 36 18.9759 35.804 18.5859 35.414C17.804 34.632 17.804 33.368 18.5859 32.586L27.172 24L18.586 15.414C17.8041 14.632 17.8041 13.368 18.586 12.586C19.368 11.8041 20.632 11.8041 21.414 12.586L31.414 22.5861C32.196 23.368 32.196 24.632 31.414 25.414Z" fill="#FFD60A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_52_1398">
+                                    <rect width="48" height="48" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="container title-wrapper">
@@ -230,13 +247,13 @@
             <div class="container title-wrapper">
                 <h2>Invertor Generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/657af00c7633bfd3cdb0276b">See all</NuxtLink>
+                <NuxtLink class="SeeAll" to="category/657aefcd7633bfd3cdb02768">See all</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aefcd7633bfd3cdb02768')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aefcd7633bfd3cdb02768').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -252,7 +269,7 @@
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aef6f7633bfd3cdb02765')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aef6f7633bfd3cdb02765').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -268,7 +285,7 @@
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aef9a7633bfd3cdb02766')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aef9a7633bfd3cdb02766').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -284,7 +301,7 @@
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aefb47633bfd3cdb02767')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aefb47633bfd3cdb02767').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -300,7 +317,7 @@
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aefe47633bfd3cdb02769')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aefe47633bfd3cdb02769').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -316,7 +333,7 @@
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aeff97633bfd3cdb0276a')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '657aeff97633bfd3cdb0276a').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -328,16 +345,30 @@
 </template>
 
 <script setup>
-import { useCategoriesStore } from '~/store/categories';
-import { useProductsStore } from '~/store/products';
+    import { useCategoriesStore } from '~/store/categories';
+    import { useProductsStore } from '~/store/products';
 
-import card from '../components/cardComponent.vue'
+    import card from '../components/cardComponent.vue'
 
-const categoriesStore = useCategoriesStore();
-categoriesStore.getCategories()
+    const categoriesStore = useCategoriesStore();
+    categoriesStore.getCategories()
 
-const productsStore = useProductsStore();
-productsStore.getProducts()
+    const productsStore = useProductsStore();
+    productsStore.getProducts()
+
+    const start = ref(0)
+    const end = ref(4)
+
+    const addCount = () => {
+        start.value = start.value + 1
+        end.value = end.value + 1
+    }
+
+    const removeCount = () => {
+        start.value = start.value - 1
+        end.value = end.value - 1
+    }
+
 </script>
 
 <style></style>

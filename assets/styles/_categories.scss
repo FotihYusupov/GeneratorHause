@@ -1,0 +1,16 @@
+.categories-list {
+    margin-top: 200px;
+    display: grid;
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    // margin-top: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    gap: 2%;
+}
+
+.show-btn {
+    margin-top: 15%;
+}

@@ -27,6 +27,7 @@
 }
 .item {
     display: grid;
+    position: relative;
     place-items: center;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0px;
@@ -73,17 +74,25 @@
     }
     .item__price-wrapper {
         display: flex;
-        flex-direction: column-reverse;
-        place-self: flex-end;
+        flex-direction: column;
+        justify-content: center;
         height: 100%;
+        width: 100%;
     }
     .item__price {
-        margin-top: 30px;
+        margin: 0;
+        place-self: flex-end;
+        place-items: flex-end;
     }
     .item__remove-btn {
+        gap: 8%;
+        position: absolute;
+        width: 80px;
+        top: 10%;
+        left: 90%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: flex-end;
         padding: 0;
         margin: 0;
         margin-bottom: auto;
@@ -92,7 +101,6 @@
         cursor: pointer;
         .item__remove-txt {
             margin: 0;
-            margin-left: 5px;
             opacity: 0.5;
         }
     }
