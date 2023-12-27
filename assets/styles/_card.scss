@@ -42,6 +42,9 @@
     .carousel__pagination {
       display: flex;
       justify-content: center;
+      align-items: center;
+      place-content: center;
+      place-items: center;
       gap: 10px;
       margin: 25px 0;
       margin-left: -10%;
