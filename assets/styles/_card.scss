@@ -30,7 +30,7 @@
   }
   .card-carousel {
     .carousel__slide {
-      width:  100%;
+      width: 100%;
       min-height: 180px;
       max-height: 180px;
       object-fit: contain;
@@ -77,18 +77,35 @@
   .card__title {
     margin: 0;
     margin-bottom: 12px;
-    font-size: 20px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    max-height: 3em;
   }
   .card__desc {
     margin: 0;
-    margin-bottom: 8px;
-    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 7em;
     color: #878787;
   }
   .card__views {
+    display: block;
     margin: 0;
+    margin-top: 10px;
     font-size: 12px;
     color: #878787;
+  }
+  .card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .card__favorites-btn {
     position: absolute;
@@ -116,7 +133,7 @@
     }
   }
   .card__basked-btn {
-    position: absolute;
+    // position: absolute;
     width: fit-content;
     bottom: 24px;
     right: 24px;
@@ -161,7 +178,6 @@
       -moz-transition: all ease-in-out 0.6s;
       -ms-transition: all ease-in-out 0.6s;
       -o-transition: all ease-in-out 0.6s;
-
       p {
         transition: all ease-in-out 0.6s;
         -webkit-transition: all ease-in-out 0.6s;
