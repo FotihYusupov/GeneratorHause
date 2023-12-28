@@ -9,6 +9,7 @@
 
             <Carousel
                 id="thumbnails"
+                :dir="vertical"
                 :items-to-show="3"
                 :wrap-around="true"
                 v-model="currentSlide"

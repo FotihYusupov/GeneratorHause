@@ -2,7 +2,7 @@
     <div class="main">
         <div class="container">
             <div class="hero_swiper">
-                <HeroSwiper />
+                <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
             <div class="sales_wrapper">
                 <div class="sale_items">
@@ -368,7 +368,6 @@
         start.value = start.value - 1
         end.value = end.value - 1
     }
-
 </script>
 
 <style></style>
