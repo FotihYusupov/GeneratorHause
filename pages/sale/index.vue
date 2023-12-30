@@ -24,8 +24,6 @@
 
     const productsStore = useProductsStore();
     productsStore.getProducts()
-
-    productsStore.data.products.filter(e => e.offer === true)
 </script>
 
 <style lang="scss" scoped>
