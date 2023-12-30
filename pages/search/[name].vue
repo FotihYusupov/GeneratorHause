@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <ul class="cards-list">
+        <ul class="cards-list list-category">
             <card v-for="product in data" 
                 :key="product._id"
                 :id="product._id"

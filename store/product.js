@@ -15,8 +15,15 @@ export const useProductStore = defineStore({
       try {
         this.data.product = []
         this.data.loading = true;
+        const basked = JSON.parse(localStorage.getItem('basked'));
+        const favorites = JSON.parse(localStorage.getItem('favorites'));
         const response = await axios.get(`https://gh-server-83lb.onrender.com/api/product/${id}`);
         if(response.status == 200) {
+          response.data.inCart = basked.some(e => e._id == response.data._id);
+          if(response.data.inCart) {
+            response.data.count = basked.find(e => e._id == response.data._id).count;
+          }
+          response.data.inFavorites = favorites.some(e => e._id == response.data._id);
           this.data.product = response.data;
           this.data.loading = false;
         } else {
