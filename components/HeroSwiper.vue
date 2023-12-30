@@ -1,13 +1,16 @@
 <template>
-    <swiper :spaceBetween="10" :direction="'vertical'" :pagination="{
+    <swiper :spaceBetween="10" :direction="'vertical'" :speed="3000" :pagination="{
         clickable: true,
-    }" :modules="modules" class="hero-swiper">
-        <swiper-slide v-for="product in data.slice(0, 4)" v-bind:key="product">
+    }" :autoplay="{
+    delay: 2000,
+    disableOnInteraction: false
+}" :modules="modules" class="hero-swiper">
+        <swiper-slide v-for="hero in data.reverse().slice(0, 4)" v-bind:key="hero">
             <div class="slide_content">
-                <div  class="slide_content_text">
-                    <span>{{ product.category.category_name }}</span>
-                    <span>{{  product.brand.brand_name }}</span>
-                    <span>{{ product.product_title }}</span>
+                <div class="slide_content_text">
+                    <span>{{ hero.category.category_name }}</span>
+                    <span>{{ hero.brand.brand_name }}</span>
+                    <span>{{ hero.product_title }}</span>
                     <a class="sale_item_link" href="/sale">
                         <span>view more</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 12" fill="none">
@@ -22,45 +25,26 @@
                 </div>
                 <div class="slide_content_details">
                     <span>
-                        {{ DiscCalc(product.product_price, product.new_price) }}%
+                        {{ DiscCalc(hero.product_price, hero.new_price) }}%
                     </span>
-                    <img :src=" product.product_img[0]" alt="">
-                    <span>{{ product.new_price }} so'm</span>
+                    <img :src="hero.product_img[0]" alt="">
+                    <span>{{ hero.new_price }} so'm</span>
                 </div>
             </div>
         </swiper-slide>
-
-
     </swiper>
 </template>
-<script>
-import DiscCalc from '../utils/disccalc' 
-
-// Import Swiper Vue.js components
+<script setup>
+import DiscCalc from '../utils/disccalc'
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
 import 'swiper/css';
-
 import 'swiper/css/pagination';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
-export default {
-    components: {
-        Swiper,
-        SwiperSlide,
-    },
-    setup() {
-        return {
-            modules: [Pagination],
-        };
-    },
-};
-</script>
-<script setup>
+let modules = ref([Autoplay, Pagination]);
+
 import { defineProps } from 'vue';
-    const { data} = defineProps(['data']);
+const { data } = defineProps(['data']);
 </script>
   
