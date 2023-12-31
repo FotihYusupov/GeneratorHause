@@ -1,5 +1,5 @@
 <template>
-    <swiper :spaceBetween="30" :speed="3000" :slidesPerView="6.5" :centeredSlides="true" :loop="true" :autoplay="{
+    <swiper :allowTouchMove="false" :spaceBetween="30" :speed="3000" :slidesPerView="6.5" :centeredSlides="true" :loop="true" :autoplay="{
         delay: 0,
         disableOnInteraction: false,
     }" :modules="modules" class="brand_swiper">

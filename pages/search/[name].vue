@@ -1,17 +1,11 @@
 <template>
     <div class="container">
-        <ul class="cards-list list-category">
-            <card v-for="product in data" 
-                :key="product._id"
-                :id="product._id"
-                :title="product.product_title"
-                :img="product.product_img[0]"
-                :description="product.product_desc"
-                :views="product.views"
-                :price="product.product_price"
-                :inCart="product.inCart"
-                :inFavorites="product.inFavorites"
-            />
+        <h1>Search</h1>
+        <ul class="cards-list">
+            <card v-for="product in data" :id="product._id"
+                v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
+                :description="product.product_desc" :views="product.views" :price="product.product_price"
+                :inCart="product.inCart" :inFavorites="product.inFavorites" />
         </ul>
     </div>
 </template>

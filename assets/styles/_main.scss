@@ -79,35 +79,33 @@
     }
 
     .header__search-wrapper {
+      position: relative;
       display: flex;
       align-items: center;
       width: 60%;
-    }
-
-    .header__search-wrapper {
-      position: relative;
       border-radius: 12px;
       border: 3px $primary-yellow solid;
-    }
-
-    .header__search-input {
-      padding: 11px 16px;
-      border: 0;
-      width: 100%;
-      border-radius: 12px;
-      &:focus {
-        outline: none;
+      .header__search-input {
+        padding: 11px 16px;
+        border: 0;
+        width: 100%;
+        border-radius: 12px;
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      .header__search-btn {
+        display: flex;
+        align-items: center;
+        padding: 10px 26px;
+        border: 0;
+        background-color: $primary-yellow;
+        cursor: pointer;
       }
     }
 
-    .header__search-btn {
-      display: flex;
-      align-items: center;
-      padding: 10px 26px;
-      border: 0;
-      background-color: $primary-yellow;
-      cursor: pointer;
-    }
+    
 
     .header__search-text {
       margin: 0;
@@ -141,25 +139,27 @@
           justify-content: space-between;
           padding: 2%;
           img {
-            width: 15%;
-            height: max-content;
-            object-fit: cover;
+            width: 150px;
+            height: 70px;
+            object-fit: contain;
           }
           div {
+            width: 50%;
             h3 {
               margin: 0;
               margin-bottom: 5px;
+              width: fit-content;
             }
             p {
               margin: 0;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
             }
           }
         }
       }
-    }
-
-    .header__storage-wrapper {
-      position: relative;
     }
 
     .header__storage {
@@ -178,6 +178,10 @@
       }
     }
 
+    .header__basked-wrapper {
+      position: relative;
+    }
+
     .header__basked-wrapper:hover {
       .header__store-products {
         display: block;
@@ -189,9 +193,9 @@
       position: absolute;
       padding: 8%;
       margin: 0;
-      width: 300%;
+      width: 600%;
       top: 100%;
-      left: -210%;
+      left: -520%;
       z-index: 100;
       border-radius: 10px;
       background-color: #ffffff;
@@ -205,7 +209,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2%;
+      padding: 1%;
       margin-bottom: 2%;
       border-radius: 10px;
       background-color: #f5f5f5;
@@ -405,11 +409,21 @@
       display: flex;
       flex-wrap: wrap;
     }
+    
+  }
+  .bottom_footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #b3b3b351;;
+    margin-top: 2%;
+    padding: 1% 0;
   }
 
   .main {
     .hero_swiper {
       width: 100%;
+      margin-top: 2%;
       height: 70vh;
       position: relative;
       border-radius: 16px;
@@ -421,6 +435,7 @@
         border-radius: 16px;
       -webkit-border-radius: 16px;
       -moz-border-radius: 16px;
+      position: relative;
       -ms-border-radius: 16px;
       -o-border-radius: 16px;
         height: 100%;
@@ -546,23 +561,25 @@
         }
         .swiper-slide {
           background-color: #f5f5f5;
+          margin-bottom: 10px;
         }
       }
     }
     .sales_wrapper {
       position: relative;
+      margin-top: 2%;
       display: flex;
       justify-content: center;
-      margin-bottom: 5%;
+      margin-bottom: 2%;
       .sale_items {
+        border: 1px solid #00081417;
         bottom: 0;
         z-index: 99;
         border-radius: 16px;
         display: grid;
         place-items: center;
-        place-content: center;
+        place-content: space-between;
         grid-template-columns: repeat(4, 1fr);
-        gap: 45px;
         background-color: #ffffff;
         -webkit-border-radius: 16px;
         -moz-border-radius: 16px;
@@ -574,6 +591,7 @@
         .sale_item {
           display: flex;
           align-items: center;
+          gap: 10px;
           transition: border 0.3s ease-in-out;
           border-bottom: transparent solid 5px;
           -webkit-transition: border 0.3s ease-in-out;
@@ -584,9 +602,10 @@
             border-bottom: #ffd60a solid 5px;
           }
           img {
-            width: 40%;
-            height: 100%;
-            height: auto;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+
           }
           .sale_item_details {
             font-family: "DM Sans 9pt";

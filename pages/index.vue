@@ -5,36 +5,7 @@
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
             <div class="sales_wrapper">
-                <div class="sale_items">
-                    <div class="sale_item">
-                        <img src="/dizel.png" alt="">
-                        <div class="sale_item_details">
-                            <p class="sale_item_name">Gasonline generator</p>
-                            <p class="sale_discount">Discount 30%</p>
-                        </div>
-                    </div>
-                    <div class="sale_item">
-                        <img src="/dizel.png" alt="">
-                        <div class="sale_item_details">
-                            <p class="sale_item_name">Gasonline generator</p>
-                            <p class="sale_discount">Discount 30%</p>
-                        </div>
-                    </div>
-                    <div class="sale_item">
-                        <img src="/dizel.png" alt="">
-                        <div class="sale_item_details">
-                            <p class="sale_item_name">Gasonline generator</p>
-                            <p class="sale_discount">Discount 30%</p>
-                        </div>
-                    </div>
-                    <div class="sale_item">
-                        <img src="/dizel.png" alt="">
-                        <div class="sale_item_details">
-                            <p class="sale_item_name">Gasonline generator</p>
-                            <p class="sale_discount">Discount 30%</p>
-                        </div>
-                    </div>
-                </div>
+               <SaleProducts :sale="productsStore.data.products.filter(product => product.offer === true)"/> 
             </div>
             <div class="categories_wrapper">
                 <div class="title-wrapper">

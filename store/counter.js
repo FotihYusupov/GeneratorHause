@@ -1,6 +1,7 @@
 import {
     defineStore
 } from "pinia";
+import { useProductsStore } from "./products";
 
 export const useCounterStore = defineStore({
     id: "counter",
@@ -11,11 +12,13 @@ export const useCounterStore = defineStore({
         },
     }),
     actions: {
-        getCounter() {
+        async getCounter() {
             try {
+                const productsStore = useProductsStore()
                 if (typeof localStorage !== "undefined") {
-                    const basked = JSON.parse(localStorage.getItem("basked"));
-                    const favorites = JSON.parse(localStorage.getItem("favorites"));
+                    await productsStore.getProducts()
+                    const basked = productsStore.data.products.filter(e => e.inCart === true);
+                    const favorites = productsStore.data.products.filter(e => e.inFavorites === true);
                     if (basked && favorites) {
                         this.data.basked = basked.length;
                         this.data.favorites = favorites.length;

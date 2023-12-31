@@ -64,7 +64,7 @@
                         <p>Total amount:</p>
                         <p><b>{{ totalSum }}</b> So'm</p>
                     </span>
-                    <button class="order-btn">Buy Now</button>
+                    <button @click="openModal = true" class="order-btn">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -287,6 +287,29 @@
             />
         </ul>
     </div>
+    <div v-if="openModal" class="modal">
+        <div class="modal-content">
+            <svg @click="openModal = false" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <g clip-path="url(#clip0_933_6149)">
+                    <path d="M27.3137 4.68628C24.2917 1.66431 20.2737 0 16 0C11.7263 0 7.70825 1.66431 4.68628 4.68628C1.66431 7.70825 0 11.7263 0 16C0 20.2739 1.66431 24.2917 4.68628 27.3137C7.70825 30.3357 11.7263 32 16 32C20.2737 32 24.2917 30.3357 27.3137 27.3137C30.3357 24.2917 32 20.2739 32 16C32 11.7263 30.3357 7.70825 27.3137 4.68628ZM22.9204 20.7104C23.5305 21.3208 23.5305 22.3101 22.9204 22.9202C22.6152 23.2253 22.2153 23.3779 21.8154 23.3779C21.4155 23.3779 21.0156 23.2253 20.7104 22.9202L16 18.2097L11.2896 22.9204C10.9844 23.2253 10.5845 23.3779 10.1846 23.3779C9.78467 23.3779 9.38477 23.2253 9.07959 22.9204C8.46948 22.3101 8.46948 21.3208 9.07959 20.7107L13.7903 16L9.07959 11.2896C8.46948 10.6792 8.46948 9.68994 9.07959 9.07983C9.68994 8.46948 10.6792 8.46948 11.2893 9.07983L16 13.7903L20.7104 9.07983C21.3208 8.46973 22.3101 8.46948 22.9202 9.07983C23.5305 9.68994 23.5305 10.6792 22.9202 11.2896L18.2097 16L22.9204 20.7104Z" fill="#FFD60A"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_933_6149">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <form @submit="sendOrder">
+                <label for="FullName">Full Name</label>
+                <input type="text" id="FullName" placeholder="Enter full name" required>
+                <label for="PhoneNumber">Phone Number</label>
+                <input type="text" id="PhoneNumber" pattern="\+998 \(?[1-9]{2}\)? [1-9]{3} [1-9]{2} [1-9]{2}" placeholder="+998 (  ) " required>
+                <label for="message">Your message</label>
+                <textarea type="text" id="message" placeholder="Enter your message" required></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script setup>
@@ -294,12 +317,17 @@
     import { useProductsStore } from '~/store/products'
     import card from '~/components/cardComponent.vue'
     import { addCount, removeCount } from '~/utils/countBasked';
+    import axios from 'axios';
+
     const counterStore = useCounterStore()
     const productsStore = useProductsStore()
 
     productsStore.getProducts()
     const basked = ref([])
     const totalSum = ref(0)
+
+    const openModal = ref(false)
+
     onMounted(async() => {
         basked.value = await JSON.parse(localStorage.getItem('basked'))
         totalSum.value = calculateTotalCost(basked.value);
@@ -354,14 +382,44 @@
 
     function calculateTotalCost(products) {
         let totalCost = 0;
-
         for (const product of products) {
             const price = product.new_price !== 0 ? product.new_price : product.product_price;
-
             totalCost += price * product.count;
         }
-
         return totalCost;
+    }
+
+    const sendOrder = async (e) => {
+        e.preventDefault();
+        try {
+            const botToken = '6476247885:AAEE11kNxED35D4cxzREmwITcjo6yH-zF3Q';
+            const channelUsername = '-1002059364860,';
+
+            const text = `
+                User: ${FullName.value},\nPhone: ${PhoneNumber.value},\nMessage: ${message.value}\nOrders:\n\n${
+                    basked.value.map(product => {
+                        return`Product: ${product.product_title},\nCount: ${product.count},\nPrice: ${product.new_price!== 0 ? product.new_price : product.product_price} So'm,\n`
+                    }).join('\n')
+                }\nTotal: ${calculateTotalCost(basked.value)} So'm
+            `
+
+            const response = await axios.post(
+                `https://api.telegram.org/bot${botToken}/sendMessage`,
+                {
+                    chat_id: channelUsername,
+                    text: text,
+                }
+                );
+
+                if(response.status == 200) {
+                    await navigateTo('/')
+                    console.log('error', response.status);
+                } else {
+                    alert('Error')
+                }
+        } catch (err) {
+            console.log("Error", err);
+        }
     }
 
 </script>
