@@ -163,17 +163,50 @@
 
     const count = (e) => {
         const target = e.target
+        const basked = JSON.parse(localStorage.getItem('basked')) || [];
         if(target.id === 'addCount') {
             if(findProduct.value.count) {
+                if(basked.some(product => product._id == id)) {
+                    basked.forEach(product => {
+                        if(product._id == id) {
+                            product.count += 1
+                        }
+                    })
+                    localStorage.setItem('basked', JSON.stringify(basked));
+                }
                 findProduct.value.count += 1
             } else {
                 findProduct.value.count = 2
+                if(basked.some(product => product._id == id)) {
+                    basked.forEach(product => {
+                        if(product._id == id) {
+                            product.count = 2
+                        }
+                    })
+                    localStorage.setItem('basked', JSON.stringify(basked));
+                }
             }
         } else if (target.id === 'removeCount') {
             if(findProduct.value.count) {
+                if(basked.some(product => product._id == id)) {
+                    basked.forEach(product => {
+                        if(product._id == id) {
+                            product.count -= 1
+                        }
+                    })
+                    localStorage.setItem('basked', JSON.stringify(basked));
+                }
                 findProduct.value.count -= 1
             } else {
                 findProduct.value.count = 1
+                if(basked.some(product => product._id == id)) {
+                    basked.forEach(product => {
+                        if(product._id == id) {
+                            product.count = 1
+                        }
+                    })
+                    localStorage.setItem('basked', JSON.stringify(basked));
+                }
             }
         }
     }

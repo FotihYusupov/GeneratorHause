@@ -3,7 +3,7 @@
       <div class="filter">
         <div class="custom-select" id="customSelect">
           <span @click="openSelect" class="custom-select__title-wrapper">
-            <p class="custom-select__title">Select Brand</p>
+            <p class="custom-select__title">Brandni Tanlang</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_775_9145)">
                 <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="price-input__title">
-          <h4>Price</h4>
+          <h4>Narxi</h4>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
             <g clip-path="url(#clip0_775_9145)">
               <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
@@ -39,6 +39,24 @@
         <div class="price-inputs">
           <input type="text" @input="filterByPrice" id="startPrice" placeholder="to">
           <input type="text" @input="filterByPrice" id="endPrice" placeholder="from">
+        </div>
+        <div v-if="openFilterKw" class="price-input__title">
+          <h4>Maksimal quvvat (Kw)</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <g clip-path="url(#clip0_775_9145)">
+              <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_775_9145">
+                <rect width="14" height="14" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <hr v-if="openFilterKw">
+        <div v-if="openFilterKw" class="price-inputs">
+          <input type="text" @input="filterByKw" id="startKw" placeholder="to">
+          <input type="text" @input="filterByKw" id="endKw" placeholder="from">
         </div>
       </div>
       <div class="categories-wrapper">
@@ -274,9 +292,18 @@
     const { id } = useRoute().params;
     const filteredProducts = ref([])
     const productsStore = useProductsStore();
+
+    const openFilterKw = ref(false)
+
     const fetchData = async () => {
         await productsStore.getProducts();
         filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
+        filteredProducts.value.forEach(e => {
+          if(e.information.some(inf => inf.key == 'Kw')) {
+            console.log('ifga krdm');
+            openFilterKw.value = true;
+          }
+        })
     };
     fetchData()
     
@@ -344,6 +371,26 @@
         return [];
       });
     }
+
+    const filterByKw = () => {
+      const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+        const kwInformation = product.information.find(inf => inf.key === 'Kw');
+
+        if (kwInformation) {
+          const kwValue = Number(kwInformation.value);
+          if (startKw.value !== '' && endKw.value !== '') {
+            return kwValue >= startKw.value && kwValue <= endKw.value;
+          } else if (startKw.value !== '') {
+            return kwValue >= startKw.value;
+          } else if (endKw.value !== '') {
+            return kwValue <= endKw.value;
+          }
+        }
+        return [];
+      });
+      filteredProducts.value = filter
+    };
+
 
     const sortBy = (e) => {
       const target = e.target
