@@ -263,6 +263,7 @@
     }
   }
   .bottom-header {
+    
     margin: 1% 0 0 0;
     display: flex;
     width: 100%;
@@ -418,6 +419,21 @@
     border-top: 1px solid #b3b3b351;;
     margin-top: 2%;
     padding: 1% 0;
+    .hypernova_logo{
+      background-image: url('../../public/Logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 44px;
+      width: 100px;
+      &:hover{
+        background-image: url('../../public/hypernovagif.gif');
+        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+        cursor: pointer;
+      }
+    }
   }
 
   .main {
