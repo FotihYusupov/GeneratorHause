@@ -5,7 +5,7 @@
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
             <div class="sales_wrapper">
-               <SaleProducts :sale="productsStore.data.products.filter(product => product.offer === true)"/> 
+                <SaleProducts :sale="productsStore.data.products.filter(product => product.offer === true)"/> 
             </div>
             <div class="categories_wrapper">
                 <div class="title-wrapper">
@@ -17,7 +17,7 @@
                         <p class="category_name">
                             Gazvi generator
                         </p>
-                        <img class="category_img" src="/public/gasoline.png" alt="">
+                        <img class="category_img" src="/gasoline.png" alt="">
                         <NuxtLink to="category/657af00c7633bfd3cdb0276b" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -35,7 +35,7 @@
                             Inventor
                             generator
                         </p>
-                        <img class="category_img" src="/public/invertor.png" alt="">
+                        <img class="category_img" src="/invertor.png" alt="">
                         <NuxtLink to="category/657aefcd7633bfd3cdb02768" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -52,7 +52,7 @@
                         <p class="category_name">
                             Dizelni generator
                         </p>
-                        <img class="category_img" src="/public/dizel.png" alt="">
+                        <img class="category_img" src="/dizel.png" alt="">
                         <NuxtLink to="category/657aeff97633bfd3cdb0276a" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -69,7 +69,7 @@
                         <p class="category_name">
                             Motokultivator
                         </p>
-                        <img class="category_img" src="/public/stabilizer.png" alt="">
+                        <img class="category_img" src="/stabilizer.png" alt="">
                         <NuxtLink to="category/657aef9a7633bfd3cdb02766" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -86,7 +86,7 @@
                         <p class="category_name">
                             Karcher stabilizator
                         </p>
-                        <img class="category_img" src="/public/karcher.png" alt="">
+                        <img class="category_img" src="/karcher.png" alt="">
                         <NuxtLink to="category/657aef6f7633bfd3cdb02765" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -103,7 +103,7 @@
                         <p class="category_name">
                             Betona meshalka
                         </p>
-                        <img class="category_img" src="/public/geshalka.png" alt="">
+                        <img class="category_img" src="/geshalka.png" alt="">
                         <NuxtLink to="category/657aefb47633bfd3cdb02767" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -120,7 +120,7 @@
                         <p class="category_name">
                             Benzinli generator
                         </p>
-                        <img class="category_img" src="/public/gasgenerator.png" alt="">
+                        <img class="category_img" src="/gasgenerator.png" alt="">
                         <NuxtLink to="category/657aefe47633bfd3cdb02769" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -322,10 +322,12 @@
     import card from '../components/cardComponent.vue'
 
     const categoriesStore = useCategoriesStore();
-    categoriesStore.getCategories()
-
     const productsStore = useProductsStore();
-    productsStore.getProducts()
+    
+    onMounted(async () => {
+        await categoriesStore.getCategories();
+        await productsStore.getProducts();
+    });
 
     const start = ref(0)
     const end = ref(4)

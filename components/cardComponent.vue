@@ -1,6 +1,6 @@
 <template>
     <li class="card" :id="id" :key="id">
-        <Carousel class="card-carousel" v-bind="settings">
+        <Carousel class="card-carousel" v-bind:key="id">
             <Slide class="custom-slide" v-for="slide in img" :key="slide">
                 <div class="carousel__item">
                     <img :src="slide" alt="product img">
@@ -75,7 +75,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useCounterStore } from '~/store/counter';
 import { useProductsStore } from '~/store/products';
 import addBasked from '~/utils/backed';

@@ -3,7 +3,7 @@
       <div class="filter">
         <div class="custom-select" id="customSelect">
           <span @click="openSelect" class="custom-select__title-wrapper">
-            <p class="custom-select__title">Select Brand</p>
+            <p class="custom-select__title">Brandni Tanlang</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_775_9145)">
                 <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
@@ -16,14 +16,26 @@
             </svg>
           </span>
           <div class="custom__selected-wrapper">
-            <p @click="removeSelected" class="custom__selected-brands" v-for="selected in selectedBrands" :id="selected._id">{{ selected.brand_name }}</p>
+            <span @click="removeSelected" class="custom__selected-brands" v-for="selected in selectedBrands" :id="selected._id">
+              <p class="pointer-events">{{ selected.brand_name }}</p>
+              <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <g clip-path="url(#clip0_944_7587)">
+    <path d="M11.9498 2.05025C10.6276 0.728134 8.86974 0 7 0C5.13026 0 3.37236 0.728134 2.05025 2.05025C0.728134 3.37236 0 5.13026 0 7C0 8.86984 0.728134 10.6276 2.05025 11.9498C3.37236 13.2719 5.13026 14 7 14C8.86974 14 10.6276 13.2719 11.9498 11.9498C13.2719 10.6276 14 8.86984 14 7C14 5.13026 13.2719 3.37236 11.9498 2.05025ZM10.0277 9.06082C10.2946 9.32785 10.2946 9.76065 10.0277 10.0276C9.89417 10.1611 9.71921 10.2278 9.54425 10.2278C9.36929 10.2278 9.19434 10.1611 9.06082 10.0276L7 7.96675L4.93918 10.0277C4.80566 10.1611 4.63071 10.2278 4.45575 10.2278C4.28079 10.2278 4.10583 10.1611 3.97232 10.0277C3.7054 9.76065 3.7054 9.32785 3.97232 9.06093L6.03325 7L3.97232 4.93918C3.7054 4.67215 3.7054 4.23935 3.97232 3.97243C4.23935 3.7054 4.67215 3.7054 4.93907 3.97243L7 6.03325L9.06082 3.97243C9.32785 3.70551 9.76065 3.7054 10.0276 3.97243C10.2946 4.23935 10.2946 4.67215 10.0276 4.93918L7.96675 7L10.0277 9.06082Z" fill="#AFB0B4"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_944_7587">
+      <rect width="14" height="14" fill="white"/>
+    </clipPath>
+  </defs>
+              </svg>
+            </span>
           </div>
           <div class="custom-select__list">
             <button @click="getBrand" class="custom-select__item" v-for="brand in brands" :id="brand._id" :disabled="brand.selected">{{ brand.brand_name }}</button>
           </div>
         </div>
         <div class="price-input__title">
-          <h4>Price</h4>
+          <h4>Narxi</h4>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
             <g clip-path="url(#clip0_775_9145)">
               <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
@@ -39,6 +51,42 @@
         <div class="price-inputs">
           <input type="text" @input="filterByPrice" id="startPrice" placeholder="to">
           <input type="text" @input="filterByPrice" id="endPrice" placeholder="from">
+        </div>
+        <div v-if="openFilterKw" class="price-input__title">
+          <h4>Maksimal quvvat (Kw)</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <g clip-path="url(#clip0_775_9145)">
+              <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_775_9145">
+                <rect width="14" height="14" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <hr v-if="openFilterKw">
+        <div v-if="openFilterKw" class="price-inputs">
+          <input type="text" @input="filterByKw" id="startKw" placeholder="to">
+          <input type="text" @input="filterByKw" id="endKw" placeholder="from">
+        </div>
+        <div v-if="openFilterFuel" class="price-input__title">
+          <h4>Yoqilg'i sig'imi (L)</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <g clip-path="url(#clip0_775_9145)">
+              <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_775_9145">
+                <rect width="14" height="14" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <hr v-if="openFilterFuel">
+        <div v-if="openFilterFuel" class="price-inputs">
+          <input type="text" @input="filterByFuel" id="startFuel" placeholder="to">
+          <input type="text" @input="filterByFuel" id="endFuel" placeholder="from">
         </div>
       </div>
       <div class="categories-wrapper">
@@ -274,9 +322,21 @@
     const { id } = useRoute().params;
     const filteredProducts = ref([])
     const productsStore = useProductsStore();
+
+    const openFilterKw = ref(false)
+    const openFilterFuel = ref(false)
+
     const fetchData = async () => {
         await productsStore.getProducts();
         filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
+        filteredProducts.value.forEach(e => {
+          if(e.information.some(inf => inf.key == 'Kw')) {
+            openFilterKw.value = true;
+          }
+          if(e.information.some(inf => inf.key == 'Bak')) {
+            openFilterFuel.value = true;
+          }
+        })
     };
     fetchData()
     
@@ -302,7 +362,6 @@
       productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
         selectedBrands.value.forEach(brand => {
           if(product.brand._id === brand._id) {
-            console.log(product.brand._id == brand._id);
             filtered.push(product)
           }
         })
@@ -321,7 +380,6 @@
       productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
         if(selectedBrands.value.length === 0) {
           filtered = productsStore.data.products.filter(e => e.category._id === id)
-          console.log(filtered);
         }
         selectedBrands.value.forEach(brand => {
           if(product.brand._id === brand._id) {
@@ -345,16 +403,59 @@
       });
     }
 
+    const filterByKw = () => {
+      const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+        const kwInformation = product.information.find(inf => inf.key === 'Kw');
+
+        if (kwInformation) {
+          const kwValue = Number(kwInformation.value);
+          if (startKw.value !== '' && endKw.value !== '') {
+            return kwValue >= startKw.value && kwValue <= endKw.value;
+          } else if (startKw.value !== '') {
+            return kwValue >= startKw.value;
+          } else if (endKw.value !== '') {
+            return kwValue <= endKw.value;
+          }
+        }
+        return [];
+      });
+      filteredProducts.value = filter
+    };
+
+    const filterByFuel = () => {
+      const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+        const kwInformation = product.information.find(inf => inf.key === 'Bak');
+
+        if (kwInformation) {
+          let result = kwInformation.value.slice(0, -1);
+          result = parseFloat(result);
+          if (startFuel.value !== '' && endFuel.value !== '') {
+            return result >= startFuel.value && result <= endFuel.value;
+          } else if (startFuel.value !== '') {
+            return result >= startFuel.value;
+          } else if (endFuel.value !== '') {
+            return result <= endFuel.value;
+          }
+        }
+        return [];
+      });
+      filteredProducts.value = filter
+    };
+
     const sortBy = (e) => {
       const target = e.target
       if(target.id === 'expensive') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => a.product_price - b.product_price)
+        sortByWrapper.classList.remove('sort-by-list--open')
       } else if (target.id === 'cheaper') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => b.product_price - a.product_price)
+        sortByWrapper.classList.remove('sort-by-list--open')
       } else if (target.id === 'viewsLow') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => a.views - b.views)
+        sortByWrapper.classList.remove('sort-by-list--open')
       } else if (target.id === 'viewsHigh') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => b.views - a.views)
+        sortByWrapper.classList.remove('sort-by-list--open')
       }
     }
 

@@ -10,7 +10,6 @@
     </div>
 </template>
 <script setup>
-import { defineProps } from 'vue';
 import DiscCalc from '~/utils/disccalc';
 const { sale } = defineProps(['sale']);
 </script>

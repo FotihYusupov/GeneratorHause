@@ -44,7 +44,6 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 let modules = ref([Autoplay, Pagination]);
 
-import { defineProps } from 'vue';
 const { data } = defineProps(['data']);
 </script>
   

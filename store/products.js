@@ -17,8 +17,14 @@ export const useProductsStore = defineStore({
         const response = await axios.get('https://gh-server-83lb.onrender.com/api/products');
         if (response.status === 200) {
           if (typeof localStorage !== 'undefined') {
-            const basked = JSON.parse(localStorage.getItem('basked'));
-            const favorites = JSON.parse(localStorage.getItem('favorites'));
+            let basked = JSON.parse(localStorage.getItem('basked'));
+            let favorites = JSON.parse(localStorage.getItem('favorites'));
+            if(!basked || !favorites) {
+              localStorage.setItem('favorites', JSON.stringify([]));
+              localStorage.setItem('basked', JSON.stringify([]));
+              basked = []
+              favorites = []
+            }
             response.data.forEach((product) => {
               const cartItem = basked.find((item) => item._id === product._id);
               product.inCart = !!cartItem;
@@ -32,19 +38,23 @@ export const useProductsStore = defineStore({
           this.data.error = true;
         }
       } catch (err) {
-        console.log('Error: ', err);
+        console.log('Error: Store', err);
       }
     },    
     updateProductInFavorites(productId, value) {
-      const productIndex = this.data.products.findIndex(product => product._id === productId);
-      if (productIndex !== -1) {
-        this.data.products[productIndex].inFavorites = value;
+      if(this.data.products) {
+        const productIndex = this.data.products.findIndex(product => product._id === productId);
+        if (productIndex !== -1) {
+          this.data.products[productIndex].inFavorites = value;
+        }
       }
     },
     updateProductIBasked(productId, value) {
-      const productIndex = this.data.products.findIndex(product => product._id === productId);
-      if (productIndex !== -1) {
-        this.data.products[productIndex].inCart = value;
+      if(this.data.products) {
+        const productIndex = this.data.products.findIndex(product => product._id === productId);
+        if (productIndex !== -1) {
+          this.data.products[productIndex].inCart = value;
+        }
       }
     },
   },
