@@ -31,7 +31,6 @@ export const useProductsStore = defineStore({
               product.count = cartItem ? cartItem.count : 0;
               product.inFavorites = favorites.some((item) => item._id === product._id);
             });
-            console.log(response.data, 'data');
             this.data.products = response.data;
             this.data.loading = false;
           }

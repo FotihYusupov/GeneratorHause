@@ -58,6 +58,24 @@
           <input type="text" @input="filterByKw" id="startKw" placeholder="to">
           <input type="text" @input="filterByKw" id="endKw" placeholder="from">
         </div>
+        <div v-if="openFilterFuel" class="price-input__title">
+          <h4>Yoqilg'i sig'imi (L)</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <g clip-path="url(#clip0_775_9145)">
+              <path d="M13.8136 3.36819C13.5651 3.11971 13.1622 3.11967 12.9137 3.36824L7.00015 9.28188L1.08634 3.36819C0.837858 3.11971 0.434912 3.11967 0.186391 3.36824C-0.0621303 3.61676 -0.0621303 4.01966 0.186391 4.26818L6.5502 10.6318C6.66954 10.7512 6.83138 10.8182 7.00015 10.8182C7.16891 10.8182 7.3308 10.7511 7.4501 10.6318L13.8136 4.26814C14.0621 4.01966 14.0621 3.61671 13.8136 3.36819Z" fill="#AFB0B4"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_775_9145">
+                <rect width="14" height="14" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <hr v-if="openFilterFuel">
+        <div v-if="openFilterFuel" class="price-inputs">
+          <input type="text" @input="filterByFuel" id="startFuel" placeholder="to">
+          <input type="text" @input="filterByFuel" id="endFuel" placeholder="from">
+        </div>
       </div>
       <div class="categories-wrapper">
         <div v-if="filteredProducts.length > 0">
@@ -294,14 +312,17 @@
     const productsStore = useProductsStore();
 
     const openFilterKw = ref(false)
+    const openFilterFuel = ref(false)
 
     const fetchData = async () => {
         await productsStore.getProducts();
         filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
         filteredProducts.value.forEach(e => {
           if(e.information.some(inf => inf.key == 'Kw')) {
-            console.log('ifga krdm');
             openFilterKw.value = true;
+          }
+          if(e.information.some(inf => inf.key == 'Bak')) {
+            openFilterFuel.value = true;
           }
         })
     };
@@ -329,7 +350,6 @@
       productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
         selectedBrands.value.forEach(brand => {
           if(product.brand._id === brand._id) {
-            console.log(product.brand._id == brand._id);
             filtered.push(product)
           }
         })
@@ -348,7 +368,6 @@
       productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
         if(selectedBrands.value.length === 0) {
           filtered = productsStore.data.products.filter(e => e.category._id === id)
-          console.log(filtered);
         }
         selectedBrands.value.forEach(brand => {
           if(product.brand._id === brand._id) {
@@ -391,17 +410,40 @@
       filteredProducts.value = filter
     };
 
+    const filterByFuel = () => {
+      const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+        const kwInformation = product.information.find(inf => inf.key === 'Bak');
+
+        if (kwInformation) {
+          let result = kwInformation.value.slice(0, -1);
+          result = parseFloat(result);
+          if (startFuel.value !== '' && endFuel.value !== '') {
+            return result >= startFuel.value && result <= endFuel.value;
+          } else if (startFuel.value !== '') {
+            return result >= startFuel.value;
+          } else if (endFuel.value !== '') {
+            return result <= endFuel.value;
+          }
+        }
+        return [];
+      });
+      filteredProducts.value = filter
+    };
 
     const sortBy = (e) => {
       const target = e.target
       if(target.id === 'expensive') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => a.product_price - b.product_price)
+        sortByWrapper.classList.remove('sort-by-list--open')
       } else if (target.id === 'cheaper') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => b.product_price - a.product_price)
+        sortByWrapper.classList.remove('sort-by-list--open')
       } else if (target.id === 'viewsLow') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => a.views - b.views)
+        sortByWrapper.classList.remove('sort-by-list--open')
       } else if (target.id === 'viewsHigh') {
         filteredProducts.value = filteredProducts.value.sort((a, b) => b.views - a.views)
+        sortByWrapper.classList.remove('sort-by-list--open')
       }
     }
 

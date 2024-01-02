@@ -133,7 +133,6 @@
             findProduct.value.inFavorites = true
         }
         if(id === 'removeFavorites') {
-            console.log('if');
             let favoritesProducts = JSON.parse(localStorage.getItem('favorites'))
             favoritesProducts = favoritesProducts.filter(product => product._id !== findProduct.value._id);
             localStorage.setItem('favorites', JSON.stringify(favoritesProducts));
