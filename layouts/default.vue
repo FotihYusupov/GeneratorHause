@@ -5,7 +5,7 @@
         <section class="header">
           <div class="header__wrapper">
             <nuxt-link to="/">
-              <img width="60" src="~/public/logotip.png" alt="" />
+              <img width="60" src="/logotip.png" alt="" />
             </nuxt-link>
             <div class="header__category-btn-wrapper" id="btnWrapper">
               <button @click="openCategories" class="header__category-wrapper" id="openCategories">
@@ -384,13 +384,16 @@ import { useCategoriesStore } from "~/store/categories";
 import { useProductsStore } from "~/store/products";
 
 const counterStore = useCounterStore();
-counterStore.getCounter();
 
 const productsStore = useProductsStore();
-productsStore.getProducts();
 
 const categoriesStore = useCategoriesStore();
-categoriesStore.getCategories();
+
+onMounted(async () => {
+    await categoriesStore.getCategories();
+    await counterStore.getCounter();
+    await productsStore.getProducts();
+});
 
 const searchProducts = ref([]);
 

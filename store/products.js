@@ -42,15 +42,19 @@ export const useProductsStore = defineStore({
       }
     },    
     updateProductInFavorites(productId, value) {
-      const productIndex = this.data.products.findIndex(product => product._id === productId);
-      if (productIndex !== -1) {
-        this.data.products[productIndex].inFavorites = value;
+      if(this.data.products) {
+        const productIndex = this.data.products.findIndex(product => product._id === productId);
+        if (productIndex !== -1) {
+          this.data.products[productIndex].inFavorites = value;
+        }
       }
     },
     updateProductIBasked(productId, value) {
-      const productIndex = this.data.products.findIndex(product => product._id === productId);
-      if (productIndex !== -1) {
-        this.data.products[productIndex].inCart = value;
+      if(this.data.products) {
+        const productIndex = this.data.products.findIndex(product => product._id === productId);
+        if (productIndex !== -1) {
+          this.data.products[productIndex].inCart = value;
+        }
       }
     },
   },

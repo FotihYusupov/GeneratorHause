@@ -16,7 +16,19 @@
             </svg>
           </span>
           <div class="custom__selected-wrapper">
-            <p @click="removeSelected" class="custom__selected-brands" v-for="selected in selectedBrands" :id="selected._id">{{ selected.brand_name }}</p>
+            <span @click="removeSelected" class="custom__selected-brands" v-for="selected in selectedBrands" :id="selected._id">
+              <p class="pointer-events">{{ selected.brand_name }}</p>
+              <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <g clip-path="url(#clip0_944_7587)">
+    <path d="M11.9498 2.05025C10.6276 0.728134 8.86974 0 7 0C5.13026 0 3.37236 0.728134 2.05025 2.05025C0.728134 3.37236 0 5.13026 0 7C0 8.86984 0.728134 10.6276 2.05025 11.9498C3.37236 13.2719 5.13026 14 7 14C8.86974 14 10.6276 13.2719 11.9498 11.9498C13.2719 10.6276 14 8.86984 14 7C14 5.13026 13.2719 3.37236 11.9498 2.05025ZM10.0277 9.06082C10.2946 9.32785 10.2946 9.76065 10.0277 10.0276C9.89417 10.1611 9.71921 10.2278 9.54425 10.2278C9.36929 10.2278 9.19434 10.1611 9.06082 10.0276L7 7.96675L4.93918 10.0277C4.80566 10.1611 4.63071 10.2278 4.45575 10.2278C4.28079 10.2278 4.10583 10.1611 3.97232 10.0277C3.7054 9.76065 3.7054 9.32785 3.97232 9.06093L6.03325 7L3.97232 4.93918C3.7054 4.67215 3.7054 4.23935 3.97232 3.97243C4.23935 3.7054 4.67215 3.7054 4.93907 3.97243L7 6.03325L9.06082 3.97243C9.32785 3.70551 9.76065 3.7054 10.0276 3.97243C10.2946 4.23935 10.2946 4.67215 10.0276 4.93918L7.96675 7L10.0277 9.06082Z" fill="#AFB0B4"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_944_7587">
+      <rect width="14" height="14" fill="white"/>
+    </clipPath>
+  </defs>
+              </svg>
+            </span>
           </div>
           <div class="custom-select__list">
             <button @click="getBrand" class="custom-select__item" v-for="brand in brands" :id="brand._id" :disabled="brand.selected">{{ brand.brand_name }}</button>
