@@ -336,67 +336,65 @@
 </template>
 
 <script setup>
-import { useCounterStore } from "~/store/counter";
-import { useCategoriesStore } from "~/store/categories";
-import { useProductsStore } from "~/store/products";
+  import { useCounterStore } from "~/store/counter";
+  import { useCategoriesStore } from "~/store/categories";
+  import { useProductsStore } from "~/store/products";
 
-const counterStore = useCounterStore();
+  const counterStore = useCounterStore();
 
-const productsStore = useProductsStore();
+  const productsStore = useProductsStore();
 
-const categoriesStore = useCategoriesStore();
+  const categoriesStore = useCategoriesStore();
 
-onMounted(async () => {
-    await categoriesStore.getCategories();
-    await counterStore.getCounter();
-    await productsStore.getProducts();
-});
+  categoriesStore.getCategories();
+  counterStore.getCounter();
+  productsStore.getProducts();
 
-const searchProducts = ref([]);
+  const searchProducts = ref([]);
 
-const search = async (e) => {
-  e.preventDefault();
-  await navigateTo(`/search/${searchInput.value}`);
-};
+  const search = async (e) => {
+    e.preventDefault();
+    await navigateTo(`/search/${searchInput.value}`);
+  };
 
-const searchProductsFn = () => {
-  const filteredProducts = productsStore.data.products.filter((product) => {
-    return product.product_title
-      .toLowerCase()
-      .includes(searchInput.value.toLowerCase());
-  });
-  searchProducts.value = filteredProducts;
-  if (filteredProducts.length > 0) {
-    searchList.classList.add("search-products--open");
-  } else {
-    searchList.classList.remove("search-products--open");
-  }
-};
-
-const openCategories = () => {
-  btnWrapper.classList.toggle("header__category-btn-wrapper--active");
-};
-
-const closeCategories = (e) => {
-  if (e.target.id !== "openCategories") {
-    btnWrapper.classList.remove("header__category-btn-wrapper--active");
-  }
-  if (searchList) {
-    searchList.classList.remove("search-products--open");
-  }
-};
-
-const removeBasked = (e) => {
-  const id = e.target.closest(".header__store-item").id;
-  let basked = JSON.parse(localStorage.getItem("basked"));
-  basked = basked.filter((e) => e._id !== id);
-  localStorage.setItem("basked", JSON.stringify(basked));
-  counterStore.deleteOne("basked");
-  productsStore.data.products.forEach((element) => {
-    if (element._id == id) {
-      element.inCart = false;
+  const searchProductsFn = () => {
+    const filteredProducts = productsStore.data.products.filter((product) => {
+      return product.product_title
+        .toLowerCase()
+        .includes(searchInput.value.toLowerCase());
+    });
+    searchProducts.value = filteredProducts;
+    if (filteredProducts.length > 0) {
+      searchList.classList.add("search-products--open");
+    } else {
+      searchList.classList.remove("search-products--open");
     }
-  });
-  productsStore.updateProductIBasked(id, false);
-};
+  };
+
+  const openCategories = () => {
+    btnWrapper.classList.toggle("header__category-btn-wrapper--active");
+  };
+
+  const closeCategories = (e) => {
+    if (e.target.id !== "openCategories") {
+      btnWrapper.classList.remove("header__category-btn-wrapper--active");
+    }
+    if (searchList) {
+      searchList.classList.remove("search-products--open");
+    }
+  };
+
+  const removeBasked = (e) => {
+    const id = e.target.closest(".header__store-item").id;
+    let basked = JSON.parse(localStorage.getItem("basked"));
+    basked = basked.filter((e) => e._id !== id);
+    localStorage.setItem("basked", JSON.stringify(basked));
+    counterStore.deleteOne("basked");
+    productsStore.data.products.forEach((element) => {
+      if (element._id == id) {
+        element.inCart = false;
+      }
+    });
+    productsStore.updateProductIBasked(id, false);
+  };
 </script>
