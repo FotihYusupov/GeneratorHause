@@ -1,6 +1,7 @@
 <template>
     <div class="main">
         <div class="container">
+            <Loader/>
             <div class="hero_swiper">
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
