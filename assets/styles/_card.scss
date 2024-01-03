@@ -87,11 +87,6 @@
   }
   .card__desc {
     margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     max-height: 7em;
     color: #878787;
   }

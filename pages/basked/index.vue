@@ -10,8 +10,8 @@
                     <li v-for="product in basked" class="item" :key="product._id" :id="product._id">
                         <img :src="product.product_img[0]" alt="" width="170" height="100">
                         <div class="item__title-wrapper">
-                            <NuxtLink class="link" :to="'/product/' + product._id">
-                                <h3 class="item__title">{{ product.product_title }}</h3>
+                            <NuxtLink class="link ellipsis" :to="'/product/' + product._id">
+                                <h3 class="item__title ellipsis">{{ product.product_title }}</h3>
                             </NuxtLink>
                             <p class="item__brand"><b>Brand:</b> {{ product.brand.brand_name }}</p>
                         </div>

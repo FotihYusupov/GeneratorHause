@@ -66,8 +66,8 @@
                 <NuxtLink class="link" :to="'/product/' + product._id">
                   <img class="search-products__item-img" :src="product.product_img[0]" alt="" />
                   <div>
-                    <h3>{{ product.product_title }}</h3>
-                    <p>{{ product.product_desc }}</p>
+                    <h3 class="ellipsis">{{ product.product_title }}</h3>
+                    <p class="ellipsis">{{ product.product_desc }}</p>
                   </div>
                   <p>{{ product.product_price }} So'm</p>
                 </NuxtLink>
@@ -105,7 +105,7 @@
                       .slice(0, 4)" :id="product._id" v-bind:key="product._id">
                       <img :src="product.product_img[0]" />
                       <div class="header__store-item-wrapper">
-                        <h3 class="header__store-item-title">
+                        <h3 class="header__store-item-title ellipsis">
                           {{ product.product_title }}
                         </h3>
                         <p class="header__store-item-price">
@@ -146,14 +146,14 @@
           </div>
         </section>
         <section class="bottom-header">
-          <NuxtLink class="bottom-header-link"> Main page </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Gasoline Generator </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Inventor Generator </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Diesel generator </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Stabilizer </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Karcher stabilizer </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Concrete geshalka </NuxtLink>
-          <NuxtLink class="bottom-header-link"> Gaseous stabilizator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/"> Main page </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657af00c7633bfd3cdb0276b"> Gasli generator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aefcd7633bfd3cdb02768"> Inventer Generator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aeff97633bfd3cdb0276a"> Dizel generator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aef9a7633bfd3cdb02766"> Stabilizator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aef6f7633bfd3cdb02765"> Karcher</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aefb47633bfd3cdb02767"> Betonameshalka </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aefe47633bfd3cdb02769"> Benzinli generator </NuxtLink>
         </section>
       </div>
     </header>
@@ -183,18 +183,18 @@
           </div>
           <div class="footer__categories">
             <h3 class="footer__categories-title">Categories</h3>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher stabilizator
+            <NuxtLink class="footer__categories-link" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher
             </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Motokultivator</NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betona meshalka
+            <NuxtLink class="footer__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Stabilizator</NuxtLink>
+            <NuxtLink class="footer__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betonameshalka
             </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Invertor Generator
+            <NuxtLink class="footer__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Inverter Generator
             </NuxtLink>
             <NuxtLink class="footer__categories-link" :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator
             </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aeff97633bfd3cdb0276a'">Dizelni generator
+            <NuxtLink class="footer__categories-link" :to="'/category/657aeff97633bfd3cdb0276a'">Dizel generator
             </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657af00c7633bfd3cdb0276b'">Gazvi generator
+            <NuxtLink class="footer__categories-link" :to="'/category/657af00c7633bfd3cdb0276b'">Gazli generator
             </NuxtLink>
           </div>
           <div class="footer__contact-wrapper">

@@ -15,7 +15,7 @@
                 <div class="categories_container">
                     <div class="categories_item">
                         <p class="category_name">
-                            Gazvi generator
+                            Gazli generator
                         </p>
                         <img class="category_img" src="/gasoline.png" alt="">
                         <NuxtLink to="category/657af00c7633bfd3cdb0276b" class="category_link">
@@ -32,8 +32,7 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Inventor
-                            generator
+                            Inverter generator
                         </p>
                         <img class="category_img" src="/invertor.png" alt="">
                         <NuxtLink to="category/657aefcd7633bfd3cdb02768" class="category_link">
@@ -50,7 +49,7 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Dizelni generator
+                            Dizel generator
                         </p>
                         <img class="category_img" src="/dizel.png" alt="">
                         <NuxtLink to="category/657aeff97633bfd3cdb0276a" class="category_link">
@@ -67,7 +66,7 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Motokultivator
+                            Stabilizator
                         </p>
                         <img class="category_img" src="/stabilizer.png" alt="">
                         <NuxtLink to="category/657aef9a7633bfd3cdb02766" class="category_link">
@@ -84,7 +83,7 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Karcher stabilizator
+                            Karcher
                         </p>
                         <img class="category_img" src="/karcher.png" alt="">
                         <NuxtLink to="category/657aef6f7633bfd3cdb02765" class="category_link">
@@ -101,7 +100,7 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Betona meshalka
+                            Betonameshalka
                         </p>
                         <img class="category_img" src="/geshalka.png" alt="">
                         <NuxtLink to="category/657aefb47633bfd3cdb02767" class="category_link">

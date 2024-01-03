@@ -1,15 +1,16 @@
 <template>
-    <swiper :allowTouchMove="false" :spaceBetween="30" :speed="3000" :slidesPerView="6.5" :centeredSlides="true" :loop="true" :autoplay="{
-        delay: 0,
-        disableOnInteraction: false,
-    }" :modules="modules" class="brand_swiper">
+    <swiper :allowTouchMove="false" :spaceBetween="30" :speed="3000" :slidesPerView="6.5" :centeredSlides="true"
+        :loop="true" :autoplay="{
+            delay: 0,
+            disableOnInteraction: false,
+        }" :modules="modules" class="brand_swiper">
 
         <swiper-slide v-for="brand in nonOrder" v-bind:key="brand.id">
             <img :src="brand.url" alt="">
         </swiper-slide>
     </swiper>
 </template>
-<script>
+<script setup>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -21,18 +22,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
-
-export default {
-    components: {
-        Swiper,
-        SwiperSlide,
-    },
-    setup() {
-        return {
-            modules: [Autoplay],
-        };
-    },
-};
+const modules = ref([Autoplay])
 </script>
 <style lang="scss">
 .brand_swiper {

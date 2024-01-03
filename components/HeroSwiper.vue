@@ -5,12 +5,17 @@
     delay: 2000,
     disableOnInteraction: false
 }" :modules="modules" class="hero-swiper">
+        <swiper-slide>
+            <div class="hero-first">
+
+            </div>
+        </swiper-slide>
         <swiper-slide v-for="hero in data.reverse().slice(0, 4)" v-bind:key="hero">
             <div class="slide_content">
                 <div class="slide_content_text">
                     <span>{{ hero.category.category_name }}</span>
                     <span>{{ hero.brand.brand_name }}</span>
-                    <span>{{ hero.product_title }}</span>
+                    <span class="ellipsis">{{ hero.product_title }}</span>
                     <a class="sale_item_link" href="/sale">
                         <span>view more</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 12" fill="none">

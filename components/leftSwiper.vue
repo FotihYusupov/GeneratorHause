@@ -10,8 +10,7 @@
         </swiper-slide>
     </swiper>
 </template>
-<script>
-// Import Swiper Vue.js components
+<script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { arr} from '../utils/images'
 
@@ -22,18 +21,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
-
-export default {
-    components: {
-        Swiper,
-        SwiperSlide,
-    },
-    setup() {
-        return {
-            modules: [Autoplay],
-        };
-    },
-};
+const modules = ref( [Autoplay])
 </script>
 <style lang="scss">
 .brand_swiper {
@@ -46,4 +34,3 @@ export default {
     }
 }
 </style>
-  

@@ -27,8 +27,8 @@
 }
 .item {
     display: grid;
-    position: relative;
     place-items: center;
+    place-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -46,6 +46,7 @@
     .item__title {
         margin: 0;
         margin-bottom: 10px;
+        place-self: center;
     }
     .item__brand {
         margin: 0;
