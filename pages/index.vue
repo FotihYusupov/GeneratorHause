@@ -145,7 +145,7 @@
                     <RightSwiper/>
                 </div>
             </div>
-            <div class="title-wrapper">
+            <!-- <div class="title-wrapper">
                 <h2>Newest Products</h2>
                 <span class="title-wrapper__line"></span>
                 <NuxtLink class="SeeAll" to="category/657aef6f7633bfd3cdb02765">See all</NuxtLink>
@@ -155,9 +155,9 @@
                     v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
                     :description="product.product_desc" :views="product.views" :price="product.product_price"
                     :inCart="product.inCart" :inFavorites="product.inFavorites" />
-            </ul>
+            </ul> -->
         </div>
-        <div>
+        <!-- <div>
             <div class="container title-wrapper">
                 <h2>Best sellers</h2>
                 <span class="title-wrapper__line"></span>
@@ -198,6 +198,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="container title-wrapper">
                 <h2>Gasoline generatorlar</h2>
                 <span class="title-wrapper__line"></span>
@@ -310,7 +311,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -318,7 +319,7 @@
     import { useCategoriesStore } from '~/store/categories';
     import { useProductsStore } from '~/store/products';
 
-    import card from '../components/cardComponent.vue'
+    import card from '~/components/cardComponent.vue'
 
     const categoriesStore = useCategoriesStore();
     const productsStore = useProductsStore();
@@ -343,3 +344,18 @@
 </script>
 
 <style></style>
+
+
+<!-- <template>
+    <div>
+        index
+    </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
+</style> -->
