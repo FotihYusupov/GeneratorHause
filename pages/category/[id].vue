@@ -58,8 +58,8 @@
       </div>
       <hr>
       <div class="price-inputs">
-        <input type="text" @input="filterByPrice" id="startPrice" placeholder="to">
-        <input type="text" @input="filterByPrice" id="endPrice" placeholder="from">
+        <input type="text" @input="filterByPrice" id="startPrice" placeholder="dan">
+        <input type="text" @input="filterByPrice" id="endPrice" placeholder="dagacha">
       </div>
       <div v-if="openFilterKw" class="price-input__title">
         <h4>Maksimal quvvat (Kw)</h4>

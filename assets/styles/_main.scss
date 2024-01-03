@@ -159,8 +159,19 @@
         }
       }
     }
-
+    .translate-panel{
+      display: flex;
+      flex-direction: column;
+      .uzb-translate{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: inherit;
+        gap: 1px;
+      }
+    }
     .header__storage {
+      
       position: relative;
       display: flex;
       align-items: center;
