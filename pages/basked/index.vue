@@ -303,7 +303,7 @@
                 <label for="FullName">Full Name</label>
                 <input type="text" id="FullName" placeholder="Enter full name" required>
                 <label for="PhoneNumber">Phone Number</label>
-                <input type="text" id="PhoneNumber" pattern="\+998 \(?[1-9]{2}\)? [1-9]{3} [1-9]{2} [1-9]{2}" placeholder="+998 (  ) " required>
+                <input type="text" id="PhoneNumber" pattern="\+998 \(?[1-9]{2}\)? [1-9]{3} ?[1-9]{2} ?[1-9]{2}" placeholder="+998 (  ) " required>
                 <label for="message">Your message</label>
                 <textarea type="text" id="message" placeholder="Enter your message" required></textarea>
                 <button>Send</button>
