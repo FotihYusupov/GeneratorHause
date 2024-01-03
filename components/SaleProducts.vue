@@ -4,7 +4,7 @@
             <img :src="e.product_img[0]" alt="">
             <div class="sale_item_details">
                 <p class="sale_item_name">{{ e.product_title }}</p>
-                <p class="sale_discount">Discount {{ DiscCalc(e.product_price, e.new_price) }}%</p>
+                <p class="sale_Chegirma">Chegirma {{ DiscCalc(e.product_price, e.new_price) }}%</p>
             </div>
         </div>
     </div>

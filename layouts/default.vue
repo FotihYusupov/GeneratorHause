@@ -24,23 +24,23 @@
                     d="M14.9993 18.9583C12.816 18.9583 11.041 17.1833 11.041 15C11.041 12.8167 12.816 11.0417 14.9993 11.0417C17.1827 11.0417 18.9577 12.8167 18.9577 15C18.9577 17.1833 17.1827 18.9583 14.9993 18.9583ZM14.9993 12.2917C13.5077 12.2917 12.291 13.5083 12.291 15C12.291 16.4917 13.5077 17.7083 14.9993 17.7083C16.491 17.7083 17.7077 16.4917 17.7077 15C17.7077 13.5083 16.491 12.2917 14.9993 12.2917Z"
                     fill="#000814" />
                 </svg>
-                <p class="pointer-events header__category-text">Category</p>
+                <p class="pointer-events header__category-text">Kategoriyalar</p>
               </button>
               <div class="header__categories-wrapper">
                 <div class="header__categories">
                   <NuxtLink class="header__categories-link" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher
                     stabilizator</NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Motokultivator
+                  <NuxtLink class="header__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Stabilizator
                   </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betona meshalka
+                  <NuxtLink class="header__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betonameshalka
                   </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Invertor Generator
+                  <NuxtLink class="header__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Inverter generator
                   </NuxtLink>
                   <NuxtLink class="header__categories-link" :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator
                   </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aeff97633bfd3cdb0276a'">Dizelni generator
+                  <NuxtLink class="header__categories-link" :to="'/category/657aeff97633bfd3cdb0276a'">Dizel generator
                   </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657af00c7633bfd3cdb0276b'">Gazvi generator
+                  <NuxtLink class="header__categories-link" :to="'/category/657af00c7633bfd3cdb0276b'">Gazli generator
                   </NuxtLink>
                 </div>
               </div>
@@ -48,7 +48,7 @@
 
             <form @submit="search" class="header__search-wrapper">
               <input @input="searchProductsFn" class="header__search-input" id="searchInput" type="text" name="search"
-                placeholder="What are you looking for..." required />
+                placeholder="Mahsulot nomini yozing..." required />
               <button class="header__search-btn">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -80,7 +80,7 @@
                     d="M10.516 17.3417C10.2327 17.4417 9.76602 17.4417 9.48268 17.3417C7.06602 16.5167 1.66602 13.075 1.66602 7.24168C1.66602 4.66668 3.74102 2.58334 6.29935 2.58334C7.81602 2.58334 9.15768 3.31668 9.99935 4.45001C10.841 3.31668 12.191 2.58334 13.6993 2.58334C16.2577 2.58334 18.3327 4.66668 18.3327 7.24168C18.3327 13.075 12.9327 16.5167 10.516 17.3417Z"
                     stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <p class="header__storage-text">Sevmlilar</p>
+                <p class="header__storage-text">Sevimlilar</p>
                 <span class="header__storage-num">{{
                   counterStore.data.favorites
                 }}</span>
@@ -139,16 +139,16 @@
                       </button>
                     </li>
                   </ul>
-                  <NuxtLink class="header__store-products-btn" to="/basked">Buy Now</NuxtLink>
+                  <NuxtLink class="header__store-products-btn" to="/basked">Sotib olish</NuxtLink>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section class="bottom-header">
-          <NuxtLink class="bottom-header-link" to="/"> Main page </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657af00c7633bfd3cdb0276b"> Gasli generator </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aefcd7633bfd3cdb02768"> Inventer Generator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/"> Asosiy sahifa </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657af00c7633bfd3cdb0276b"> Gazli generator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/657aefcd7633bfd3cdb02768"> Inverter generator </NuxtLink>
           <NuxtLink class="bottom-header-link" to="/category/657aeff97633bfd3cdb0276a"> Dizel generator </NuxtLink>
           <NuxtLink class="bottom-header-link" to="/category/657aef9a7633bfd3cdb02766"> Stabilizator </NuxtLink>
           <NuxtLink class="bottom-header-link" to="/category/657aef6f7633bfd3cdb02765"> Karcher</NuxtLink>
@@ -166,7 +166,7 @@
       <section class="footer">
         <div class="footer__wrapper">
           <div class="footer__about">
-            <h3 class="footer__about-title">About us</h3>
+            <h3 class="footer__about-title">Biz haqimizda</h3>
             <p class="footer__about-text">
               "Generator House" is a product sales company dedicated to
               providing quality products to our customers. our team works
@@ -182,13 +182,13 @@
             </p>
           </div>
           <div class="footer__categories">
-            <h3 class="footer__categories-title">Categories</h3>
+            <h3 class="footer__categories-title">Kategoriyalar</h3>
             <NuxtLink class="footer__categories-link" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher
             </NuxtLink>
             <NuxtLink class="footer__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Stabilizator</NuxtLink>
             <NuxtLink class="footer__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betonameshalka
             </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Inverter Generator
+            <NuxtLink class="footer__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Inverter generator
             </NuxtLink>
             <NuxtLink class="footer__categories-link" :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator
             </NuxtLink>
@@ -198,7 +198,7 @@
             </NuxtLink>
           </div>
           <div class="footer__contact-wrapper">
-            <h3 class="footer__categories-title">Contacts</h3>
+            <h3 class="footer__categories-title">Bog'lanish</h3>
             <span class="footer__contact">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path
@@ -234,7 +234,7 @@
               <a class="footer__contact-link" target="_blank" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8">Toshkent
                 Xalqa Avtomabil Yo'li</a>
             </span>
-            <h3 class="footer__messenger-title">Follow us</h3>
+            <h3 class="footer__messenger-title">Obuna bo'ling</h3>
             <div class="footer__messengers-wrapper">
               <a class="footer__messenger" href="https://www.instagram.com/generator_house555/" target="_blank"
                 rel="noopener noreferrer">
@@ -326,7 +326,7 @@
         </div>
       </section>
       <section class="bottom_footer">
-        <p>© 2023 Generator House. All rights reserved</p>
+        <p>© 2024 Generator House. Barcha huquqlar himoyalangan</p>
         <span class="hypernova_logo">
 
         </span>
@@ -346,11 +346,9 @@ const productsStore = useProductsStore();
 
 const categoriesStore = useCategoriesStore();
 
-onMounted(async () => {
-    await categoriesStore.getCategories();
-    await counterStore.getCounter();
-    await productsStore.getProducts();
-});
+categoriesStore.getCategories();
+counterStore.getCounter();
+productsStore.getProducts();
 
 const searchProducts = ref([]);
 
