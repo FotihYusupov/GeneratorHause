@@ -80,7 +80,7 @@
                     d="M10.516 17.3417C10.2327 17.4417 9.76602 17.4417 9.48268 17.3417C7.06602 16.5167 1.66602 13.075 1.66602 7.24168C1.66602 4.66668 3.74102 2.58334 6.29935 2.58334C7.81602 2.58334 9.15768 3.31668 9.99935 4.45001C10.841 3.31668 12.191 2.58334 13.6993 2.58334C16.2577 2.58334 18.3327 4.66668 18.3327 7.24168C18.3327 13.075 12.9327 16.5167 10.516 17.3417Z"
                     stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <p class="header__storage-text">favorites</p>
+                <p class="header__storage-text">Sevmlilar</p>
                 <span class="header__storage-num">{{
                   counterStore.data.favorites
                 }}</span>
@@ -95,7 +95,7 @@
                       d="M10.3257 2.25581C9.05416 2.25581 8.02339 3.2866 8.02339 4.55814V7.48837C8.02339 7.83515 7.74227 8.11628 7.39549 8.11628C7.0487 8.11628 6.76758 7.83515 6.76758 7.48837V4.55814C6.76758 2.59303 8.36061 1 10.3257 1C12.2908 1 13.8839 2.59303 13.8839 4.55814V7.48837C13.8839 7.83515 13.6027 8.11628 13.256 8.11628C12.9092 8.11628 12.628 7.83515 12.628 7.48837V4.55814C12.628 3.2866 11.5973 2.25581 10.3257 2.25581Z"
                       fill="black" />
                   </svg>
-                  <p class="header__storage-text">basked</p>
+                  <p class="header__storage-text">Savat</p>
                   <span class="header__storage-num">{{ counterStore.data.basked }}</span>
                 </NuxtLink>
                 <div v-if="counterStore.data.basked > 0" class="header__store-products">

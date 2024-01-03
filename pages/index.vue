@@ -18,7 +18,7 @@
                             Gazli generator
                         </p>
                         <img class="category_img" src="/gasoline.png" alt="">
-                        <NuxtLink to="category/657af00c7633bfd3cdb0276b" class="category_link">
+                        <NuxtLink to="/category/657aefe47633bfd3cdb02769" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -35,7 +35,7 @@
                             Inverter generator
                         </p>
                         <img class="category_img" src="/invertor.png" alt="">
-                        <NuxtLink to="category/657aefcd7633bfd3cdb02768" class="category_link">
+                        <NuxtLink to="/category/657aefcd7633bfd3cdb02768" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -69,7 +69,7 @@
                             Stabilizator
                         </p>
                         <img class="category_img" src="/stabilizer.png" alt="">
-                        <NuxtLink to="category/657aef9a7633bfd3cdb02766" class="category_link">
+                        <NuxtLink to="/category/658fe65abb31924eb5f82cec" class="category_link">
                             <p>View more</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
