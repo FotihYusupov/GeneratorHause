@@ -14,7 +14,7 @@ export const useProductsStore = defineStore({
     async getProducts() {
       try {
         this.data.loading = true;
-        const response = await axios.get('https://gh-server-83lb.onrender.com/api/products');
+        const response = await axios.get('https://api.generatorhouse.uz/api/products');
         if (response.status === 200) {
           if (typeof localStorage !== 'undefined') {
             let basked = JSON.parse(localStorage.getItem('basked'));

@@ -644,7 +644,7 @@ const end = ref(20)
 
 const brands = ref([])
 const getBrands = async () => {
-  const res = await axios.get('https://gh-server-83lb.onrender.com/api/brands')
+  const res = await axios.get('https://api.generatorhouse.uz/api/brands')
   brands.value = res.data
 }
 getBrands()

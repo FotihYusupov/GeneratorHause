@@ -688,11 +688,11 @@ const openModal = ref(false)
             const channelUsername = '-1002059364860,';
 
             const text = `
-                User: ${FullName.value},\nPhone: ${PhoneNumber.value},\nMessage: ${message.value}\nOrders:\n\n${
+                Mijoz: ${FullName.value},\nTelefon Raqam: ${PhoneNumber.value},\nXabar: ${message.value}\nBuyurtmalar:\n\n${
                     basked.value.map(product => {
-                        return`Product: ${product.product_title},\nCount: ${product.count},\nPrice: ${product.new_price!== 0 ? product.new_price : product.product_price} So'm,\n`
+                        return`Mahsulot: ${product.product_title},\nSoni: ${product.count},\nNarxi: ${product.new_price!== 0 ? product.new_price : product.product_price} So'm,\nUmumiy Narxi: ${product.count * (product.new_price!== 0 ? product.new_price : product.product_price)} So'm\n\n`
                     }).join('\n')
-                }\nTotal: ${calculateTotalCost(basked.value)} So'm
+                }\nUmumiy: ${calculateTotalCost(basked.value)} So'm
             `
 
         const response = await axios.post(

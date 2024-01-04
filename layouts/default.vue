@@ -28,20 +28,13 @@
               </button>
               <div class="header__categories-wrapper">
                 <div class="header__categories">
-                  <NuxtLink class="header__categories-link" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher
-                    stabilizator</NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Stabilizator
-                  </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betonameshalka
-                  </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Inverter generator
-                  </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator
-                  </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657aeff97633bfd3cdb0276a'">Dizel generator
-                  </NuxtLink>
-                  <NuxtLink class="header__categories-link" :to="'/category/657af00c7633bfd3cdb0276b'">Gazli generator
-                  </NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
                 </div>
               </div>
             </div>
@@ -143,7 +136,7 @@
                 </div>
               </div>
               <div class="translate-panel">
-                <NuxtLink to="/uz/" class="uzb-translate">
+                <NuxtLink to="/" class="uzb-translate">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                     <mask id="mask0_986_2339" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
                       height="20">
@@ -216,14 +209,14 @@
           </div>
         </section>
         <section class="bottom-header">
-          <NuxtLink class="bottom-header-link" to="/"> Asosiy sahifa </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657af00c7633bfd3cdb0276b"> Gazli generator </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aefcd7633bfd3cdb02768"> Inverter generator </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aeff97633bfd3cdb0276a"> Dizel generator </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aef9a7633bfd3cdb02766"> Stabilizator </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aef6f7633bfd3cdb02765"> Karcher</NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aefb47633bfd3cdb02767"> Betonameshalka </NuxtLink>
-          <NuxtLink class="bottom-header-link" to="/category/657aefe47633bfd3cdb02769"> Benzinli generator </NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/">Asosiy sahifa</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
+          <NuxtLink class="bottom-header-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator</NuxtLink>
         </section>
       </div>
     </header>
@@ -253,19 +246,13 @@
           </div>
           <div class="footer__categories">
             <h3 class="footer__categories-title">Kategoriyalar</h3>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aef6f7633bfd3cdb02765'">Karcher
-            </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aef9a7633bfd3cdb02766'">Stabilizator</NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aefb47633bfd3cdb02767'">Betonameshalka
-            </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aefcd7633bfd3cdb02768'">Inverter generator
-            </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aefe47633bfd3cdb02769'">Benzinli generator
-            </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657aeff97633bfd3cdb0276a'">Dizel generator
-            </NuxtLink>
-            <NuxtLink class="footer__categories-link" :to="'/category/657af00c7633bfd3cdb0276b'">Gazli generator
-            </NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
           </div>
           <div class="footer__contact-wrapper">
             <h3 class="footer__categories-title">Bog'lanish</h3>
@@ -397,74 +384,73 @@
       </section>
       <section class="bottom_footer">
         <p>© 2024 Generator House. Barcha huquqlar himoyalangan</p>
-        <span class="hypernova_logo">
-
-        </span>
+        <span class="hypernova_logo"></span>
       </section>
     </footer>
+    
   </div>
 </template>
 
 <script setup>
-import { useCounterStore } from "~/store/counter";
-import { useCategoriesStore } from "~/store/categories";
-import { useProductsStore } from "~/store/products";
+  import { useCounterStore } from "~/store/counter";
+  import { useCategoriesStore } from "~/store/categories";
+  import { useProductsStore } from "~/store/products";
 
-const counterStore = useCounterStore();
+  const counterStore = useCounterStore();
 
-const productsStore = useProductsStore();
+  const productsStore = useProductsStore();
 
-const categoriesStore = useCategoriesStore();
+  const categoriesStore = useCategoriesStore();
 
-categoriesStore.getCategories();
-counterStore.getCounter();
-productsStore.getProducts();
+  categoriesStore.getCategories();
+  counterStore.getCounter();
+  productsStore.getProducts();
 
-const searchProducts = ref([]);
+  const searchProducts = ref([]);
 
-const search = async (e) => {
-  e.preventDefault();
-  await navigateTo(`/search/${searchInput.value}`);
-};
+  const search = async (e) => {
+    e.preventDefault();
+    await navigateTo(`/search/${searchInput.value}`);
+  };
 
-const searchProductsFn = () => {
-  const filteredProducts = productsStore.data.products.filter((product) => {
-    return product.product_title
-      .toLowerCase()
-      .includes(searchInput.value.toLowerCase());
-  });
-  searchProducts.value = filteredProducts;
-  if (filteredProducts.length > 0) {
-    searchList.classList.add("search-products--open");
-  } else {
-    searchList.classList.remove("search-products--open");
-  }
-};
-
-const openCategories = () => {
-  btnWrapper.classList.toggle("header__category-btn-wrapper--active");
-};
-
-const closeCategories = (e) => {
-  if (e.target.id !== "openCategories") {
-    btnWrapper.classList.remove("header__category-btn-wrapper--active");
-  }
-  if (searchList) {
-    searchList.classList.remove("search-products--open");
-  }
-};
-
-const removeBasked = (e) => {
-  const id = e.target.closest(".header__store-item").id;
-  let basked = JSON.parse(localStorage.getItem("basked"));
-  basked = basked.filter((e) => e._id !== id);
-  localStorage.setItem("basked", JSON.stringify(basked));
-  counterStore.deleteOne("basked");
-  productsStore.data.products.forEach((element) => {
-    if (element._id == id) {
-      element.inCart = false;
+  const searchProductsFn = () => {
+    const filteredProducts = productsStore.data.products.filter((product) => {
+      return product.product_title
+        .toLowerCase()
+        .includes(searchInput.value.toLowerCase());
+    });
+    searchProducts.value = filteredProducts;
+    if (filteredProducts.length > 0) {
+      searchList.classList.add("search-products--open");
+    } else {
+      searchList.classList.remove("search-products--open");
     }
-  });
-  productsStore.updateProductIBasked(id, false);
-};
+  };
+
+  const openCategories = () => {
+    btnWrapper.classList.toggle("header__category-btn-wrapper--active");
+  };
+
+  const closeCategories = (e) => {
+    if (e.target.id !== "openCategories") {
+      btnWrapper.classList.remove("header__category-btn-wrapper--active");
+    }
+    if (searchList) {
+      searchList.classList.remove("search-products--open");
+    }
+  };
+
+  const removeBasked = (e) => {
+    const id = e.target.closest(".header__store-item").id;
+    let basked = JSON.parse(localStorage.getItem("basked"));
+    basked = basked.filter((e) => e._id !== id);
+    localStorage.setItem("basked", JSON.stringify(basked));
+    counterStore.deleteOne("basked");
+    productsStore.data.products.forEach((element) => {
+      if (element._id == id) {
+        element.inCart = false;
+      }
+    });
+    productsStore.updateProductIBasked(id, false);
+  };
 </script>

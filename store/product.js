@@ -17,7 +17,7 @@ export const useProductStore = defineStore({
         this.data.loading = true;
         const basked = JSON.parse(localStorage.getItem('basked'));
         const favorites = JSON.parse(localStorage.getItem('favorites'));
-        const response = await axios.get(`https://gh-server-83lb.onrender.com/api/product/${id}`);
+        const response = await axios.get(`https://api.generatorhouse.uz/api/product/${id}`);
         if(response.status == 200) {
           response.data.inCart = basked.some(e => e._id == response.data._id);
           if(response.data.inCart) {

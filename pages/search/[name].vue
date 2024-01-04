@@ -1,12 +1,15 @@
 <template>
     <div class="container">
-        <h1>Search</h1>
-        <ul class="cards-list">
-            <card v-for="product in data" :id="product._id"
-                v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
-                :description="product.product_desc" :views="product.views" :price="product.product_price"
-                :inCart="product.inCart" :inFavorites="product.inFavorites" />
-        </ul>
+        <Loader v-if="data.length > 0"/>
+        <div v-else>
+            <h1>Search</h1>
+            <ul class="cards-list">
+                <card v-for="product in data" :id="product._id"
+                    v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
+                    :description="product.product_desc" :views="product.views" :price="product.product_price"
+                    :inCart="product.inCart" :inFavorites="product.inFavorites" />
+            </ul>
+        </div>
     </div>
 </template>
 
