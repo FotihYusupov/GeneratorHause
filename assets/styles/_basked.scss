@@ -105,13 +105,17 @@
 }
 
 .basked-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 7% 0;
     h2 {
         margin: 0;
     }
     .basked-wrapper__link {
         display: block;
-        width: 10%;
+        width: fit-content;
         padding: 1% 2%;
         border-radius: 12px;
         text-decoration: none;
