@@ -1,5 +1,6 @@
 <template>
-    <div class="container">
+    <Loader v-if="product.data.loading"/>
+    <div v-else class="container">
         <div v-if="findProduct.product_title" class="product">
             <div v-if="findProduct.product_img" class="images-wrapper">
                 <div class="images-list">

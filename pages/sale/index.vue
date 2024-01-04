@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
-        <h1>Chegirmali mahsulotlar</h1>
+    <Loader v-if="productsStore.data.loading"/>
+    <div v-else class="container">
+        <h1>Chegirmadagi mahsulotlar</h1>
         <ul class="cards-list list-category">
             <card v-for="product in productsStore.data.products.filter(e => e.offer === true)" :id="product._id"
                 v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
@@ -17,5 +18,3 @@ import card from '~/components/cardComponent.vue'
 const productsStore = useProductsStore();
 productsStore.getProducts()
 </script>
-
-<style lang="scss" scoped></style>
