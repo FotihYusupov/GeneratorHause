@@ -1,5 +1,6 @@
 <template>
-    <div class="container">
+    <Loader v-if="productsStore.data.loading"/>
+    <div v-else class="container">
         <div v-if="productsStore.data.products.filter(e => e.inFavorites == true).length > 0">
             <div class="basked-header-wrapper">
                 <h1>Sevimlilar</h1>

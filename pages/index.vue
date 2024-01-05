@@ -1,7 +1,7 @@
 
 <template>
-    <!-- <Loader v-if="!productsStore.data.products.length > 0"/> -->
-    <div class="main">
+    <Loader v-if="productsStore.data.loading"/>
+    <div v-else class="main">
         <div class="container">
             <div class="hero_swiper">
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />

@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <div v-if="basked.length > 0">
+        <Loader v-if="!productsStore.data.products.length > 0"/>
+        <div v-else>
+            <div v-if="basked.length > 0">
             <div class="basked-header-wrapper">
                 <h1>Savat</h1>
                 <button @click="removeAllBasked" class="clear-btn">Barchasini O'chirish</button>
@@ -572,6 +574,7 @@
                 :description="product.product_desc" :views="product.views" :price="product.product_price"
                 :inCart="product.inCart" :inFavorites="product.inFavorites" />
         </ul>
+        </div>
     </div>
     <div v-if="openModal" class="modal">
         <div class="modal-content">

@@ -304,7 +304,7 @@
       <slot />
     </main>
 
-    <footer class="container">
+    <footer v-if="productsStore.data.products.length > 0" class="container">
       <section class="footer">
         <div class="footer__wrapper">
           <div class="footer__about">

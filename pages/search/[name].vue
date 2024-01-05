@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <Loader v-if="data.length > 0"/>
+        <Loader v-if="productsStore.data.loading"/>
         <div v-else>
             <h1>Search</h1>
             <ul class="cards-list">
