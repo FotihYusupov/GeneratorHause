@@ -20,7 +20,7 @@
             <NuxtLink class="link" :to="'/product/' + id">
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
-            <p class="card__desc ellipsis">{{ description }}</p>
+            <p class="card__desc ellipsis">{{  }}</p>
             <p class="card__views">{{ views }} views</p>
             <div class="card_footer">
                 <p v-if="!newPrice" class="card__price">{{ price }} So'm</p>

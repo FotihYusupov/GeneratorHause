@@ -11,7 +11,7 @@
             </div>
             <div class="categories_wrapper">
                 <div class="title-wrapper">
-                    <h2>Kategoriyalar orqali</h2>
+                    <h2>Katalog orqali</h2>
                     <span class="title-wrapper__line"></span>
                 </div>
                 <div class="categories_container">
