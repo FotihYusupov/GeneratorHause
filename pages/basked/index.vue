@@ -1,15 +1,15 @@
 <template>
     <div class="container">
-        <Loader v-if="!productsStore.data.products.length > 0"/>
+        <Loader v-if="productsStore.data.loading"/>
         <div v-else>
-            <div v-if="basked.length > 0">
+            <div v-if="productsStore.data.products.filter(e => e.inCart === true).length > 0">
             <div class="basked-header-wrapper">
                 <h1>Savat</h1>
                 <button @click="removeAllBasked" class="clear-btn">Barchasini O'chirish</button>
             </div>
             <div class="wrapper">
                 <ul class="items-list">
-                    <li v-for="product in basked" class="item" :key="product._id" :id="product._id">
+                    <li v-for="product in productsStore.data.products.filter(e => e.inCart === true)" class="item" :key="product._id" :id="product._id">
                         <img :src="product.product_img[0]" alt="" width="170" height="100">
                         <div class="item__title-wrapper">
                             <NuxtLink class="link ellipsis" :to="'/product/' + product._id">
@@ -74,10 +74,10 @@
                 </ul>
                 <div class="orders-wrapper">
                     <h2>Sizning buyurtmangiz</h2>
-                    <p class="orders-count">Savatda {{ basked.length }} ta mahsulot bor</p>
+                    <p class="orders-count">Savatda {{ productsStore.data.products.filter(e => e.inCart === true).length }} ta mahsulot bor</p>
                     <span>
                         <p>Umumiy hisob:</p>
-                        <p><b>{{ totalSum }}</b> So'm</p>
+                        <p><b>{{ calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true)) }}</b> So'm</p>
                     </span>
                     <button @click="openModal = true" class="order-btn">Sotib olish</button>
                 </div>
@@ -615,26 +615,24 @@ import axios from 'axios';
 const counterStore = useCounterStore()
 const productsStore = useProductsStore()
 
-    const basked = ref([])
     const totalSum = ref(0)
 
 const openModal = ref(false)
 
     onMounted(async() => {
         await productsStore.getProducts()
-        basked.value = productsStore.data.products.filter(e => e.inCart === true)
-        totalSum.value = calculateTotalCost(basked.value);
+        totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true));
     })
 
     const addOne = (id) => {
         try {
             addCount(id)
-            basked.value.forEach(e => {
+            productsStore.data.products.filter(e => e.inCart === true).forEach(e => {
                 if(e._id == id) {
                     e.count += 1
                 }
             })
-            totalSum.value = calculateTotalCost(basked.value);
+            totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true));
         } catch(err) {
             console.log("Error: ", err)
         }
@@ -643,12 +641,12 @@ const openModal = ref(false)
     const removeOne = (id) => {
         try {
             removeCount(id)
-            basked.value.forEach(e => {
+            productsStore.data.products.filter(e => e.inCart === true).forEach(e => {
                 if(e._id == id) {
                     e.count -= 1
                 }
             })
-            totalSum.value = calculateTotalCost(basked.value);
+            totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true));
         } catch(err) {
             console.log("Error: ", err)
         }
@@ -656,10 +654,9 @@ const openModal = ref(false)
 
     const removeBasked = (e) => {
         const id = e.target.closest('.item').id;
-        basked.value = basked.value.filter(e => e._id !== id)
-        localStorage.setItem('basked', JSON.stringify(basked.value))
+        localStorage.setItem('basked', JSON.stringify(productsStore.data.products.filter(e => e.inCart === true).filter(e => e._id !== id)))
         counterStore.deleteOne('basked')
-        totalSum.value = calculateTotalCost(basked.value);
+        totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true).filter(e => e._id !== id));
         productsStore.data.products.forEach(element => {
             if(element._id == id) {
                 element.inCart = false
@@ -669,7 +666,6 @@ const openModal = ref(false)
 
     const removeAllBasked = () => {
         localStorage.setItem('basked', JSON.stringify([]))
-        basked.value = []
         counterStore.deleteMany('basked')
         totalSum.value = 0;
         productsStore.getProducts()
@@ -692,10 +688,10 @@ const openModal = ref(false)
 
             const text = `
                 Mijoz: ${FullName.value},\nTelefon Raqam: ${PhoneNumber.value},\nXabar: ${message.value}\nBuyurtmalar:\n\n${
-                    basked.value.map(product => {
+                    productsStore.data.products.filter(e => e.inCart === true).map(product => {
                         return`Mahsulot: ${product.product_title},\nSoni: ${product.count},\nNarxi: ${product.new_price!== 0 ? product.new_price : product.product_price} So'm,\nUmumiy Narxi: ${product.count * (product.new_price!== 0 ? product.new_price : product.product_price)} So'm\n\n`
                     }).join('\n')
-                }\nUmumiy: ${calculateTotalCost(basked.value)} So'm
+                }\nUmumiy: ${calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true))} So'm
             `
 
         const response = await axios.post(
