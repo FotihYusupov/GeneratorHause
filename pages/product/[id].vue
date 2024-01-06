@@ -122,6 +122,13 @@
                 </span>
             </div>
         </div>
+        <h2 class="product-footer-title">O'xshash mahsulotlar</h2>
+        <ul class="cards-list list-category">
+            <card v-for="product in products.slice(0, 8)" :id="product._id" v-bind:key="product._id"
+                :title="product.product_title" :img="product.product_img" :description="product.product_desc"
+                :views="product.views" :price="product.product_price" :inCart="product.inCart"
+                :inFavorites="product.inFavorites" />
+        </ul>
     </div>
 </template>
 
@@ -129,6 +136,7 @@
 import { useProductStore } from '~/store/product';
 import { useProductsStore } from '~/store/products';
 import { useCounterStore } from '~/store/counter';
+import card from '~/components/cardComponent.vue';
 
 const counterStore = useCounterStore()
 
@@ -140,12 +148,16 @@ const productsStore = useProductsStore()
 const { id } = useRoute().params;
 const product = useProductStore()
 
+const products = ref([])
+
 const findProduct = ref([])
 const index = ref(0)
 
 const getProduct = async () => {
     await product.getProduct(id)
-    findProduct.value = product.data.product
+    await productsStore.getProducts()
+    findProduct.value = product.data.product;
+    products.value = productsStore.data.products
 }
 getProduct()
 
