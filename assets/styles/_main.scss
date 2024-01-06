@@ -1282,6 +1282,41 @@
 
   .mobile-footer {
     position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    .mobile-footer__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5% 8%;
+      background-color: #ffffff;
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        svg {
+          g {
+            g {
+              path {
+                stroke: #787878 ;
+              }
+            }
+          }
+          path {
+            color: #f5f5f5;
+          }
+          stroke: #f5f5f5;
+        }
+      }
+      p {
+        margin: 0;
+        margin-top: 5%;
+        font-size: 12px;
+      }
+    }
   }
 
   .footer {
