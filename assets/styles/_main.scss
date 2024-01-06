@@ -458,7 +458,6 @@
       }
     }
   }
-
   .main {
     .hero_swiper {
       width: 100%;
@@ -933,6 +932,9 @@
       background-size: 20% 100%, 20% 100%, 20% 100%;
     }
   }
+  .mobile-footer {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 350px) and (max-width: 1200px) {
@@ -1279,7 +1281,6 @@
       }
     }
   }
-
   .mobile-footer {
     position: fixed;
     bottom: 0;
@@ -1292,36 +1293,65 @@
       align-items: center;
       padding: 5% 8%;
       background-color: #ffffff;
+      .router-link-active {
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: $primary-yellow !important;
+          stroke: $primary-yellow !important;
+          g {
+            fill:$primary-yellow !important;
+            g {
+              fill:$primary-yellow !important;
+              path {
+                fill: $primary-yellow;
+                stroke: $primary-yellow !important;
+              }
+            }
+          }
+          rect {
+            fill: $primary-yellow !important;
+          }
+          path {
+            fill: $primary-yellow;
+            color: $primary-yellow !important;
+          }
+          fill: $primary-yellow;
+          stroke: $primary-yellow !important;
+        }
+        p {
+          color: $primary-yellow !important;
+        }
+      }
       a {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         svg {
+          width: 20px;
+          height: 20px;
+          fill: #787878;
           g {
             g {
+              fill:#787878;
               path {
-                stroke: #787878 ;
+                stroke: #787878;
               }
             }
           }
-          path {
-            color: #f5f5f5;
-          }
-          stroke: #f5f5f5;
         }
       }
-      p {
+      .mobile-footer__text {
         margin: 0;
         margin-top: 5%;
         font-size: 12px;
+        color: #787878;
       }
     }
   }
-
   .footer {
     padding-bottom: 0px;
-
     .footer__wrapper {
       display: flex;
       flex-direction: column;
@@ -1447,6 +1477,7 @@
     }
   }
   .bottom_footer {
+    margin-bottom: 18%;
     p {
       font-size: 10px;
       font-style: normal;
@@ -1479,7 +1510,6 @@
       }
     }
   }
-
   .main {
     .hero_swiper {
       width: 100%;
@@ -1955,12 +1985,12 @@
   }
   .loader-wrapper {
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 120vh;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(255, 255, 255);
     z-index: 99999;
     display: flex;
     justify-content: center;

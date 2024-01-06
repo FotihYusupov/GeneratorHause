@@ -185,13 +185,13 @@ const getImg = (e) => {
 
 const afterImg = () => {
     if (index.value < findProduct.value.product_img.length - 1) {
-        index.value += 1
+        index.value = parseInt(index.value) + 1
     }
 }
 
 const beforeImg = () => {
     if (index.value > 0) {
-        index.value -= 1
+        index.value = parseInt(index.value) - 1
     }
 }
 

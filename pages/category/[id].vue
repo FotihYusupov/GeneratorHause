@@ -663,10 +663,10 @@ const fetchData = async () => {
   await productsStore.getProducts();
   filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
   filteredProducts.value.forEach(e => {
-    if (e.information.some(inf => inf.key == 'Kw')) {
+    if (e.information.some(inf => inf.key == 'kVa')) {
       openFilterKw.value = true;
     }
-    if (e.information.some(inf => inf.key == 'Bak')) {
+    if (e.information.some(inf => inf.key == 'Bak hajmi')) {
       openFilterFuel.value = true;
     }
   })
