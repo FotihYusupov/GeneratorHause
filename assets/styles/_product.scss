@@ -185,7 +185,7 @@
     width: 100%;
     height: 20%;
     .hero-img {
-      width: 70%;
+      width: 72%;
       height: 320px;
       margin-left: 10px;
       border-radius: 7px;
@@ -240,6 +240,7 @@
 
   .product-content {
     width: 100%;
+    padding: 2%;
     .product__header {
       width: 100%;
       padding-bottom: 10px;
@@ -282,6 +283,7 @@
     }
     .product__counter-btns {
       display: flex;
+      margin-top: 10px;
       align-items: center;
       width: fit-content;
       border-radius: 5px;
@@ -319,15 +321,15 @@
     }
     .product__basked-wrapper {
       display: flex;
-      margin-top: 9%;
+      margin: 15px 0;
       width: 100%;
       button {
-        padding: 15px 20px;
+        padding: 10px 15px;
         border-radius: 10px;
         border: 0;
         font-weight: bold;
         background-color: $primary-yellow;
-        width: 49%;
+        width: 50%;
         cursor: pointer;
         &:nth-child(1) {
           margin-right: 10px;
@@ -343,9 +345,8 @@
   .product-details {
     display: flex;
     flex-direction: column;
-    align-items: center;
     h3 {
-      padding-bottom: 2px;
+      padding-bottom: 10px;
       border-bottom: 3px solid $primary-yellow;
     }
   }
@@ -357,7 +358,7 @@
     align-items: center;
 
     span {
-      padding: 0 20%;
+      padding: 0 4%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -368,7 +369,7 @@
       hr {
         border: none;
         margin: 0;
-        border-top: 2px dotted rgb(0, 0, 0);
+        border-top: 2px dotted #afb0b4;
         color: #fff;
         background-color: #fff;
         height: 1px;

@@ -1,7 +1,8 @@
 <template>
     <Loader v-if="productsStore.data.loading"/>
     <div v-else class="container">
-        <h1>Chegirmadagi mahsulotlar</h1>
+        <h1 class="sale_title">Chegirmadagi mahsulotlar</h1>
+        <p class="sale_count">{{ productsStore.data.products.filter(e => e.offer === true).length }}ta mahsulot</p>
         <ul class="cards-list list-category">
             <card v-for="product in productsStore.data.products.filter(e => e.offer === true)" :id="product._id"
                 v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
