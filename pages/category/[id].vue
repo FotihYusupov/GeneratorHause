@@ -107,10 +107,19 @@
       <div class="categories-wrapper">
         <div v-if="filteredProducts.length > 0">
           <div class="categories-header">
-            <span class="categories__title-wrapper">
-              <h2>{{ filteredProducts[0].category.category_name }}</h2>
-              <p>{{ filteredProducts.length }} ta mahsulot</p>
-            </span>
+            <div>
+              <span class="categories-filter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.125 3.7576C11.6205 3.7576 10.3553 4.83598 10.0635 6.2576H1.875C1.52983 6.2576 1.25 6.53742 1.25 6.8826C1.25 7.22777 1.52983 7.5076 1.875 7.5076H10.0635C10.3553 8.92922 11.6205 10.0076 13.125 10.0076C14.6295 10.0076 15.8947 8.92922 16.1865 7.5076H18.125C18.4702 7.5076 18.75 7.22777 18.75 6.8826C18.75 6.53742 18.4702 6.2576 18.125 6.2576H16.1865C15.8947 4.83598 14.6295 3.7576 13.125 3.7576ZM13.125 5.0076C14.1679 5.0076 15 5.83968 15 6.8826C15 7.92552 14.1679 8.7576 13.125 8.7576C12.0821 8.7576 11.25 7.92552 11.25 6.8826C11.25 5.83968 12.0821 5.0076 13.125 5.0076Z" fill="#AFB0B4"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.875 10.0076C5.37051 10.0076 4.10528 11.086 3.81348 12.5076H1.875C1.52983 12.5076 1.25 12.7874 1.25 13.1326C1.25 13.4778 1.52983 13.7576 1.875 13.7576H3.81348C4.10528 15.1792 5.37051 16.2576 6.875 16.2576C8.37949 16.2576 9.64472 15.1792 9.93652 13.7576H18.125C18.4702 13.7576 18.75 13.4778 18.75 13.1326C18.75 12.7874 18.4702 12.5076 18.125 12.5076H9.93652C9.64472 11.086 8.37949 10.0076 6.875 10.0076ZM6.875 11.2576C7.91792 11.2576 8.75 12.0897 8.75 13.1326C8.75 14.1755 7.91792 15.0076 6.875 15.0076C5.83208 15.0076 5 14.1755 5 13.1326C5 12.0897 5.83208 11.2576 6.875 11.2576Z" fill="#AFB0B4"/>
+                </svg>
+                <p>Filter</p>
+              </span>
+              <span class="categories__title-wrapper">
+                <h2>{{ filteredProducts[0].category.category_name }}</h2>
+                <p>{{ filteredProducts.length }} ta mahsulot</p>
+              </span>
+            </div>
             <span @click="OpenSortBy" class="sort-wrapper">
               <p>Saralash</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
