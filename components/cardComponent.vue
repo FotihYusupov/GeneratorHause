@@ -20,7 +20,7 @@
             <NuxtLink class="link" :to="'/product/' + id">
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
-            <p class="card__desc ellipsis">{{  }}</p>
+            <p class="card__desc ellipsis">{{ brand }}</p>
             <p class="card__views">{{ views }} views</p>
             <div class="card_footer">
                 <p v-if="!newPrice" class="card__price">{{ price }} So'm</p>
@@ -103,8 +103,8 @@ onMounted(async () => {
     favorites.value = await JSON.parse(localStorage.getItem('favorites'));
 });
 
-const { img, id, title, description, views, price, inCart, inFavorites, removeBtn, newPrice } =
-    defineProps(['id', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn', 'newPrice']);
+const { img, id, title, description, views, price, brand, inCart, inFavorites, removeBtn, newPrice } =
+    defineProps(['id', 'brand', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn', 'newPrice']);
 const removeFavorites = (id) => {
     favorites.value = favorites.value.filter(product => product._id !== id);
     localStorage.setItem('favorites', JSON.stringify(favorites.value));

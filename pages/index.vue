@@ -154,7 +154,7 @@
             <ul class="cards-list list-category">
                 <card v-for="product in newProducts" :id="product._id" v-bind:key="product._id"
                     :title="product.product_title" :img="product.product_img" :description="product.product_desc"
-                    :views="product.views" :price="product.product_price" :inCart="product.inCart"
+                    :views="product.views" :brand="product.brand.brand_name" :price="product.product_price" :inCart="product.inCart"
                     :inFavorites="product.inFavorites" />
             </ul>
         </div>
@@ -167,7 +167,7 @@
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card v-for="product in bestSellers.slice(start, end)" :id="product._id" v-bind:key="product._id"
-                            :title="product.product_title" :img="product.product_img" :description="product.product_desc"
+                            :title="product.product_title" :brand="product.brand.brand_name" :img="product.product_img" :description="product.product_desc"
                             :views="product.views" :price="product.product_price" :inCart="product.inCart"
                             :inFavorites="product.inFavorites" />
                     </ul>
@@ -216,7 +216,7 @@
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f6')"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
-                            :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
+                            :price="product.product_price" :brand="product.brand.brand_name" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                         <card
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f7').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
-                            :img="product.product_img" :description="product.product_desc" :views="product.views"
+                            :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
@@ -249,7 +249,7 @@
                         <card
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f9').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
-                            :img="product.product_img" :description="product.product_desc" :views="product.views"
+                            :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
@@ -265,7 +265,7 @@
                         <card
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '6596496b757d180fa1fb351d').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
-                            :img="product.product_img" :description="product.product_desc" :views="product.views"
+                            :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
@@ -281,7 +281,7 @@
                         <card
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6fa').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
-                            :img="product.product_img" :description="product.product_desc" :views="product.views"
+                            :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
@@ -299,7 +299,7 @@
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6fb').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
-                            :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
+                            :price="product.product_price" :brand="product.brand.brand_name" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                             v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f8').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
-                            :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
+                            :price="product.product_price" :brand="product.brand.brand_name" :inCart="product.inCart" :inFavorites="product.inFavorites" />
                     </ul>
                 </div>
             </div>
