@@ -2,10 +2,83 @@
   <div @click="closeCategories">
     <header>
       <div class="container">
+        <section class="res-header">
+          <nuxt-link class="res-header_logo" to="/">
+            <img src="/logotip.png" alt="" />
+          </nuxt-link>
+          <NuxtLink to="/" class="res-uzb-translate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <mask id="mask0_986_2339" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
+                height="20">
+                <circle cx="10.5" cy="10" r="10" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_986_2339)">
+                <path
+                  d="M26.1249 6.58769H-5.125V0.301757C-5.125 0.00421067 -4.88373 -0.237061 -4.58618 -0.237061H25.5862C25.8837 -0.237061 26.125 0.00421067 26.125 0.301757L26.1249 6.58769Z"
+                  fill="#82AFFF" />
+                <path
+                  d="M25.5861 20.2371H-4.58618C-4.88373 20.2371 -5.125 19.9958 -5.125 19.6983V13.4124H26.1249V19.6983C26.1249 19.9959 25.8837 20.2371 25.5861 20.2371Z"
+                  fill="#73AF00" />
+                <path d="M26.1249 6.58769H-5.125V13.4124H26.1249V6.58769Z" fill="#F5F5F5" />
+                <path d="M26.1249 5.98149H-5.125V6.83244H26.1249V5.98149Z" fill="#FF4B55" />
+                <path d="M26.1251 13.1671H-5.12489V14.0181H26.1251V13.1671Z" fill="#FF4B55" />
+                <path
+                  d="M1.80152 4.87746C0.698495 4.87746 -0.195606 3.9855 -0.195606 2.88644C-0.195606 1.78335 0.698434 0.887357 1.80152 0.887357C1.80579 0.887357 1.80994 0.887357 1.81409 0.887418C1.87904 0.888273 1.9018 0.80203 1.84455 0.771329C1.50489 0.589262 1.11726 0.486235 0.705149 0.489226C-0.614673 0.498625 -1.68675 1.59231 -1.67272 2.91213C-1.65892 4.21834 -0.591053 5.27566 0.722421 5.27566C1.12885 5.27566 1.51105 5.17281 1.8465 4.99325C1.90357 4.96267 1.8805 4.87643 1.8158 4.87734C1.81092 4.87746 1.80622 4.87746 1.80152 4.87746Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M3.36491 4.32692L3.27574 4.59437L2.99382 4.59651C2.95732 4.59675 2.94219 4.64338 2.97154 4.66505L3.19835 4.83253L3.11327 5.10133C3.10228 5.13612 3.14189 5.16493 3.17162 5.14369L3.40098 4.97975L3.63036 5.14369C3.66008 5.16493 3.69963 5.13612 3.6887 5.10133L3.60362 4.83253L3.83037 4.66505C3.85972 4.64338 3.84459 4.59675 3.80809 4.59651L3.52617 4.59437L3.437 4.32692C3.42546 4.29231 3.37651 4.29231 3.36491 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M5.351 4.32692L5.26183 4.59437L4.97991 4.59651C4.94341 4.59675 4.92827 4.64338 4.95763 4.66505L5.18437 4.83253L5.09929 5.10133C5.0883 5.13612 5.12792 5.16493 5.15764 5.14369L5.38701 4.97975L5.61638 5.14369C5.6461 5.16493 5.68566 5.13612 5.67473 5.10133L5.58965 4.83253L5.81639 4.66505C5.84575 4.64338 5.83061 4.59675 5.79411 4.59651L5.51219 4.59437L5.42302 4.32692C5.41148 4.29231 5.36247 4.29231 5.351 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M7.33708 4.32692L7.24791 4.59437L6.96599 4.59651C6.92949 4.59675 6.91435 4.64338 6.94371 4.66505L7.17052 4.83253L7.08543 5.10133C7.07445 5.13612 7.11406 5.16493 7.14378 5.14369L7.37315 4.97975L7.60252 5.14369C7.63224 5.16493 7.6718 5.13612 7.66087 5.10133L7.57579 4.83253L7.80253 4.66505C7.83189 4.64338 7.81675 4.59675 7.78025 4.59651L7.49833 4.59437L7.40916 4.32692C7.39763 4.29231 7.34862 4.29231 7.33708 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M9.32317 4.32692L9.23399 4.59437L8.95207 4.59651C8.91557 4.59675 8.90044 4.64338 8.92979 4.66505L9.15654 4.83253L9.07146 5.10133C9.06047 5.13612 9.10008 5.16493 9.12981 5.14369L9.35918 4.97975L9.58854 5.14369C9.61827 5.16493 9.65782 5.13612 9.6469 5.10133L9.56181 4.83253L9.78856 4.66505C9.81791 4.64338 9.80278 4.59675 9.76628 4.59651L9.48436 4.59437L9.39519 4.32692C9.38371 4.29231 9.3347 4.29231 9.32317 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M11.3105 4.32692L11.2213 4.59437L10.9394 4.59651C10.9029 4.59675 10.8877 4.64338 10.9171 4.66505L11.1439 4.83253L11.0588 5.10133C11.0478 5.13612 11.0874 5.16493 11.1172 5.14369L11.3465 4.97975L11.5759 5.14369C11.6056 5.16493 11.6452 5.13612 11.6343 5.10133L11.5492 4.83253L11.776 4.66505C11.8053 4.64338 11.7902 4.59675 11.7537 4.59651L11.4718 4.59437L11.3826 4.32692C11.371 4.29231 11.322 4.29231 11.3105 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M5.351 2.47314L5.26183 2.7406L4.97991 2.74273C4.94341 2.74298 4.92827 2.78961 4.95763 2.81127L5.18437 2.97876L5.09929 3.24755C5.0883 3.28234 5.12792 3.31115 5.15764 3.28991L5.38701 3.12597L5.61638 3.28991C5.6461 3.31115 5.68566 3.28234 5.67473 3.24755L5.58965 2.97876L5.81639 2.81127C5.84575 2.78961 5.83061 2.74298 5.79411 2.74273L5.51219 2.7406L5.42302 2.47314C5.41148 2.43841 5.36247 2.43841 5.351 2.47314Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M7.33708 2.47314L7.24791 2.7406L6.96599 2.74273C6.92949 2.74298 6.91435 2.78961 6.94371 2.81127L7.17052 2.97876L7.08543 3.24755C7.07445 3.28234 7.11406 3.31115 7.14378 3.28991L7.37315 3.12597L7.60252 3.28991C7.63224 3.31115 7.6718 3.28234 7.66087 3.24755L7.57579 2.97876L7.80253 2.81127C7.83189 2.78961 7.81675 2.74298 7.78025 2.74273L7.49833 2.7406L7.40916 2.47314C7.39763 2.43841 7.34862 2.43841 7.33708 2.47314Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M9.32317 2.47314L9.23399 2.7406L8.95207 2.74273C8.91557 2.74298 8.90044 2.78961 8.92979 2.81127L9.15654 2.97876L9.07146 3.24755C9.06047 3.28234 9.10008 3.31115 9.12981 3.28991L9.35918 3.12597L9.58854 3.28991C9.61827 3.31115 9.65782 3.28234 9.6469 3.24755L9.56181 2.97876L9.78856 2.81127C9.81791 2.78961 9.80278 2.74298 9.76628 2.74273L9.48436 2.7406L9.39519 2.47314C9.38371 2.43841 9.3347 2.43841 9.32317 2.47314Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M11.3105 2.47314L11.2213 2.7406L10.9394 2.74273C10.9029 2.74298 10.8877 2.78961 10.9171 2.81127L11.1439 2.97876L11.0588 3.24755C11.0478 3.28234 11.0874 3.31115 11.1172 3.28991L11.3465 3.12597L11.5759 3.28991C11.6056 3.31115 11.6452 3.28234 11.6343 3.24755L11.5492 2.97876L11.776 2.81127C11.8053 2.78961 11.7902 2.74298 11.7537 2.74273L11.4718 2.7406L11.3826 2.47314C11.371 2.43841 11.322 2.43841 11.3105 2.47314Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M7.33708 4.32692L7.24791 4.59437L6.96599 4.59651C6.92949 4.59675 6.91435 4.64338 6.94371 4.66505L7.17052 4.83253L7.08543 5.10133C7.07445 5.13612 7.11406 5.16493 7.14378 5.14369L7.37315 4.97975L7.60252 5.14369C7.63224 5.16493 7.6718 5.13612 7.66087 5.10133L7.57579 4.83253L7.80253 4.66505C7.83189 4.64338 7.81675 4.59675 7.78025 4.59651L7.49833 4.59437L7.40916 4.32692C7.39763 4.29231 7.34862 4.29231 7.33708 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M7.33708 0.619316L7.24791 0.886771L6.96599 0.888908C6.92949 0.889152 6.91435 0.935782 6.94371 0.95745L7.17052 1.12493L7.08543 1.39373C7.07445 1.42852 7.11406 1.45733 7.14378 1.43609L7.37315 1.27215L7.60252 1.43609C7.63224 1.45733 7.6718 1.42852 7.66087 1.39373L7.57579 1.12493L7.80253 0.95745C7.83189 0.935782 7.81675 0.889152 7.78025 0.888908L7.49833 0.886771L7.40916 0.619316C7.39763 0.584709 7.34862 0.584709 7.33708 0.619316Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M9.32317 4.32692L9.23399 4.59437L8.95207 4.59651C8.91557 4.59675 8.90044 4.64338 8.92979 4.66505L9.15654 4.83253L9.07146 5.10133C9.06047 5.13612 9.10008 5.16493 9.12981 5.14369L9.35918 4.97975L9.58854 5.14369C9.61827 5.16493 9.65782 5.13612 9.6469 5.10133L9.56181 4.83253L9.78856 4.66505C9.81791 4.64338 9.80278 4.59675 9.76628 4.59651L9.48436 4.59437L9.39519 4.32692C9.38371 4.29231 9.3347 4.29231 9.32317 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M11.3105 4.32692L11.2213 4.59437L10.9394 4.59651C10.9029 4.59675 10.8877 4.64338 10.9171 4.66505L11.1439 4.83253L11.0588 5.10133C11.0478 5.13612 11.0874 5.16493 11.1172 5.14369L11.3465 4.97975L11.5759 5.14369C11.6056 5.16493 11.6452 5.13612 11.6343 5.10133L11.5492 4.83253L11.776 4.66505C11.8053 4.64338 11.7902 4.59675 11.7537 4.59651L11.4718 4.59437L11.3826 4.32692C11.371 4.29231 11.322 4.29231 11.3105 4.32692Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M9.32317 0.619316L9.23399 0.886771L8.95207 0.888908C8.91557 0.889152 8.90044 0.935782 8.92979 0.95745L9.15654 1.12493L9.07146 1.39373C9.06047 1.42852 9.10008 1.45733 9.12981 1.43609L9.35918 1.27215L9.58854 1.43609C9.61827 1.45733 9.65782 1.42852 9.6469 1.39373L9.56181 1.12493L9.78856 0.95745C9.81791 0.935782 9.80278 0.889152 9.76628 0.888908L9.48436 0.886771L9.39519 0.619316C9.38371 0.584709 9.3347 0.584709 9.32317 0.619316Z"
+                  fill="#F5F5F5" />
+                <path
+                  d="M11.3105 0.619316L11.2213 0.886771L10.9394 0.888908C10.9029 0.889152 10.8877 0.935782 10.9171 0.95745L11.1439 1.12493L11.0588 1.39373C11.0478 1.42852 11.0874 1.45733 11.1172 1.43609L11.3465 1.27215L11.5759 1.43609C11.6056 1.45733 11.6452 1.42852 11.6343 1.39373L11.5492 1.12493L11.776 0.95745C11.8053 0.935782 11.7902 0.889152 11.7537 0.888908L11.4718 0.886771L11.3826 0.619316C11.371 0.584709 11.322 0.584709 11.3105 0.619316Z"
+                  fill="#F5F5F5" />
+              </g>
+            </svg>
+            O‘zbekcha
+          </NuxtLink>
+        </section>
         <section class="header">
           <div class="header__wrapper">
-            <nuxt-link to="/">
-              <img width="60" src="/logotip.png" alt="" />
+            <nuxt-link class="header_logo" to="/">
+              <img src="/logotip.png" alt="" />
             </nuxt-link>
             <div class="header__category-btn-wrapper" id="btnWrapper">
               <button @click="openCategories" class="header__category-wrapper" id="openCategories">
@@ -24,17 +97,23 @@
                     d="M14.9993 18.9583C12.816 18.9583 11.041 17.1833 11.041 15C11.041 12.8167 12.816 11.0417 14.9993 11.0417C17.1827 11.0417 18.9577 12.8167 18.9577 15C18.9577 17.1833 17.1827 18.9583 14.9993 18.9583ZM14.9993 12.2917C13.5077 12.2917 12.291 13.5083 12.291 15C12.291 16.4917 13.5077 17.7083 14.9993 17.7083C16.491 17.7083 17.7077 16.4917 17.7077 15C17.7077 13.5083 16.491 12.2917 14.9993 12.2917Z"
                     fill="#000814" />
                 </svg>
-                <p class="pointer-events header__category-text">Kategoriyalar</p>
+                <p class="pointer-events header__category-text">Katalog</p>
               </button>
               <div class="header__categories-wrapper">
                 <div class="header__categories">
-                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
-                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
-                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator
+                  </NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator
+                  </NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator
+                  </NuxtLink>
                   <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
-                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
-                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator</NuxtLink>
-                  <NuxtLink class="header__categories-link" to="/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6fa">Betonameshalka
+                  </NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator
+                  </NuxtLink>
+                  <NuxtLink class="header__categories-link" to="/category/6596496b757d180fa1fb351d">Stabilizator
+                  </NuxtLink>
                 </div>
               </div>
             </div>
@@ -245,12 +324,14 @@
             </p>
           </div>
           <div class="footer__categories">
-            <h3 class="footer__categories-title">Kategoriyalar</h3>
+            <h3 class="footer__categories-title">Katalog</h3>
             <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
             <NuxtLink class="footer__categories-link" to="/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
             <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
-            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
-            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator</NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator
+            </NuxtLink>
+            <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6fb">Benzinli generator
+            </NuxtLink>
             <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
             <NuxtLink class="footer__categories-link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
           </div>
@@ -359,7 +440,7 @@
               <p class="footer__map-text">Toshkent Xalqa Avtomabil Yo'li</p>
               <a class="footer__map-link" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8" target="_blank"
                 rel="noopener noreferrer">
-                <p class="footer__map">Map</p>
+                <p class="footer__map">Xarita</p>
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="fi_11515688" clip-path="url(#clip0_229_3343)">
                     <g id="Group">
@@ -430,65 +511,65 @@
 </template>
 
 <script setup>
-  import { useCounterStore } from "~/store/counter";
-  import { useCategoriesStore } from "~/store/categories";
-  import { useProductsStore } from "~/store/products";
+import { useCounterStore } from "~/store/counter";
+import { useCategoriesStore } from "~/store/categories";
+import { useProductsStore } from "~/store/products";
 
-  const counterStore = useCounterStore();
+const counterStore = useCounterStore();
 
-  const productsStore = useProductsStore();
+const productsStore = useProductsStore();
 
-  const categoriesStore = useCategoriesStore();
+const categoriesStore = useCategoriesStore();
 
-  categoriesStore.getCategories();
-  counterStore.getCounter();
-  productsStore.getProducts();
+categoriesStore.getCategories();
+counterStore.getCounter();
+productsStore.getProducts();
 
-  const searchProducts = ref([]);
+const searchProducts = ref([]);
 
-  const search = async (e) => {
-    e.preventDefault();
-    await navigateTo(`/search/${searchInput.value}`);
-  };
+const search = async (e) => {
+  e.preventDefault();
+  await navigateTo(`/search/${searchInput.value}`);
+};
 
-  const searchProductsFn = () => {
-    const filteredProducts = productsStore.data.products.filter((product) => {
-      return product.product_title
-        .toLowerCase()
-        .includes(searchInput.value.toLowerCase());
-    });
-    searchProducts.value = filteredProducts;
-    if (filteredProducts.length > 0) {
-      searchList.classList.add("search-products--open");
-    } else {
-      searchList.classList.remove("search-products--open");
+const searchProductsFn = () => {
+  const filteredProducts = productsStore.data.products.filter((product) => {
+    return product.product_title
+      .toLowerCase()
+      .includes(searchInput.value.toLowerCase());
+  });
+  searchProducts.value = filteredProducts;
+  if (filteredProducts.length > 0) {
+    searchList.classList.add("search-products--open");
+  } else {
+    searchList.classList.remove("search-products--open");
+  }
+};
+
+const openCategories = () => {
+  btnWrapper.classList.toggle("header__category-btn-wrapper--active");
+};
+
+const closeCategories = (e) => {
+  if (e.target.id !== "openCategories") {
+    btnWrapper.classList.remove("header__category-btn-wrapper--active");
+  }
+  if (searchList) {
+    searchList.classList.remove("search-products--open");
+  }
+};
+
+const removeBasked = (e) => {
+  const id = e.target.closest(".header__store-item").id;
+  let basked = JSON.parse(localStorage.getItem("basked"));
+  basked = basked.filter((e) => e._id !== id);
+  localStorage.setItem("basked", JSON.stringify(basked));
+  counterStore.deleteOne("basked");
+  productsStore.data.products.forEach((element) => {
+    if (element._id == id) {
+      element.inCart = false;
     }
-  };
-
-  const openCategories = () => {
-    btnWrapper.classList.toggle("header__category-btn-wrapper--active");
-  };
-
-  const closeCategories = (e) => {
-    if (e.target.id !== "openCategories") {
-      btnWrapper.classList.remove("header__category-btn-wrapper--active");
-    }
-    if (searchList) {
-      searchList.classList.remove("search-products--open");
-    }
-  };
-
-  const removeBasked = (e) => {
-    const id = e.target.closest(".header__store-item").id;
-    let basked = JSON.parse(localStorage.getItem("basked"));
-    basked = basked.filter((e) => e._id !== id);
-    localStorage.setItem("basked", JSON.stringify(basked));
-    counterStore.deleteOne("basked");
-    productsStore.data.products.forEach((element) => {
-      if (element._id == id) {
-        element.inCart = false;
-      }
-    });
-    productsStore.updateProductIBasked(id, false);
-  };
+  });
+  productsStore.updateProductIBasked(id, false);
+};
 </script>

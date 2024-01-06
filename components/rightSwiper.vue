@@ -1,5 +1,18 @@
 <template>
-    <swiper :allowTouchMove="false" :spaceBetween="30" :speed="3000" :slidesPerView="6.5" :centeredSlides="true"
+    <swiper :allowTouchMove="false" :breakpoints="{
+      '350': {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+      '768': {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      '1200': {
+        slidesPerView: 6.5,
+        spaceBetween: 30,
+      },
+    }" :spaceBetween="30" :speed="3000" :slidesPerView="6.5" :centeredSlides="true"
         :loop="true" :autoplay="{
             delay: 0,
             disableOnInteraction: false,
