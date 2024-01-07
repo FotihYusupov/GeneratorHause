@@ -358,13 +358,13 @@
     align-items: center;
 
     span {
-      padding: 0 4%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       p:nth-child(1) {
         color: #afb0b4;
+        width: 30%;
       }
       hr {
         border: none;
@@ -373,7 +373,7 @@
         color: #fff;
         background-color: #fff;
         height: 1px;
-        width: 50%;
+        width: 40%;
       }
     }
   }
