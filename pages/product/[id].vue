@@ -68,7 +68,7 @@
                     {{ findProduct.brand.brand_name }}
                 </p>
                 <div class="product__counter-wrapper">
-                    <p>Amount:</p>
+                    <p>Soni:</p>
                     <span class="product__counter-btns">
                         <button @click="count" class="product__counter-btn" id="removeCount">
                             <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="20" height="21"

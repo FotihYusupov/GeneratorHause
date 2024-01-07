@@ -16,7 +16,7 @@
   .pointer-events {
     pointer-events: none;
   }
-  .res-header{
+  .res-header {
     display: none;
   }
   .header__wrapper {
@@ -173,13 +173,13 @@
         align-items: center;
         height: inherit;
         gap: 1px;
-        svg{
+        svg {
           border-radius: 50%;
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           -ms-border-radius: 50%;
           -o-border-radius: 50%;
-}
+        }
       }
     }
     .header__storage {
@@ -441,12 +441,12 @@
     margin-top: 2%;
     padding: 1% 0;
     .hypernova_logo {
-      background-image: url("/Logo.png");
+      background-image: url("/hypernova.png");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 82%;
+      background-size: cover;
       height: 62px;
-      width: 101px;
+      width: 120px;
       &:hover {
         background-image: url("/hypernova.gif");
         background-position: center;
@@ -940,6 +940,13 @@
 @media only screen and (min-width: 350px) and (max-width: 1200px) {
   .container {
     padding: 0px 6%;
+    .sale_title {
+      margin-top: 10%;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
   }
   .link {
     color: #000;
@@ -955,18 +962,18 @@
   .pointer-events {
     pointer-events: none;
   }
-  .res-header{
+  .res-header {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 2% 0;
     justify-content: space-between;
-    .res-header_logo{
-      img{
+    .res-header_logo {
+      img {
         width: 40px;
       }
     }
-    .res-uzb-translate{
+    .res-uzb-translate {
       display: flex;
       align-items: center;
       gap: 4px;
@@ -1078,7 +1085,7 @@
       position: absolute;
       padding: 1%;
       z-index: 10;
-      top: 15%;
+      top: 27%;
       width: 88%;
       border-radius: 10px;
       background-color: #ffffff;
@@ -1324,6 +1331,7 @@
         }
       }
       a {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1347,6 +1355,17 @@
         margin-top: 5%;
         font-size: 12px;
         color: #787878;
+      }
+      .mobile-footer__count {
+        position: absolute;
+        bottom: 65%;
+        right: -5px;
+        margin: 0;
+        padding: 0 5px;
+        font-size: 12px;
+        border-radius: 4px;
+        color: $primary-yellow;
+        background-color: #000814;
       }
     }
   }
@@ -1493,7 +1512,7 @@
     margin-top: 2%;
     padding: 4% 0;
     .hypernova_logo {
-      background-image: url("/Logo.png");
+      background-image: url("/hypernova.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 82%;
@@ -1762,11 +1781,10 @@
         }
         &:nth-child(1) {
           background: #fcf2f5;
-          
         }
         &:nth-child(2) {
           background: #f6f8ff;
-          .category_img{
+          .category_img {
             position: relative;
             left: 10%;
             width: 80%;
@@ -1777,7 +1795,7 @@
         }
         &:nth-child(3) {
           background: #ffffe1;
-          .category_img{
+          .category_img {
             position: relative;
             left: 20%;
             width: 100%;
@@ -1788,7 +1806,7 @@
         }
         &:nth-child(4) {
           background: #fff7f2;
-          .category_img{
+          .category_img {
             position: relative;
             left: 10%;
             width: 80%;
@@ -1799,11 +1817,10 @@
         }
         &:nth-child(5) {
           background: #f6f2ff;
-          
         }
         &:nth-child(6) {
           background: #f2fff5;
-          .category_img{
+          .category_img {
             position: relative;
             left: 7%;
             width: 70%;
