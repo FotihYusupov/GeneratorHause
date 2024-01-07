@@ -359,6 +359,7 @@
 
     span {
       display: flex;
+      gap: 10px;
       justify-content: space-between;
       align-items: center;
       width: 100%;
@@ -373,7 +374,7 @@
         color: #fff;
         background-color: #fff;
         height: 1px;
-        width: 40%;
+        width: 30%;
       }
     }
   }

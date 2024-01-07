@@ -2,7 +2,7 @@
   <div class="container">
     <Loader v-if="productsStore.data.loading"/>
     <div v-else class="category_wrapper">
-      <div class="filter">
+      <div id="filterWrapper" class="filter">
         <div class="custom-select" id="customSelect">
           <span @click="openSelect" class="custom-select__title-wrapper">
             <p class="custom-select__title">Brandni Tanlang</p>
@@ -61,7 +61,7 @@
         <hr>
         <div class="price-inputs">
           <input type="text" @input="filterByPrice" id="startPrice" placeholder="dan">
-          <input type="text" @input="filterByPrice" id="endPrice" placeholder="dagacha">
+          <input type="text" @input="filterByPrice" id="endPrice" placeholder="gacha">
         </div>
         <div v-if="openFilterKw" class="price-input__title">
           <h4>Maksimal quvvat (Kw)</h4>
@@ -80,8 +80,8 @@
         </div>
         <hr v-if="openFilterKw">
         <div v-if="openFilterKw" class="price-inputs">
-          <input type="text" @input="filterByKw" id="startKw" placeholder="to">
-          <input type="text" @input="filterByKw" id="endKw" placeholder="from">
+          <input type="text" @input="filterByKw" id="startKw" placeholder="dan">
+          <input type="text" @input="filterByKw" id="endKw" placeholder="gacha">
         </div>
         <div v-if="openFilterFuel" class="price-input__title">
           <h4>Yoqilg'i sig'imi (L)</h4>
@@ -100,17 +100,27 @@
         </div>
         <hr v-if="openFilterFuel">
         <div v-if="openFilterFuel" class="price-inputs">
-          <input type="text" @input="filterByFuel" id="startFuel" placeholder="to">
-          <input type="text" @input="filterByFuel" id="endFuel" placeholder="from">
+          <input type="text" @input="filterByFuel" id="startFuel" placeholder="dan">
+          <input type="text" @input="filterByFuel" id="endFuel" placeholder="gacha">
         </div>
+        <button @click="closeOpenFilter" class="filter__show">Ko'rsatish</button>
       </div>
-      <div class="categories-wrapper">
-        <div v-if="filteredProducts.length > 0">
+      <div  v-if="open" class="categories-wrapper">
+        <div>
           <div class="categories-header">
-            <span class="categories__title-wrapper">
-              <h2>{{ filteredProducts[0].category.category_name }}</h2>
-              <p>{{ filteredProducts.length }} ta mahsulot</p>
-            </span>
+            <div>
+              <span @click="closeOpenFilter" class="categories-filter">
+                <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.125 3.7576C11.6205 3.7576 10.3553 4.83598 10.0635 6.2576H1.875C1.52983 6.2576 1.25 6.53742 1.25 6.8826C1.25 7.22777 1.52983 7.5076 1.875 7.5076H10.0635C10.3553 8.92922 11.6205 10.0076 13.125 10.0076C14.6295 10.0076 15.8947 8.92922 16.1865 7.5076H18.125C18.4702 7.5076 18.75 7.22777 18.75 6.8826C18.75 6.53742 18.4702 6.2576 18.125 6.2576H16.1865C15.8947 4.83598 14.6295 3.7576 13.125 3.7576ZM13.125 5.0076C14.1679 5.0076 15 5.83968 15 6.8826C15 7.92552 14.1679 8.7576 13.125 8.7576C12.0821 8.7576 11.25 7.92552 11.25 6.8826C11.25 5.83968 12.0821 5.0076 13.125 5.0076Z" fill="#AFB0B4"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.875 10.0076C5.37051 10.0076 4.10528 11.086 3.81348 12.5076H1.875C1.52983 12.5076 1.25 12.7874 1.25 13.1326C1.25 13.4778 1.52983 13.7576 1.875 13.7576H3.81348C4.10528 15.1792 5.37051 16.2576 6.875 16.2576C8.37949 16.2576 9.64472 15.1792 9.93652 13.7576H18.125C18.4702 13.7576 18.75 13.4778 18.75 13.1326C18.75 12.7874 18.4702 12.5076 18.125 12.5076H9.93652C9.64472 11.086 8.37949 10.0076 6.875 10.0076ZM6.875 11.2576C7.91792 11.2576 8.75 12.0897 8.75 13.1326C8.75 14.1755 7.91792 15.0076 6.875 15.0076C5.83208 15.0076 5 14.1755 5 13.1326C5 12.0897 5.83208 11.2576 6.875 11.2576Z" fill="#AFB0B4"/>
+                </svg>
+                <p class="pointer-events">Filter</p>
+              </span>
+              <span class="categories__title-wrapper">
+                <h2>{{ findP.category.category_name }}</h2>
+                <p>{{ filteredProducts.length }} ta mahsulot</p>
+              </span>
+            </div>
             <span @click="OpenSortBy" class="sort-wrapper">
               <p>Saralash</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -133,15 +143,15 @@
               <span @click="sortBy" id="viewsHigh">Ko'rishlar (yuqoridan boshlab)</span>
             </div>
           </div>
-          <ul class="category-products">
+          <ul v-if="filteredProducts.length > 0" class="category-products">
             <card v-for="product in filteredProducts.slice(0, end)" :id="product._id" v-bind:key="product._id"
               :title="product.product_title" :img="product.product_img" :description="product.product_desc"
               :views="product.views" :price="product.product_price" :newPrice="product.new_price" :inCart="product.inCart"
               :inFavorites="product.inFavorites" />
           </ul>
-          <button class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Tanishish</button>
+          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Tanishish</button>
         </div>
-        <div v-else class="category-not-found">
+        <div v-if="!filteredProducts.length > 0" class="category-not-found">
           <svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M533.558 120.219L525.902 157.294L520.977 152.49L512.591 158.468L506.185 150.515L491.813 160.963L479.538 140.426L465.839 148.449L460.409 140.958L443.016 150.758L437.782 139.556L449.973 80.5072L515.337 94.0024L533.558 120.219Z"
@@ -638,162 +648,174 @@
 </template>
 
 <script setup>
-import axios from 'axios'
+  import axios from 'axios'
 
-import { useProductsStore } from '~/store/products';
-import card from '~/components/cardComponent.vue'
+  import { useProductsStore } from '~/store/products';
+  import card from '~/components/cardComponent.vue'
 
-const end = ref(20)
+  const end = ref(20)
 
-const brands = ref([])
-const getBrands = async () => {
-  const res = await axios.get('https://api.generatorhouse.uz/api/brands')
-  brands.value = res.data
-}
-getBrands()
-
-const { id } = useRoute().params;
-const filteredProducts = ref([])
-const productsStore = useProductsStore();
-
-const openFilterKw = ref(false)
-const openFilterFuel = ref(false)
-
-const fetchData = async () => {
-  await productsStore.getProducts();
-  filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
-  filteredProducts.value.forEach(e => {
-    if (e.information.some(inf => inf.key == 'kVa')) {
-      openFilterKw.value = true;
-    }
-    if (e.information.some(inf => inf.key == 'Bak hajmi')) {
-      openFilterFuel.value = true;
-    }
-  })
-};
-fetchData()
-
-const clickFn = () => {
-  end.value = end.value + 20
-}
-
-const openSelect = () => {
-  customSelect.classList.toggle('custom-select--open')
-}
-
-const selectedBrands = ref([])
-
-const getBrand = (event) => {
-  customSelect.classList.remove('custom-select--open')
-  brands.value.forEach(element => {
-    if (element._id == event.target.id) {
-      element.selected = true
-    }
-  })
-  selectedBrands.value.push(brands.value.filter(e => e._id === event.target.id)[0])
-  const filtered = []
-  productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
-    selectedBrands.value.forEach(brand => {
-      if (product.brand._id === brand._id) {
-        filtered.push(product)
-      }
-    })
-  })
-  filteredProducts.value = filtered
-}
-
-const removeSelected = (e) => {
-  selectedBrands.value = selectedBrands.value.filter(element => element._id !== e.target.id)
-  brands.value.forEach(element => {
-    if (element._id == e.target.id) {
-      element.selected = false
-    }
-  })
-  let filtered = []
-  productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
-    if (selectedBrands.value.length === 0) {
-      filtered = productsStore.data.products.filter(e => e.category._id === id)
-    }
-    selectedBrands.value.forEach(brand => {
-      if (product.brand._id === brand._id) {
-        filtered.push(product)
-      }
-    })
-  })
-  filteredProducts.value = filtered
-}
-
-const filterByPrice = () => {
-  filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
-    if (startPrice.value !== '' && endPrice.value !== '') {
-      return product.product_price >= startPrice.value && product.product_price <= endPrice.value;
-    } else if (startPrice.value !== '') {
-      return product.product_price >= startPrice.value;
-    } else if (endPrice.value !== '') {
-      return product.product_price <= endPrice.value;
-    }
-    return [];
-  });
-}
-
-const filterByKw = () => {
-  const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
-    const kwInformation = product.information.find(inf => inf.key === 'Kw');
-
-    if (kwInformation) {
-      const kwValue = Number(kwInformation.value);
-      if (startKw.value !== '' && endKw.value !== '') {
-        return kwValue >= startKw.value && kwValue <= endKw.value;
-      } else if (startKw.value !== '') {
-        return kwValue >= startKw.value;
-      } else if (endKw.value !== '') {
-        return kwValue <= endKw.value;
-      }
-    }
-    return [];
-  });
-  filteredProducts.value = filter
-};
-
-const filterByFuel = () => {
-  const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
-    const kwInformation = product.information.find(inf => inf.key === 'Bak');
-
-    if (kwInformation) {
-      let result = kwInformation.value.slice(0, -1);
-      result = parseFloat(result);
-      if (startFuel.value !== '' && endFuel.value !== '') {
-        return result >= startFuel.value && result <= endFuel.value;
-      } else if (startFuel.value !== '') {
-        return result >= startFuel.value;
-      } else if (endFuel.value !== '') {
-        return result <= endFuel.value;
-      }
-    }
-    return [];
-  });
-  filteredProducts.value = filter
-};
-
-const sortBy = (e) => {
-  const target = e.target
-  if (target.id === 'expensive') {
-    filteredProducts.value = filteredProducts.value.sort((a, b) => a.product_price - b.product_price)
-    sortByWrapper.classList.remove('sort-by-list--open')
-  } else if (target.id === 'cheaper') {
-    filteredProducts.value = filteredProducts.value.sort((a, b) => b.product_price - a.product_price)
-    sortByWrapper.classList.remove('sort-by-list--open')
-  } else if (target.id === 'viewsLow') {
-    filteredProducts.value = filteredProducts.value.sort((a, b) => a.views - b.views)
-    sortByWrapper.classList.remove('sort-by-list--open')
-  } else if (target.id === 'viewsHigh') {
-    filteredProducts.value = filteredProducts.value.sort((a, b) => b.views - a.views)
-    sortByWrapper.classList.remove('sort-by-list--open')
+  const brands = ref([])
+  const getBrands = async () => {
+    const res = await axios.get('https://api.generatorhouse.uz/api/brands')
+    brands.value = res.data
   }
-}
+  getBrands()
 
-const OpenSortBy = () => {
-  sortByWrapper.classList.toggle('sort-by-list--open')
-}
+  const { id } = useRoute().params;
+  const filteredProducts = ref([])
+  const productsStore = useProductsStore();
+
+  const open = ref(false)
+
+  const openFilterKw = ref(false)
+  const openFilterFuel = ref(false)
+
+  const findP = ref(null)
+
+  const fetchData = async () => {
+    await productsStore.getProducts();
+    filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
+    filteredProducts.value.forEach(e => {
+      if (e.information.some(inf => inf.key == 'kVa')) {
+        openFilterKw.value = true;
+      }
+      if (e.information.some(inf => inf.key == 'Bak hajmi')) {
+        openFilterFuel.value = true;
+      }
+    })
+    if(filteredProducts.value[0]) {
+      findP.value = filteredProducts.value[0]
+      open.value = true;
+    }
+  };
+  fetchData()
+
+  const clickFn = () => {
+    end.value = end.value + 20
+  }
+
+  const openSelect = () => {
+    customSelect.classList.toggle('custom-select--open')
+  }
+
+  const selectedBrands = ref([])
+
+  const getBrand = (event) => {
+    customSelect.classList.remove('custom-select--open')
+    brands.value.forEach(element => {
+      if (element._id == event.target.id) {
+        element.selected = true
+      }
+    })
+    selectedBrands.value.push(brands.value.filter(e => e._id === event.target.id)[0])
+    const filtered = []
+    productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
+      selectedBrands.value.forEach(brand => {
+        if (product.brand._id === brand._id) {
+          filtered.push(product)
+        }
+      })
+    })
+    filteredProducts.value = filtered
+  }
+
+  const removeSelected = (e) => {
+    selectedBrands.value = selectedBrands.value.filter(element => element._id !== e.target.id)
+    brands.value.forEach(element => {
+      if (element._id == e.target.id) {
+        element.selected = false
+      }
+    })
+    let filtered = []
+    productsStore.data.products.filter(e => e.category._id === id).forEach(product => {
+      if (selectedBrands.value.length === 0) {
+        filtered = productsStore.data.products.filter(e => e.category._id === id)
+      }
+      selectedBrands.value.forEach(brand => {
+        if (product.brand._id === brand._id) {
+          filtered.push(product)
+        }
+      })
+    })
+    filteredProducts.value = filtered
+  }
+
+  const filterByPrice = () => {
+    filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+      if (startPrice.value !== '' && endPrice.value !== '') {
+        return product.product_price >= startPrice.value && product.product_price <= endPrice.value;
+      } else if (startPrice.value !== '') {
+        return product.product_price >= startPrice.value;
+      } else if (endPrice.value !== '') {
+        return product.product_price <= endPrice.value;
+      }
+      return [];
+    });
+  }
+
+  const filterByKw = () => {
+    const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+      const kwInformation = product.information.find(inf => inf.key === 'kVa');
+
+      if (kwInformation) {
+        const kwValue = Number(kwInformation.value);
+        if (startKw.value !== '' && endKw.value !== '') {
+          return kwValue >= startKw.value && kwValue <= endKw.value;
+        } else if (startKw.value !== '') {
+          return kwValue >= startKw.value;
+        } else if (endKw.value !== '') {
+          return kwValue <= endKw.value;
+        }
+      }
+      return [];
+    });
+    filteredProducts.value = filter
+  };
+
+  const filterByFuel = () => {
+    const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
+      const kwInformation = product.information.find(inf => inf.key === 'Bak hajmi');
+
+      if (kwInformation) {
+        let result = kwInformation.value.slice(0, -1);
+        result = parseFloat(result);
+        if (startFuel.value !== '' && endFuel.value !== '') {
+          return result >= startFuel.value && result <= endFuel.value;
+        } else if (startFuel.value !== '') {
+          return result >= startFuel.value;
+        } else if (endFuel.value !== '') {
+          return result <= endFuel.value;
+        }
+      }
+      return [];
+    });
+    filteredProducts.value = filter
+  };
+
+  const sortBy = (e) => {
+    const target = e.target
+    if (target.id === 'expensive') {
+      filteredProducts.value = filteredProducts.value.sort((a, b) => a.product_price - b.product_price)
+      sortByWrapper.classList.remove('sort-by-list--open')
+    } else if (target.id === 'cheaper') {
+      filteredProducts.value = filteredProducts.value.sort((a, b) => b.product_price - a.product_price)
+      sortByWrapper.classList.remove('sort-by-list--open')
+    } else if (target.id === 'viewsLow') {
+      filteredProducts.value = filteredProducts.value.sort((a, b) => a.views - b.views)
+      sortByWrapper.classList.remove('sort-by-list--open')
+    } else if (target.id === 'viewsHigh') {
+      filteredProducts.value = filteredProducts.value.sort((a, b) => b.views - a.views)
+      sortByWrapper.classList.remove('sort-by-list--open')
+    }
+  }
+
+  const OpenSortBy = () => {
+    sortByWrapper.classList.toggle('sort-by-list--open')
+  }
+  
+  const closeOpenFilter = () => {
+    filterWrapper.classList.toggle('filter--open')
+  }
 
 </script>

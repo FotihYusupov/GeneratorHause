@@ -4,12 +4,9 @@
         <div v-if="findProduct.product_title" class="product">
             <div v-if="findProduct.product_img" class="images-wrapper">
                 <div class="images-list">
-                    <img @click="getImg" class="list-item__img" v-for="(img, index) in findProduct.product_img" v-bind:key="img" :src="img"
-                        alt="Product Img" :id="index">
-                </div>
-                
-                    <img class='hero-img' :src="findProduct.product_img[index]" alt="">
-                
+                    <img @click="getImg" class="list-item__img" v-for="(img, index) in findProduct.product_img" v-bind:key="img" :src="img" alt="Product Img" :id="index">
+                </div>    
+                <img class='hero-img' :src="findProduct.product_img[index]" alt="">
                 <button @click="beforeImg" class="img-pagination-btn-start">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                         <g clip-path="url(#clip0_844_136)">
