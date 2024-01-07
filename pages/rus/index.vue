@@ -1,10 +1,8 @@
-
 <template>
     <Loader v-if="productsStore.data.loading"/>
     <div v-else class="main">
         <div class="container">
             <div class="hero_swiper">
-                ruscha
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
             <div class="sales_wrapper">
@@ -21,7 +19,7 @@
                             Gazli generator
                         </p>
                         <img class="category_img" src="/gasoline.png" alt="">
-                        <NuxtLink to="/category/659644bd0d8d7f5636a9c6f6" class="category_link">
+                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f6" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -38,7 +36,7 @@
                             Inverter generator
                         </p>
                         <img class="category_img" src="/invertor.png" alt="">
-                        <NuxtLink to="/category/659644bd0d8d7f5636a9c6f7" class="category_link">
+                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f7" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -55,7 +53,7 @@
                             Dizel generator
                         </p>
                         <img class="category_img" src="/dizel.png" alt="">
-                        <NuxtLink to="/category/659644bd0d8d7f5636a9c6f8" class="category_link">
+                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f8" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -72,7 +70,7 @@
                             Stabilizator
                         </p>
                         <img class="category_img" src="/stabilizer.png" alt="">
-                        <NuxtLink to="/category/6596496b757d180fa1fb351d" class="category_link">
+                        <NuxtLink to="/rus/category/6596496b757d180fa1fb351d" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -89,7 +87,7 @@
                             Karcher
                         </p>
                         <img class="category_img" src="/karcher.png" alt="">
-                        <NuxtLink to="/category/659644bd0d8d7f5636a9c6f9" class="category_link">
+                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f9" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -106,7 +104,7 @@
                             Betonameshalka
                         </p>
                         <img class="category_img" src="/geshalka.png" alt="">
-                        <NuxtLink to="/category/659644bd0d8d7f5636a9c6fa" class="category_link">
+                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6fa" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -123,7 +121,7 @@
                             Benzinli generator
                         </p>
                         <img class="category_img" src="/gasgenerator.png" alt="">
-                        <NuxtLink to="/category/659644bd0d8d7f5636a9c6fb" class="category_link">
+                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6fb" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -208,7 +206,7 @@
             <div class="container title-wrapper">
                 <h2>Gazli generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/category/659644bd0d8d7f5636a9c6f6">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f6">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -225,7 +223,7 @@
             <div class="container title-wrapper">
                 <h2>Inverter generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/category/659644bd0d8d7f5636a9c6f7">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f7">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -242,7 +240,7 @@
             <div class="container title-wrapper">
                 <h2>Karcher</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6f9">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f9">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -258,7 +256,7 @@
             <div class="container title-wrapper">
                 <h2>Stabilizator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/6596496b757d180fa1fb351d">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/rus/category/6596496b757d180fa1fb351d">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -274,7 +272,7 @@
             <div class="container title-wrapper">
                 <h2>Betonameshalka</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6fa">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="rus/category/659644bd0d8d7f5636a9c6fa">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -291,7 +289,7 @@
             <div class="container title-wrapper">
                 <h2>Benzinli generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6fb">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6fb">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -308,7 +306,7 @@
             <div class="container title-wrapper">
                 <h2>Dizel generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6f8">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f8">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">

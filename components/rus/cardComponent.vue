@@ -17,7 +17,7 @@
 
         <div class="card__content-wrapper">
 
-            <NuxtLink class="link" :to="'/product/' + id">
+            <NuxtLink class="link" :to="'/rus/product/' + id">
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
             <p class="card__desc ellipsis">{{ brand }}</p>

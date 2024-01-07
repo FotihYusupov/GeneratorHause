@@ -13,7 +13,6 @@ export const useProductsStore = defineStore({
   actions: {
     async getProducts() {
       try {
-        console.log('getProducts uz')
         this.data.loading = true;
         const response = await axios.get('https://api.generatorhouse.uz/api/products');
         if (response.status === 200) {
