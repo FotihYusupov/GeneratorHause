@@ -2,7 +2,7 @@ import axios from 'axios';
 import { defineStore } from 'pinia';
 
 export const useProductsStore = defineStore({
-  id: 'products',
+  id: 'productsRus',
   state: () => ({
     data: {
       loading: false,
@@ -13,19 +13,20 @@ export const useProductsStore = defineStore({
   actions: {
     async getProducts() {
       try {
-        console.log('getProducts uz')
+        console.log('getProducts')
         this.data.loading = true;
-        const response = await axios.get('https://api.generatorhouse.uz/api/products');
+        const response = await axios.get('https://api.generatorhouse.uz/api/ru/products');
         if (response.status === 200) {
           if (typeof localStorage !== 'undefined') {
-            let basked = JSON.parse(localStorage.getItem('basked'));
-            let favorites = JSON.parse(localStorage.getItem('favorites'));
+            let basked = JSON.parse(localStorage.getItem('baskedRus'));
+            let favorites = JSON.parse(localStorage.getItem('favoritesRus'));
             if(!basked || !favorites) {
-              localStorage.setItem('favorites', JSON.stringify([]));
-              localStorage.setItem('basked', JSON.stringify([]));
+              localStorage.setItem('favoritesRus', JSON.stringify([]));
+              localStorage.setItem('baskedRus', JSON.stringify([]));
               basked = []
               favorites = []
             }
+            console.log(response.data)
             response.data.forEach((product) => {
               const cartItem = basked.find((item) => item._id === product._id);
               product.inCart = !!cartItem;
