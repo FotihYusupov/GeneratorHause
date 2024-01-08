@@ -5,7 +5,7 @@
       <div id="filterWrapper" class="filter">
         <div class="custom-select" id="customSelect">
           <span @click="openSelect" class="custom-select__title-wrapper">
-            <p class="custom-select__title">Brandni Tanlang</p>
+            <p class="custom-select__title">Выберите Бренд</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <g clip-path="url(#clip0_775_9145)">
                 <path
@@ -677,10 +677,10 @@
     await productsStore.getProducts();
     filteredProducts.value = productsStore.data.products.filter(e => e.category._id === id);
     filteredProducts.value.forEach(e => {
-      if (e.information.some(inf => inf.key == 'Volt')) {
+      if (e.information.some(inf => inf.key == 'кВа')) {
         openFilterKw.value = true;
       }
-      if (e.information.some(inf => inf.key == 'Bak hajmi')) {
+      if (e.information.some(inf => inf.key == 'Емкость топлива')) {
         openFilterFuel.value = true;
       }
     })
@@ -756,7 +756,7 @@
 
   const filterByKw = () => {
     const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
-      const kwInformation = product.information.find(inf => inf.key === 'Volt');
+      const kwInformation = product.information.find(inf => inf.key === 'кВа');
 
       if (kwInformation) {
         const kwValue = Number(kwInformation.value);
@@ -775,7 +775,7 @@
 
   const filterByFuel = () => {
     const filter = productsStore.data.products.filter(e => e.category._id === id).filter(product => {
-      const kwInformation = product.information.find(inf => inf.key === 'Bak hajmi');
+      const kwInformation = product.information.find(inf => inf.key === 'Емкость топлива');
 
       if (kwInformation) {
         let result = kwInformation.value.slice(0, -1);

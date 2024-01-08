@@ -10,7 +10,7 @@
             </div>
             <div class="categories_wrapper">
                 <div class="title-wrapper">
-                    <h2>Katalog orqali</h2>
+                    <h2>Через каталог</h2>
                     <span class="title-wrapper__line"></span>
                 </div>
                 <div class="categories_container">
@@ -20,7 +20,7 @@
                         </p>
                         <img class="category_img" src="/gasoline.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb351e" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -37,7 +37,7 @@
                         </p>
                         <img class="category_img" src="/invertor.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb351f" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -54,7 +54,7 @@
                         </p>
                         <img class="category_img" src="/dizel.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3520" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -71,7 +71,7 @@
                         </p>
                         <img class="category_img" src="/stabilizer.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3524" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -88,7 +88,7 @@
                         </p>
                         <img class="category_img" src="/karcher.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3521" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -105,7 +105,7 @@
                         </p>
                         <img class="category_img" src="/geshalka.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3522" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -122,7 +122,7 @@
                         </p>
                         <img class="category_img" src="/gasgenerator.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3523" class="category_link">
-                            <p>Tanishish</p>
+                            <p>Еще больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
                                     d="M29.7729 6.65226H0.703278C0.35749 6.65226 0.078125 6.35893 0.078125 5.99585C0.078125 5.63277 0.35749 5.33944 0.703278 5.33944H28.2627L24.4688 1.35585C24.2246 1.09944 24.2246 0.683032 24.4688 0.426622C24.713 0.170211 25.1096 0.170211 25.3538 0.426622L30.2163 5.53226C30.3961 5.72098 30.4488 6.00201 30.3511 6.24816C30.2535 6.49226 30.0249 6.65226 29.7729 6.65226Z"
@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="title-wrapper">
-                <h2>Yangi maxsulotlar</h2>
+                <h2>Новые продукты</h2>
                 <span class="title-wrapper__line"></span>
             </div>
             <ul class="cards-list list-category">
@@ -206,7 +206,7 @@
             <div class="container title-wrapper">
                 <h2>Газовый генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb351e">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb351e">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -223,7 +223,7 @@
             <div class="container title-wrapper">
                 <h2>Инвертерный генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb351f">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb351f">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -240,7 +240,7 @@
             <div class="container title-wrapper">
                 <h2>Карчер</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3521">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3521">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -256,7 +256,7 @@
             <div class="container title-wrapper">
                 <h2>Стабилизатор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3524">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3524">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -272,7 +272,7 @@
             <div class="container title-wrapper">
                 <h2>Бетонасмеситель</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="rus/category/659649fd757d180fa1fb3522">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="rus/category/659649fd757d180fa1fb3522">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -289,7 +289,7 @@
             <div class="container title-wrapper">
                 <h2>Бензиновый генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3523">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3523">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -306,7 +306,7 @@
             <div class="container title-wrapper">
                 <h2>Дизельный генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3520">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3520">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">

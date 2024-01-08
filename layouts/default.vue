@@ -310,17 +310,10 @@
           <div class="footer__about">
             <h3 class="footer__about-title">Biz haqimizda</h3>
             <p class="footer__about-text">
-              "Generator House" is a product sales company dedicated to
-              providing quality products to our customers. our team works
-              tirelessly to ensure that each of our products meets the highest
-              standards. Our main goal is software development.
-              <br />
-              <br />
-              <i><b>Our Mission</b></i>
-              <br />
-              Our mission is to make the shopping process easy and enjoyable for
-              our customers. We always strive to provide our customers with the
-              highest level of service and always value their feedback.
+              Generator House kompaniyasi g'eneratorlar va stabilizatorlardan boshlab murakkab qurilmalar sotish sohasida 10 yillik tajribaga ega. Ularining ushbu sohada malakalari kompaniyaga xilma-xil xilma ehtiyot qilgan mijozlarining turli talablari uchun turli jihozlar taklif etish imkoniyatini beradi.
+              <br/>
+              <br/>
+              Generator House mijozlarga sifatli g'eneratorlar, stabilizatorlar va o'xshash qurilmalar bilan ta'minlashda mutaxassislik qiladi. Turli modellari va xususiyatlarini yillar davomida testlash natijasida, kompaniya mijozlarning turli talablari uchun mos  yechimlar taklif etadi.
             </p>
           </div>
           <div class="footer__categories">
