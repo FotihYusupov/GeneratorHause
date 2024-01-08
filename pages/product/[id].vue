@@ -96,7 +96,7 @@
                         </button>
                     </span>
                 </div>
-                <h5 class="product__price-title">Price:</h5>
+                <h5 class="product__price-title">Narxi:</h5>
                 <span v-if="findProduct.new_price" class="product__price-wrapper">
                     <p>{{ findProduct.new_price * (findProduct.count || 1) }} So'm</p>
                     <p v-if="findProduct.product_price">{{ findProduct.product_price }} So'm</p>

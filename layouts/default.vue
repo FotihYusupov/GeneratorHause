@@ -130,7 +130,7 @@
                     d="M18.3326 18.9583C18.1742 18.9583 18.0159 18.9 17.8909 18.775L16.2242 17.1083C15.9826 16.8667 15.9826 16.4667 16.2242 16.225C16.4659 15.9833 16.8659 15.9833 17.1076 16.225L18.7742 17.8917C19.0159 18.1333 19.0159 18.5333 18.7742 18.775C18.6492 18.9 18.4909 18.9583 18.3326 18.9583Z"
                     fill="#000814" />
                 </svg>
-                <p class="header__search-text">Search</p>
+                <p class="header__search-text">Qidirish</p>
               </button>
             </form>
             <ul id="searchList" class="search-products">
@@ -310,7 +310,7 @@
           <div class="footer__about">
             <h3 class="footer__about-title">Biz haqimizda</h3>
             <p class="footer__about-text">
-              Generator House kompaniyasi g'eneratorlar va stabilizatorlardan boshlab murakkab qurilmalar sotish sohasida 10 yillik tajribaga ega. Ularining ushbu sohada malakalari kompaniyaga xilma-xil xilma ehtiyot qilgan mijozlarining turli talablari uchun turli jihozlar taklif etish imkoniyatini beradi.
+              Generator House kompaniyasi generatorlar va stabilizatorlardan boshlab murakkab qurilmalar sotish sohasida 10 yillik tajribaga ega. Ularining ushbu sohada malakalari kompaniyaga xilma-xil xilma ehtiyot qilgan mijozlarining turli talablari uchun turli jihozlar taklif etish imkoniyatini beradi.
               <br/>
               <br/>
               Generator House mijozlarga sifatli g'eneratorlar, stabilizatorlar va o'xshash qurilmalar bilan ta'minlashda mutaxassislik qiladi. Turli modellari va xususiyatlarini yillar davomida testlash natijasida, kompaniya mijozlarning turli talablari uchun mos  yechimlar taklif etadi.
