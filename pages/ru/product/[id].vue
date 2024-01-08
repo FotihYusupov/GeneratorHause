@@ -137,7 +137,7 @@ import card from '~/components/rus/cardComponent.vue';
 
 const counterStore = useCounterStore()
 
-import addFavorites from '~/utils/favorites';
+import addFavorites from '~/utils/rus/favorites';
 
 const productsStore = useProductsStore()
 
@@ -203,7 +203,7 @@ const count = (e) => {
                         product.count += 1
                     }
                 })
-                localStorage.setItem('basked', JSON.stringify(basked));
+                localStorage.setItem('baskedRus', JSON.stringify(basked));
             }
             findProduct.value.count += 1
         } else {
@@ -214,7 +214,7 @@ const count = (e) => {
                         product.count = 2
                     }
                 })
-                localStorage.setItem('basked', JSON.stringify(basked));
+                localStorage.setItem('baskedRus', JSON.stringify(basked));
             }
         }
     } else if (target.id === 'removeCount') {
@@ -225,7 +225,7 @@ const count = (e) => {
                         product.count -= 1
                     }
                 })
-                localStorage.setItem('basked', JSON.stringify(basked));
+                localStorage.setItem('baskedRus', JSON.stringify(basked));
             }
             findProduct.value.count -= 1
         } else {
@@ -236,7 +236,7 @@ const count = (e) => {
                         product.count = 1
                     }
                 })
-                localStorage.setItem('basked', JSON.stringify(basked));
+                localStorage.setItem('baskedRus', JSON.stringify(basked));
             }
         }
     }
