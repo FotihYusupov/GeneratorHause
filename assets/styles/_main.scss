@@ -344,6 +344,7 @@
     }
 
     .footer__about-text {
+      font-size: 16px;
       color: #b3b3b3;
     }
 
@@ -1263,7 +1264,7 @@
     .mobile-footer__wrapper {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: end;
       padding: 5% 8%;
       background-color: #ffffff;
       .router-link-active {
@@ -1364,6 +1365,7 @@
     }
 
     .footer__about-text {
+      font-size: 16px;
       color: #b3b3b3;
     }
 

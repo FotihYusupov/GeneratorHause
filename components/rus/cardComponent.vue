@@ -21,17 +21,16 @@
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
             <p class="card__desc ellipsis">{{ brand }}</p>
-            <p class="card__views">{{ views }} views</p>
+            <p class="card__views">{{ views }} Просмотры</p>
             <div class="card_footer">
-                <p v-if="!newPrice" class="card__price">{{ price }} So'm</p>
+                <p v-if="!newPrice" class="card__price">{{ price }} Сум</p>
                 <div v-if="newPrice" class="card__newPrice-wrapper">
-                    <p>{{ newPrice }} So'm</p>
-                    <p>{{ price }} So'm</p>
-                    <p>ruscha</p>
+                    <p>{{ newPrice }} Сум</p>
+                    <p>{{ price }} Сум</p>
                 </div>
                 <button @click="e => addBasked(e.target.closest('.card').id)" class="card__basked-btn" id="addBaskedBtn"
                     :disabled="inCart">
-                    <p>Add to card</p>
+                    <p>Добавить в корзину</p>
                     <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                         viewBox="0 0 20 20" fill="none">
                         <g id="Icons">

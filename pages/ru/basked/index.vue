@@ -4,8 +4,8 @@
         <div v-else>
             <div v-if="productsStore.data.products.filter(e => e.inCart === true).length > 0">
             <div class="basked-header-wrapper">
-                <h1>Savat</h1>
-                <button @click="removeAllBasked" class="clear-btn">Barchasini O'chirish</button>
+                <h1>Корзина</h1>
+                <button @click="removeAllBasked" class="clear-btn">Удалить Все</button>
             </div>
             <div class="wrapper">
                 <ul class="items-list">
@@ -15,7 +15,7 @@
                             <NuxtLink class="link ellipsis" :to="'/ru/product/' + product._id">
                                 <h3 class="item__title ellipsis">{{ product.product_title }}</h3>
                             </NuxtLink>
-                            <p class="item__brand"><b>Brand:</b> {{ product.brand.brand_name }}</p>
+                            <p class="item__brand"><b>Бренд:</b> {{ product.brand.brand_name }}</p>
                         </div>
                         <div class="item__counter-wrapper">
                             <button @click="e => removeOne(e.target.closest('.item').id)" class="item__plus-btn" :disabled="product.count === 1">
@@ -42,9 +42,9 @@
                         </div>
                         <div class="item__price-wrapper">
                             <p v-if="!product.new_price" class="item__price"><b>{{ product.count * product.product_price
-                            }}</b> So'm</p>
+                            }}</b> Сум</p>
                             <p v-if="product.new_price" class="item__price"><b>{{ product.count * product.new_price }}</b>
-                                So'm</p>
+                                Сум</p>
                         </div>
                         <button @click="removeBasked" class="item__remove-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -68,18 +68,18 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <p class="item__remove-txt">Remove</p>
+                            <p class="item__remove-txt">Удалить</p>
                         </button>
                     </li>
                 </ul>
                 <div class="orders-wrapper">
-                    <h2>Sizning buyurtmangiz</h2>
-                    <p class="orders-count">Savatda {{ productsStore.data.products.filter(e => e.inCart === true).length }} ta mahsulot bor</p>
+                    <h2>Ваш заказ</h2>
+                    <p class="orders-count">В корзине {{ productsStore.data.products.filter(e => e.inCart === true).length }} товара</p>
                     <span>
-                        <p>Umumiy hisob:</p>
-                        <p><b>{{ calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true)) }}</b> So'm</p>
+                        <p>Общий счет:</p>
+                        <p><b>{{ calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true)) }}</b> Сум</p>
                     </span>
-                    <button @click="openModal = true" class="order-btn">Sotib olish</button>
+                    <button @click="openModal = true" class="order-btn">Купит</button>
                 </div>
             </div>
         </div>
@@ -562,12 +562,12 @@
                     d="M208.262 50.5392V52.4976C208.262 53.34 207.629 53.9728 206.786 53.9728C206.004 53.9728 205.311 53.34 205.311 52.4976V49.3648C205.311 49.3352 205.341 49.3352 205.341 49.3048C205.311 49.2752 205.311 49.2752 205.311 49.2448C205.311 48.4616 206.004 47.7688 206.786 47.7688C208.685 47.7688 210.221 46.2632 210.221 44.396C210.221 42.4992 208.684 41.0232 206.786 41.0232C205.552 41.0232 204.468 41.6864 203.895 42.68C203.474 43.4032 202.571 43.644 201.847 43.2224C201.154 42.8016 200.914 41.9272 201.336 41.2056C202.42 39.3384 204.468 38.0728 206.786 38.0728C210.281 38.0728 213.141 40.904 213.141 44.3976C213.141 47.3776 211.063 49.8776 208.262 50.5392ZM208.262 57.1352V57.6768C208.262 58.5208 207.629 59.1528 206.786 59.1528C206.004 59.1528 205.311 58.52 205.311 57.6768V57.1352C205.311 56.3224 206.004 55.66 206.786 55.66C207.629 55.66 208.262 56.3224 208.262 57.1352Z"
                     fill="#FFC727" />
             </svg>
-            <h2>Savatga mahsulotlar qo'shing </h2>
-            <p>Hali sizda mahsulotlar yo'q</p>
-            <NuxtLink class="basked-wrapper__link" to="/rus">Asosiy sahifa</NuxtLink>
+            <h2>Добавить товары в корзину </h2>
+            <p>У вас еще нет продуктов</p>
+            <NuxtLink class="basked-wrapper__link" to="/rus">Главная страница</NuxtLink>
 
         </div>
-        <h2>Ommabop mahsulotlar</h2>
+        <h2>Популярные продукты</h2>
         <ul class="cards-list">
             <card v-for="product in productsStore.data.products.slice(0, 4)" v-bind:key="product._id"
                 :id="product._id" :title="product.product_title" :img="product.product_img"
@@ -592,14 +592,14 @@
                 </defs>
             </svg>
             <form @submit="sendOrder">
-                <label for="FullName">To'liq ism</label>
-                <input type="text" id="FullName" placeholder="Ismingiz" required>
-                <label for="PhoneNumber">Telefon raqam</label>
+                <label for="FullName">Полное имя</label>
+                <input type="text" id="FullName" placeholder="Ваше имя" required>
+                <label for="PhoneNumber">Номер телефона</label>
                 <input type="text" id="PhoneNumber" pattern="\+998 \(?[1-9]{2}\)? [1-9]{3} ?[1-9]{2} ?[1-9]{2}"
                     placeholder="+998 (  ) " required>
-                <label for="message">Xabaringiz</label>
-                <textarea type="text" id="message" placeholder="Xabaringizni yozing" required></textarea>
-                <button>Yuborish</button>
+                <label for="message">Ваше сообщение</label>
+                <textarea type="text" id="message" placeholder="Напишите свое сообщение" required></textarea>
+                <button>Отправить</button>
             </form>
         </div>
     </div>

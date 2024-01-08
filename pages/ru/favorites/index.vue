@@ -3,8 +3,8 @@
     <div v-else class="container">
         <div v-if="productsStore.data.products.filter(e => e.inFavorites == true).length > 0">
             <div class="basked-header-wrapper">
-                <h1>Sevimlilar</h1>
-                <button @click="removeAllFavorites" class="clear-btn">Barchasini O'chirish</button>
+                <h1>Избранное</h1>
+                <button @click="removeAllFavorites" class="clear-btn">Удалить все</button>
             </div>
             <ul class="cards-list">
                 <card v-for="product in productsStore.data.products.filter(e => e.inFavorites == true)"
@@ -526,9 +526,9 @@
                         d="M143.085 105.23C143.053 105.229 143.049 105.274 143.078 105.284C144.513 105.768 145.329 107.023 145.927 108.339C145.479 107.846 144.894 107.595 144.229 108.133C144.194 108.161 144.232 108.216 144.272 108.206C144.838 108.048 145.258 108.123 145.674 108.559C145.968 108.868 146.18 109.269 146.4 109.633C146.472 109.754 146.695 109.674 146.639 109.532C146.635 109.522 146.63 109.51 146.625 109.5C146.553 107.711 145.015 105.294 143.085 105.23Z"
                         fill="#263238" />
                 </svg>
-                <h2>Sevimli mahsulotingizni qo'shing</h2>
-                <p>Hali sizda sevimlilar yo'q</p>
-                <NuxtLink class="basked-wrapper__link" to="/rus">Asosiy sahifa</NuxtLink>
+                <h2>Добавьте ваш любимый продукт</h2>
+                <p>У вас пока нет избранных</p>
+                <NuxtLink class="basked-wrapper__link" to="/rus">Главная страница</NuxtLink>
             </div>
         </div>
     </div>

@@ -50,7 +50,7 @@
                                 d="M10.516 17.3417C10.2327 17.4417 9.76602 17.4417 9.48268 17.3417C7.06602 16.5167 1.66602 13.075 1.66602 7.24168C1.66602 4.66668 3.74102 2.58334 6.29935 2.58334C7.81602 2.58334 9.15768 3.31668 9.99935 4.45001C10.841 3.31668 12.191 2.58334 13.6993 2.58334C16.2577 2.58334 18.3327 4.66668 18.3327 7.24168C18.3327 13.075 12.9327 16.5167 10.516 17.3417Z"
                                 stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <p class="pointer-events">Sevimlilar</p>
+                        <p class="pointer-events">Избранное</p>
                     </span>
                     <span @click="favorites" v-else class="product__favorites-wrapper" id="removeFavorites">
                         <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="20" height="21"
@@ -60,15 +60,15 @@
                                 fill="#FFD60A" stroke="#FFD60A" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <p class="pointer-events">Sevimlilar</p>
+                        <p class="pointer-events">Избранное</p>
                     </span>
                 </div>
-                <p><b>Brand:</b>
+                <p><b>Бренд:</b>
                     <br>
                     {{ findProduct.brand.brand_name }}
                 </p>
                 <div class="product__counter-wrapper">
-                    <p>Soni:</p>
+                    <p>Число:</p>
                     <span class="product__counter-btns">
                         <button @click="count" class="product__counter-btn" id="removeCount">
                             <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="20" height="21"
@@ -96,21 +96,21 @@
                         </button>
                     </span>
                 </div>
-                <h5 class="product__price-title">Price:</h5>
+                <h5 class="product__price-title">Цена:</h5>
                 <span v-if="findProduct.new_price" class="product__price-wrapper">
-                    <p>{{ findProduct.new_price * (findProduct.count || 1) }} So'm</p>
-                    <p v-if="findProduct.product_price">{{ findProduct.product_price }} So'm</p>
+                    <p>{{ findProduct.new_price * (findProduct.count || 1) }} Сум</p>
+                    <p v-if="findProduct.product_price">{{ findProduct.product_price }} Сум</p>
                 </span>
                 <p class="product__price" v-if="!findProduct.new_price">{{ findProduct.product_price * (findProduct.count ||
-                    1) }} So'm</p>
+                    1) }} Сум</p>
                 <span class="product__basked-wrapper">
-                    <button @click="addBasked" :disabled="findProduct.inCart">Savatga qo'shish</button>
-                    <button @click="buyNow">Sotib olish</button>
+                    <button @click="addBasked" :disabled="findProduct.inCart">Добавить в корзину</button>
+                    <button @click="buyNow">Покупка</button>
                 </span>
             </div>
         </div>
         <div class="product-details">
-            <h3>Mahsulot ma'lumotlari</h3>
+            <h3>Информация о продукте</h3>
             <div class="product-details__wrapper">
                 <span v-bind:key="information" v-for="information in findProduct.information">
                     <p>{{ information.key }}</p>
@@ -119,7 +119,7 @@
                 </span>
             </div>
         </div>
-        <h2 class="product-footer-title">O'xshash mahsulotlar</h2>
+        <h2 class="product-footer-title">Похожие продукты</h2>
         <ul class="cards-list list-category">
             <card v-for="product in products.slice(0, 8)" :id="product._id" v-bind:key="product._id"
                 :title="product.product_title" :img="product.product_img" :description="product.product_desc"

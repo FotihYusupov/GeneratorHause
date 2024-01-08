@@ -250,21 +250,14 @@
             <div class="footer__about">
               <h3 class="footer__about-title">О нас</h3>
               <p class="footer__about-text">
-                "Generator House" is a product sales company dedicated to
-                providing quality products to our customers. our team works
-                tirelessly to ensure that each of our products meets the highest
-                standards. Our main goal is software development.
-                <br />
-                <br />
-                <i><b>Our Mission</b></i>
-                <br />
-                Our mission is to make the shopping process easy and enjoyable for
-                our customers. We always strive to provide our customers with the
-                highest level of service and always value their feedback.
+                Компания <b>Generator House</b> обладает более чем 10-летним опытом в области продажи разнообразного оборудования, начиная от генераторов и стабилизаторов до устройств с различным уровнем напряжения. Их экспертиза в этой сфере позволяет компании предложить широкий спектр оборудования, отвечающего различным потребностям клиентов.
+                <br/>
+                <br/>
+                <b>Generator House</b> специализируется на обеспечении клиентов высококачественными генераторами, стабилизаторами и аналогичными устройствами. Благодаря многолетнему опыту работы с различными моделями и характеристиками оборудования, компания предлагает решения, которые соответствуют разнообразным потребностям клиентов.
               </p>
             </div>
             <div class="footer__categories">
-              <h3 class="footer__categories-title">Katalog</h3>
+              <h3 class="footer__categories-title">Каталог</h3>
               <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb3521">Карчер</NuxtLink>
               <NuxtLink class="footer__categories-link" to="/ru/category/6596496b757d180fa1fb351d">Стабилизатор</NuxtLink>
               <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb3522">Бетонасмеситель</NuxtLink>
@@ -277,7 +270,7 @@
               <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb351e">Газовый генератор</NuxtLink>
             </div>
             <div class="footer__contact-wrapper">
-              <h3 class="footer__categories-title">Bog'lanish</h3>
+              <h3 class="footer__categories-title">Контакты</h3>
               <span class="footer__contact">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                   <path
@@ -310,10 +303,9 @@
                     d="M14 26.5535C12.2734 26.5535 10.535 25.9002 9.18169 24.6052C5.74002 21.2918 1.93669 16.0068 3.37169 9.7185C4.66669 4.0135 9.64836 1.4585 14 1.4585C14 1.4585 14 1.4585 14.0117 1.4585C18.3634 1.4585 23.345 4.0135 24.64 9.73016C26.0634 16.0185 22.26 21.2918 18.8184 24.6052C17.465 25.9002 15.7267 26.5535 14 26.5535ZM14 3.2085C10.605 3.2085 6.24169 5.01683 5.08669 10.1035C3.82669 15.5985 7.28002 20.3352 10.4067 23.3335C12.425 25.2818 15.5867 25.2818 17.605 23.3335C20.72 20.3352 24.1734 15.5985 22.9367 10.1035C21.77 5.01683 17.395 3.2085 14 3.2085Z"
                     fill="#FFD60A" />
                 </svg>
-                <a class="footer__contact-link" target="_blank" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8">Toshkent
-                  Xalqa Avtomabil Yo'li</a>
+                <a class="footer__contact-link" target="_blank" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8">Ташкентская Народная Автодорога</a>
               </span>
-              <h3 class="footer__messenger-title">Obuna bo'ling</h3>
+              <h3 class="footer__messenger-title">Подписаться</h3>
               <div class="footer__messengers-wrapper">
                 <a class="footer__messenger" href="https://www.instagram.com/generator_house555/" target="_blank"
                   rel="noopener noreferrer">
@@ -378,7 +370,7 @@
                 </a>
               </div>
               <span class="footer__map-wrapper">
-                <p class="footer__map-text">Toshkent Xalqa Avtomabil Yo'li</p>
+                <p class="footer__map-text">Ташкентская Народная Автодорога</p>
                 <a class="footer__map-link" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8" target="_blank"
                   rel="noopener noreferrer">
                   <p class="footer__map">карта</p>
