@@ -339,7 +339,6 @@ const bestSellers = ref([])
 const getData = async () => {
     await categoriesStore.getCategories();
     await productsStore.getProducts();
-    console.log(productsStore.data.products)
     newProducts.value = productsStore.data.products.reverse().slice(0, 8)
     bestSellers.value = productsStore.data.products.reverse()
 }

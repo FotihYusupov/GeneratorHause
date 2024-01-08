@@ -40,7 +40,7 @@
     </swiper>
 </template>
 <script setup>
-import DiscCalc from '../utils/disccalc'
+import DiscCalc from '../utils/rus/disccalc'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';

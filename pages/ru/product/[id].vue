@@ -258,9 +258,9 @@ const buyNow = async () => {
     const basked = JSON.parse(localStorage.getItem('baskedRus')) || [];
     if (!basked.some(product => product._id == id)) {
         addBasked()
-        await navigateTo('/rus/basked')
+        await navigateTo('/ru/basked')
     } else {
-        await navigateTo('/rus/basked')
+        await navigateTo('/ru/basked')
     }
 }
 </script>

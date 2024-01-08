@@ -15,6 +15,7 @@ export const useCounterStore = defineStore({
         async getCounter() {
             try {
                 const productsStore = useProductsStore()
+                console.log(productsStore.data);
                 if (typeof localStorage !== "undefined") {
                     await productsStore.getProducts()
                     const basked = productsStore.data.products.filter(e => e.inCart === true);
@@ -23,8 +24,8 @@ export const useCounterStore = defineStore({
                         this.data.basked = basked.length;
                         this.data.favorites = favorites.length;
                     } else {
-                        localStorage.setItem("basked", JSON.stringify([]));
-                        localStorage.setItem("favorites", JSON.stringify([]));
+                        localStorage.setItem("baskedRus", JSON.stringify([]));
+                        localStorage.setItem("favoritesRus", JSON.stringify([]));
                     }
                 }
             } catch (err) {

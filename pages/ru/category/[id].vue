@@ -650,8 +650,8 @@
 <script setup>
   import axios from 'axios'
 
-  import { useProductsStore } from '~/store/products';
-  import card from '~/components/cardComponent.vue'
+  import { useProductsStore } from '~/store/rus/products';
+  import card from '~/components/rus/cardComponent.vue'
 
   const end = ref(20)
 

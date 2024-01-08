@@ -1,6 +1,6 @@
 // addFavorites.js
-import { useProductsStore } from "~/store/products";
-import { useCounterStore } from "~/store/counter";
+import { useProductsStore } from "~/store/rus/products";
+import { useCounterStore } from "~/store/rus/counter";
 
 const addFavorites = (id) => {
     const productsStore = useProductsStore();

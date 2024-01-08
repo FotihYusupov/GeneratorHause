@@ -10,6 +10,6 @@
     </div>
 </template>
 <script setup>
-import DiscCalc from '~/utils/disccalc';
+import DiscCalc from '~/utils/rus/disccalc';
 const { sale } = defineProps(['sale']);
 </script>

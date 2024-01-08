@@ -17,7 +17,7 @@
 
         <div class="card__content-wrapper">
 
-            <NuxtLink class="link" :to="'/rus/product/' + id">
+            <NuxtLink class="link" :to="'/ru/product/' + id">
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
             <p class="card__desc ellipsis">{{ brand }}</p>
@@ -89,10 +89,10 @@
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
-import { useCounterStore } from '~/store/counter';
-import { useProductsStore } from '~/store/products';
-import addBasked from '~/utils/backed';
-import addFavorites from '~/utils/favorites';
+import { useCounterStore } from '~/store/rus/counter';
+import { useProductsStore } from '~/store/rus/products';
+import addBasked from '~/utils/rus/backed';
+import addFavorites from '~/utils/rus/favorites';
 
 
 const counterStore = useCounterStore();
@@ -101,7 +101,7 @@ const productsStore = useProductsStore();
 const favorites = ref(null);
 
 onMounted(async () => {
-    favorites.value = await JSON.parse(localStorage.getItem('favorites'));
+    favorites.value = await JSON.parse(localStorage.getItem('favoritesRus'));
 });
 
 const { img, id, title, description, views, price, brand, inCart, inFavorites, removeBtn, newPrice } =

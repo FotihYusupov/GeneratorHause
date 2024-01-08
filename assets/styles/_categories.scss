@@ -198,8 +198,11 @@
         }
     }
     .category-not-found {
+        width: 100%;
         display: flex;
         justify-content: center;
+        border-radius: 10px;
+        background-color: #f5f5f5;
     }
     
 }

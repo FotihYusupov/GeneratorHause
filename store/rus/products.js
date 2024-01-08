@@ -13,7 +13,6 @@ export const useProductsStore = defineStore({
   actions: {
     async getProducts() {
       try {
-        console.log('getProducts')
         this.data.loading = true;
         const response = await axios.get('https://api.generatorhouse.uz/api/ru/products');
         if (response.status === 200) {
@@ -26,7 +25,6 @@ export const useProductsStore = defineStore({
               basked = []
               favorites = []
             }
-            console.log(response.data)
             response.data.forEach((product) => {
               const cartItem = basked.find((item) => item._id === product._id);
               product.inCart = !!cartItem;
