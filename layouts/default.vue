@@ -465,7 +465,7 @@
       </section>
       <section class="bottom_footer">
         <p>© 2024 Generator House. Barcha huquqlar himoyalangan</p>
-        <span class="hypernova_logo"></span>
+        <a href="https://hypernova.uz" class="hypernova_logo"></a>
       </section>
     </footer>
     <div class="mobile-footer">
