@@ -595,7 +595,7 @@
                 <label for="FullName">Полное имя</label>
                 <input type="text" id="FullName" placeholder="Ваше имя" required>
                 <label for="PhoneNumber">Номер телефона</label>
-                <input type="text" id="PhoneNumber" pattern="\+998 \(?[1-9]{2}\)? [1-9]{3} ?[1-9]{2} ?[1-9]{2}"
+                <input type="text" id="PhoneNumber"
                     placeholder="+998 (  ) " required>
                 <label for="message">Ваше сообщение</label>
                 <textarea type="text" id="message" placeholder="Напишите свое сообщение" required></textarea>
@@ -615,7 +615,7 @@ import axios from 'axios';
 const counterStore = useCounterStore()
 const productsStore = useProductsStore()
 
-    const totalSum = ref(0)
+const totalSum = ref(0)
 
 const openModal = ref(false)
 
@@ -703,6 +703,7 @@ const openModal = ref(false)
         );
 
         if (response.status == 200) {
+            removeAllBasked()
             await navigateTo('/')
             console.log('error', response.status);
         } else {

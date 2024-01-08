@@ -595,7 +595,7 @@
                 <label for="FullName">To'liq ism</label>
                 <input type="text" id="FullName" placeholder="Ismingiz" required>
                 <label for="PhoneNumber">Telefon raqam</label>
-                <input type="text" id="PhoneNumber" pattern="\+998 \(?[1-9]{2}\)? [1-9]{3} ?[1-9]{2} ?[1-9]{2}"
+                <input type="text" id="PhoneNumber"
                     placeholder="+998 (  ) " required>
                 <label for="message">Xabaringiz</label>
                 <textarea type="text" id="message" placeholder="Xabaringizni yozing" required></textarea>
@@ -659,7 +659,7 @@ const openModal = ref(false)
         totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true).filter(e => e._id !== id));
         productsStore.data.products.forEach(element => {
             if(element._id == id) {
-                element.inCart = false
+                element.inCart = falseremoveAllBasked
             }
         }) 
     }
@@ -703,6 +703,7 @@ const openModal = ref(false)
         );
 
         if (response.status == 200) {
+            removeAllBasked()
             await navigateTo('/')
             console.log('error', response.status);
         } else {
