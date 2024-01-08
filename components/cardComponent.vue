@@ -21,7 +21,7 @@
                 <h3 class="card__title">{{ title }}</h3>
             </NuxtLink>
             <p class="card__desc ellipsis">{{ brand }}</p>
-            <p class="card__views">Korganlar {{ views }}</p>
+            <p class="card__views">Ko'rganlar {{ views }}</p>
             <div class="card_footer">
                 <p v-if="!newPrice" class="card__price">{{ price }} So'm</p>
                 <div v-if="newPrice" class="card__newPrice-wrapper">

@@ -310,7 +310,7 @@
           <div class="footer__about">
             <h3 class="footer__about-title">Biz haqimizda</h3>
             <p class="footer__about-text">
-              Generator House kompaniyasi g'eneratorlar va stabilizatorlardan boshlab murakkab qurilmalar sotish sohasida 10 yillik tajribaga ega. Ularining ushbu sohada malakalari kompaniyaga xilma-xil xilma ehtiyot qilgan mijozlarining turli talablari uchun turli jihozlar taklif etish imkoniyatini beradi.
+              Generator House kompaniyasi generatorlar va stabilizatorlardan boshlab murakkab qurilmalar sotish sohasida 10 yillik tajribaga ega. Ularining ushbu sohada malakalari kompaniyaga xilma-xil xilma ehtiyot qilgan mijozlarining turli talablari uchun turli jihozlar taklif etish imkoniyatini beradi.
               <br/>
               <br/>
               Generator House mijozlarga sifatli g'eneratorlar, stabilizatorlar va o'xshash qurilmalar bilan ta'minlashda mutaxassislik qiladi. Turli modellari va xususiyatlarini yillar davomida testlash natijasida, kompaniya mijozlarning turli talablari uchun mos  yechimlar taklif etadi.
