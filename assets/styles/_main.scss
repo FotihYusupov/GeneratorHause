@@ -296,9 +296,9 @@
       color: black;
       border-right: 1px solid #f5f5f5;
       border-left: 1px solid #f5f5f5;
-      font-size: 14px;
+      font-size: 13px;
       font-style: normal;
-      font-weight: 550;
+      font-weight: 500;
       padding: 8px 2%;
       line-height: normal;
       transition: all 0.3s ease-in-out;
@@ -1252,41 +1252,7 @@
     }
   }
   .bottom-header {
-    margin: 1% 0 0 0;
     display: none;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    .bottom-header-link {
-      justify-content: center;
-      display: flex;
-      color: black;
-      border-right: 1px solid #f5f5f5;
-      border-left: 1px solid #f5f5f5;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 550;
-      padding: 8px 2%;
-      line-height: normal;
-      transition: all 0.3s ease-in-out;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -ms-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      &:last-child {
-        border-right: unset;
-      }
-      &:first-child {
-        border-left: unset;
-      }
-      &:hover {
-        border-radius: 8px;
-        border-right: 1px solid transparent;
-        border-left: 1px solid transparent;
-        cursor: pointer;
-        background: $primary-yellow;
-      }
-    }
   }
   .mobile-footer {
     position: fixed;
@@ -1560,7 +1526,7 @@
           background-size: contain;
         }
         .slide_content {
-          padding: 10% 8%;
+          padding: 6% 8%;
           max-height: 100%;
           width: 100%;
           display: grid;
@@ -1790,7 +1756,6 @@
           -ms-border-radius: 12px;
           -o-border-radius: 12px;
           .category_img {
-            width: 100%;
             height: 100%;
             object-fit: cover;
             place-self: end;
@@ -1802,7 +1767,6 @@
         &:nth-child(2) {
           background: #f6f8ff;
           .category_img {
-            width: 80%;
             height: 100%;
             object-fit: cover;
             place-self: end;
@@ -1811,7 +1775,6 @@
         &:nth-child(3) {
           background: #ffffe1;
           .category_img {
-            width: 100%;
             height: 100%;
             object-fit: cover;
             place-self: end;
@@ -1820,7 +1783,6 @@
         &:nth-child(4) {
           background: #fff7f2;
           .category_img {
-            width: 80%;
             height: 100%;
             object-fit: cover;
             place-self: end;
@@ -1832,7 +1794,6 @@
         &:nth-child(6) {
           background: #f2fff5;
           .category_img {
-            width: 70%;
             height: 100%;
             object-fit: cover;
             place-self: end;

@@ -19,7 +19,7 @@
                         <p class="category_name">
                             Gazli generator
                         </p>
-                        <img class="category_img" src="/gasoline.png" alt="">
+                        <img class="category_img" src="/category1.png" alt="">
                         <NuxtLink to="/category/659644bd0d8d7f5636a9c6f6" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -36,7 +36,7 @@
                         <p class="category_name">
                             Inverter generator
                         </p>
-                        <img class="category_img" src="/invertor.png" alt="">
+                        <img class="category_img" src="/category2.png" alt="">
                         <NuxtLink to="/category/659644bd0d8d7f5636a9c6f7" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -53,7 +53,7 @@
                         <p class="category_name">
                             Dizel generator
                         </p>
-                        <img class="category_img" src="/dizel.png" alt="">
+                        <img class="category_img" src="/category3.png" alt="">
                         <NuxtLink to="/category/659644bd0d8d7f5636a9c6f8" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -70,7 +70,7 @@
                         <p class="category_name">
                             Stabilizator
                         </p>
-                        <img class="category_img" src="/stabilizer.png" alt="">
+                        <img class="category_img" src="/category4.png" alt="">
                         <NuxtLink to="/category/6596496b757d180fa1fb351d" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -87,7 +87,7 @@
                         <p class="category_name">
                             Karcher
                         </p>
-                        <img class="category_img" src="/karcher.png" alt="">
+                        <img class="category_img" src="/category5.png" alt="">
                         <NuxtLink to="/category/659644bd0d8d7f5636a9c6f9" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -104,7 +104,7 @@
                         <p class="category_name">
                             Betonameshalka
                         </p>
-                        <img class="category_img" src="/geshalka.png" alt="">
+                        <img class="category_img" src="/category6.png" alt="">
                         <NuxtLink to="/category/659644bd0d8d7f5636a9c6fa" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -121,7 +121,7 @@
                         <p class="category_name">
                             Benzinli generator
                         </p>
-                        <img class="category_img" src="/gasgenerator.png" alt="">
+                        <img class="category_img" src="/category7.png" alt="">
                         <NuxtLink to="/category/659644bd0d8d7f5636a9c6fb" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">

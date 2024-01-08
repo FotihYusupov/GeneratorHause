@@ -18,7 +18,7 @@
                         <p class="category_name">
                             Газовый генератор
                         </p>
-                        <img class="category_img" src="/gasoline.png" alt="">
+                        <img class="category_img" src="../../public/category1.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb351e" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -35,7 +35,7 @@
                         <p class="category_name">
                             Инвертерный генератор
                         </p>
-                        <img class="category_img" src="/invertor.png" alt="">
+                        <img class="category_img" src="../../public/category2.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb351f" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -52,7 +52,7 @@
                         <p class="category_name">
                             Дизельный генератор
                         </p>
-                        <img class="category_img" src="/dizel.png" alt="">
+                        <img class="category_img" src="../../public/category3.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3520" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -69,7 +69,7 @@
                         <p class="category_name">
                             Стабилизатор
                         </p>
-                        <img class="category_img" src="/stabilizer.png" alt="">
+                        <img class="category_img" src="../../public/category4.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3524" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -86,7 +86,7 @@
                         <p class="category_name">
                             Карчер
                         </p>
-                        <img class="category_img" src="/karcher.png" alt="">
+                        <img class="category_img" src="../../public/category5.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3521" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -103,7 +103,7 @@
                         <p class="category_name">
                             Бетонасмеситель
                         </p>
-                        <img class="category_img" src="/geshalka.png" alt="">
+                        <img class="category_img" src="../../public/category6.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3522" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
@@ -120,7 +120,7 @@
                         <p class="category_name">
                             Бензиновый генератор
                         </p>
-                        <img class="category_img" src="/gasgenerator.png" alt="">
+                        <img class="category_img" src="../../public/category7.png" alt="">
                         <NuxtLink to="/ru/category/659649fd757d180fa1fb3523" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
