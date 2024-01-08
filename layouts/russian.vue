@@ -6,7 +6,7 @@
             <nuxt-link class="res-header_logo" to="/ru">
               <img src="/logotip.png" alt="" />
             </nuxt-link>
-            <NuxtLink to="/rus" class="res-uzb-translate">
+            <NuxtLink to="/ru" class="res-uzb-translate">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                 <mask id="mask0_986_2339" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
                   height="20">
@@ -468,7 +468,7 @@
   
   const search = async (e) => {
     e.preventDefault();
-    await navigateTo(`/search/${searchInput.value}`);
+    await navigateTo(`/ru/search/${searchInput.value}`);
   };
   
   const searchProductsFn = () => {
