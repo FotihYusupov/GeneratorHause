@@ -18,10 +18,13 @@
         <div class="card__content-wrapper">
 
             <NuxtLink class="link" :to="'/ru/product/' + id">
-                <h3 class="card__title">{{ title }}</h3>
+                <div>
+                    <h3 class="card__title">{{ title }}</h3>
+                    <p class="card__desc ellipsis">{{ brand }}</p>
+                    <p class="card__views">{{ views }} Просмотры</p>
+                </div>
             </NuxtLink>
-            <p class="card__desc ellipsis">{{ brand }}</p>
-            <p class="card__views">{{ views }} Просмотры</p>
+
             <div class="card_footer">
                 <p v-if="!newPrice" class="card__price">{{ price }} Сум</p>
                 <div v-if="newPrice" class="card__newPrice-wrapper">
