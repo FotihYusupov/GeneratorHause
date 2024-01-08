@@ -599,7 +599,7 @@
                     placeholder="+998 (  ) " required>
                 <label for="message">Xabaringiz</label>
                 <textarea type="text" id="message" placeholder="Xabaringizni yozing" required></textarea>
-                <button>Yuborish</button>
+                <button id="sendBtn">Yuborish</button>
             </form>
         </div>
     </div>
@@ -683,6 +683,7 @@ const openModal = ref(false)
     const sendOrder = async (e) => {
         e.preventDefault();
         try {
+            sendBtn.disabled = true
             const botToken = '6476247885:AAEE11kNxED35D4cxzREmwITcjo6yH-zF3Q';
             const channelUsername = '-1002059364860,';
 
@@ -705,7 +706,6 @@ const openModal = ref(false)
         if (response.status == 200) {
             removeAllBasked()
             await navigateTo('/')
-            console.log('error', response.status);
         } else {
             alert('Error')
         }

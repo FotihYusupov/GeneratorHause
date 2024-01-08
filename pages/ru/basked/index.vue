@@ -599,7 +599,7 @@
                     placeholder="+998 (  ) " required>
                 <label for="message">Ваше сообщение</label>
                 <textarea type="text" id="message" placeholder="Напишите свое сообщение" required></textarea>
-                <button>Отправить</button>
+                <button id="sendBtn">Отправить</button>
             </form>
         </div>
     </div>
@@ -683,6 +683,7 @@ const openModal = ref(false)
     const sendOrder = async (e) => {
         e.preventDefault();
         try {
+            sendBtn.disabled = true
             const botToken = '6476247885:AAEE11kNxED35D4cxzREmwITcjo6yH-zF3Q';
             const channelUsername = '-1002059364860,';
 
