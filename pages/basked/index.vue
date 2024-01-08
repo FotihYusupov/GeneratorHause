@@ -591,7 +591,7 @@
                     </clipPath>
                 </defs>
             </svg>
-            <form @submit="sendOrder">
+            <form @submit="sendOrder" id="SendForm">
                 <label for="FullName">To'liq ism</label>
                 <input type="text" id="FullName" placeholder="Ismingiz" required>
                 <label for="PhoneNumber">Telefon raqam</label>
@@ -601,6 +601,17 @@
                 <textarea type="text" id="message" placeholder="Xabaringizni yozing" required></textarea>
                 <button id="sendBtn">Yuborish</button>
             </form>
+        </div>
+    </div>
+
+    <div v-if="success" class="success">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" viewBox="0 0 156 156" fill="none">
+                <path d="M78 6.5C63.8587 6.5 50.0349 10.6934 38.2768 18.5499C26.5186 26.4064 17.3543 37.5732 11.9426 50.6381C6.53098 63.703 5.11504 78.0793 7.87388 91.949C10.6327 105.819 17.4424 118.559 27.4419 128.558C37.4414 138.558 50.1814 145.367 64.0511 148.126C77.9207 150.885 92.297 149.469 105.362 144.057C118.427 138.646 129.594 129.481 137.45 117.723C145.307 105.965 149.5 92.1414 149.5 78C149.478 59.0439 141.937 40.8706 128.533 27.4666C115.129 14.0626 96.9562 6.52236 78 6.5ZM108.596 66.3455L76.0955 98.8455C74.8766 100.064 73.2236 100.749 71.5 100.749C69.7765 100.749 68.1235 100.064 66.9045 98.8455L47.4045 79.3455C46.7837 78.7459 46.2885 78.0286 45.9479 77.2356C45.6072 76.4426 45.4279 75.5897 45.4204 74.7266C45.4129 73.8635 45.5774 73.0076 45.9042 72.2088C46.231 71.41 46.7137 70.6842 47.324 70.0739C47.9343 69.4636 48.66 68.981 49.4588 68.6542C50.2577 68.3273 51.1136 68.1629 51.9766 68.1704C52.8397 68.1779 53.6926 68.3572 54.4857 68.6978C55.2787 69.0385 55.9959 69.5337 56.5955 70.1545L71.5 85.059L99.4045 57.1545C100.63 55.9705 102.272 55.3153 103.977 55.3301C105.681 55.3449 107.311 56.0285 108.516 57.2337C109.722 58.4388 110.405 60.0691 110.42 61.7734C110.435 63.4777 109.78 65.1196 108.596 66.3455Z" fill="#70E000"/>
+            </svg>
+            <h3>Muvaffaqiyatli!</h3>
+            <p>Sizning xabaringiz yetkazildi</p>
+            <NuxtLink to="/">Davom etish</NuxtLink>
         </div>
     </div>
 </template>
@@ -680,6 +691,8 @@ const openModal = ref(false)
         return totalCost;
     }
 
+    const success = ref(false)
+
     const sendOrder = async (e) => {
         e.preventDefault();
         try {
@@ -705,7 +718,10 @@ const openModal = ref(false)
 
         if (response.status == 200) {
             removeAllBasked()
-            await navigateTo('/')
+            SendForm.reset()
+            openModal.value = false
+            success.value = true
+            sendBtn.disabled = false
         } else {
             alert('Error')
         }
