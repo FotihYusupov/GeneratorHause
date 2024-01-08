@@ -206,8 +206,7 @@
 
             <div class="container title-wrapper">
                 <h2>Gazli generator</h2>
-                <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/category/659644bd0d8d7f5636a9c6f6">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/category/659644bd0d8d7f5636a9c6f6">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -224,7 +223,7 @@
             <div class="container title-wrapper">
                 <h2>Inverter generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/category/659644bd0d8d7f5636a9c6f7">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/category/659644bd0d8d7f5636a9c6f7">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -241,7 +240,7 @@
             <div class="container title-wrapper">
                 <h2>Karcher</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6f9">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6f9">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -257,7 +256,7 @@
             <div class="container title-wrapper">
                 <h2>Stabilizator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/6596496b757d180fa1fb351d">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="category/6596496b757d180fa1fb351d">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -273,7 +272,7 @@
             <div class="container title-wrapper">
                 <h2>Betonameshalka</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6fa">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6fa">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -290,7 +289,7 @@
             <div class="container title-wrapper">
                 <h2>Benzinli generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6fb">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6fb">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -307,7 +306,7 @@
             <div class="container title-wrapper">
                 <h2>Dizel generator</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6f8">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="category/659644bd0d8d7f5636a9c6f8">Barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">

@@ -1,7 +1,7 @@
 <template>
     <swiper :allowTouchMove="false" :breakpoints="{
       '350': {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 20,
       },
       '768': {
