@@ -149,8 +149,9 @@
               :views="product.views" :price="product.product_price" :newPrice="product.new_price" :inCart="product.inCart"
               :inFavorites="product.inFavorites" />
           </ul>
-          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Tanishish</button>
+          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Ko'proq </button>
         </div>
+        
         <div v-if="!filteredProducts.length > 0" class="category-not-found">
           <svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -642,6 +643,7 @@
               fill="#FFC727" />
           </svg>
         </div>
+        
       </div>
     </div>
   </div>

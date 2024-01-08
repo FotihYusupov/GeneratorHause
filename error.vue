@@ -439,19 +439,5 @@
       fill="#263238" />
   </svg>
   <NuxtLink class="error-link" to="/">Asosiy sahifa</NuxtLink>
-</div></template>
-
-<style>.error-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
-}
-
-.error-link {
-  padding: 12px 35px;
-  border-radius: 10px;
-  font-weight: bold;
-  color: #000000;
-  background-color: #FFD60A;
-}</style>
+</div>
+</template>
