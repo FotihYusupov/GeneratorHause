@@ -5,10 +5,27 @@
             <div class="hero_swiper">
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
+            <div class="scroll-middle">
+                <a href="/#categories">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <g clip-path="url(#clip0_1192_13798)">
+                            <circle cx="16" cy="16" r="10" fill="white" />
+                            <path
+                                d="M0 15.9906C0 15.9969 0 16.0031 0 16.0094C0.1075 21.9637 1.30312 25.85 3.76187 28.2381C6.14937 30.6969 10.0356 31.8925 15.9906 32H16.0094C21.9644 31.8925 25.8506 30.6969 28.2381 28.2381C30.6969 25.85 31.8925 21.9637 32 16.0094V16V15.9906C31.8925 10.0356 30.6969 6.14938 28.2381 3.76188C25.85 1.30313 21.9637 0.1075 16.0094 0C16.0031 0 15.9969 0 15.9906 0C10.0363 0.1075 6.14937 1.30313 3.76187 3.76188C1.30312 6.15 0.1075 10.0363 0 15.9906ZM23.0544 11.9169C23.255 11.7163 23.5806 11.7163 23.7812 11.9169C23.8819 12.0175 23.9319 12.1487 23.9319 12.2806C23.9319 12.4125 23.8819 12.5437 23.7812 12.6444L16.3431 20.0831C16.1425 20.2838 15.8169 20.2838 15.6163 20.0831L8.21875 12.6856C8.01812 12.485 8.01812 12.1594 8.21875 11.9587C8.41938 11.7581 8.745 11.7581 8.94625 11.9587L15.9794 18.9925L23.0544 11.9169Z"
+                                fill="#FFD60A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1192_13798">
+                                <rect width="32" height="32" fill="white" transform="matrix(0 -1 1 0 0 32)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
             <div class="sales_wrapper">
                 <SaleProducts :sale="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
-            <div class="categories_wrapper">
+            <div id="categories" class="categories_wrapper">
                 <div class="title-wrapper">
                     <h2>Через каталог</h2>
                     <span class="title-wrapper__line"></span>
