@@ -3,7 +3,7 @@
       <Title>GENERATOR HOUSE</Title>
       <Meta name="description" content=""/>
       <Meta property="og:title" content="Genarator House"/>
-      <Meta property="og:description" content=""/>
+      <Meta property="og:description" content="Generator House official web page"/>
       <Meta property="og:url" content="https://generatorhouse.uz/"/>
       <Meta property="og:type" content="website"/>
       <Meta name="keywords" content="Genarator House"/>
