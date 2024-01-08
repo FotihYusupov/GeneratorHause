@@ -74,3 +74,16 @@ a {
 svg {
   width: fit-content;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    a {
+      text-decoration: none;
+      color: #000; /* Safari on iPhone text color with -webkit prefix */
+    }
+    button {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}

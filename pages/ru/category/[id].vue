@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="price-input__title">
-          <h4>Narxi</h4>
+          <h4>Стоимость</h4>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
             <g clip-path="url(#clip0_775_9145)">
               <path
@@ -60,11 +60,11 @@
         </div>
         <hr>
         <div class="price-inputs">
-          <input type="text" @input="filterByPrice" id="startPrice" placeholder="dan">
-          <input type="text" @input="filterByPrice" id="endPrice" placeholder="gacha">
+          <input type="text" @input="filterByPrice" id="startPrice" placeholder="от">
+          <input type="text" @input="filterByPrice" id="endPrice" placeholder="до">
         </div>
         <div v-if="openFilterKw" class="price-input__title">
-          <h4>Volt</h4>
+          <h4>Волт</h4>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
             <g clip-path="url(#clip0_775_9145)">
               <path
@@ -80,11 +80,11 @@
         </div>
         <hr v-if="openFilterKw">
         <div v-if="openFilterKw" class="price-inputs">
-          <input type="text" @input="filterByKw" id="startKw" placeholder="dan">
-          <input type="text" @input="filterByKw" id="endKw" placeholder="gacha">
+          <input type="text" @input="filterByKw" id="startKw" placeholder="от">
+          <input type="text" @input="filterByKw" id="endKw" placeholder="до">
         </div>
         <div v-if="openFilterFuel" class="price-input__title">
-          <h4>Yoqilg'i sig'imi (L)</h4>
+          <h4>Емкость топлива (L)</h4>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
             <g clip-path="url(#clip0_775_9145)">
               <path
@@ -100,8 +100,8 @@
         </div>
         <hr v-if="openFilterFuel">
         <div v-if="openFilterFuel" class="price-inputs">
-          <input type="text" @input="filterByFuel" id="startFuel" placeholder="dan">
-          <input type="text" @input="filterByFuel" id="endFuel" placeholder="gacha">
+          <input type="text" @input="filterByFuel" id="startFuel" placeholder="от">
+          <input type="text" @input="filterByFuel" id="endFuel" placeholder="до">
         </div>
         <button @click="closeOpenFilter" class="filter__show">Ko'rsatish</button>
       </div>
@@ -118,11 +118,11 @@
               </span>
               <span class="categories__title-wrapper">
                 <h2>{{ findP.category.category_name }}</h2>
-                <p>{{ filteredProducts.length }} ta mahsulot</p>
+                <p>{{ filteredProducts.length }} продуктов</p>
               </span>
             </div>
             <span @click="OpenSortBy" class="sort-wrapper">
-              <p>Saralash</p>
+              <p>Сортировка</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <g clip-path="url(#clip0_684_17814)">
                   <path
@@ -137,10 +137,10 @@
               </svg>
             </span>
             <div id="sortByWrapper" class="sort-by-list">
-              <span @click="sortBy" id="expensive">Qimmatligi bo'yicha</span>
-              <span @click="sortBy" id="cheaper">Arzonligi bo'yicha</span>
-              <span @click="sortBy" id="viewsLow">Koʻrishlar (pastdan boshlab)</span>
-              <span @click="sortBy" id="viewsHigh">Ko'rishlar (yuqoridan boshlab)</span>
+              <span @click="sortBy" id="expensive">По стоимости</span>
+              <span @click="sortBy" id="cheaper">По дешевизне</span>
+              <span @click="sortBy" id="viewsLow">Виды (начиная снизу)</span>
+              <span @click="sortBy" id="viewsHigh">Виды (начиная сверху)</span>
             </div>
           </div>
           <ul v-if="filteredProducts.length > 0" class="category-products">
@@ -149,7 +149,7 @@
               :views="product.views" :price="product.product_price" :newPrice="product.new_price" :inCart="product.inCart"
               :inFavorites="product.inFavorites" />
           </ul>
-          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Tanishish</button>
+          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Узнать больше</button>
         </div>
       </div>
       <div v-if="!filteredProducts.length > 0" class="category-not-found">
