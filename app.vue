@@ -28,7 +28,7 @@
       <Meta name="yandex-verification" content="4adbf28d4115d8b8" />
       <Meta name="google-site-verification" content="_GCrBB-LPH-dnA6CJFQ1zfPZfPIUDK5bpaNWBXKLr5A" />
       <Link rel="canonical" href="https://generatorhouse.uz/"/>
-      <Link rel="icon" type="image/x-icon" href=""/>
+      <Link rel="icon" type="image/x-icon" href="https://generatorhouse.uz/logotip.png"/>
     </Head>
     <NuxtLayout :name="route.fullPath.slice(1, 3) == 'ru' ? 'russian' : 'default'">
       <NuxtPage />
