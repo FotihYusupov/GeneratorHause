@@ -72,7 +72,7 @@
                     fill="#F5F5F5" />
                 </g>
               </svg>
-              Ruscha
+              Русский
             </NuxtLink>
           </section>
           <section class="header">
@@ -101,26 +101,21 @@
                 </button>
                 <div class="header__categories-wrapper">
                   <div class="header__categories">
-                    <NuxtLink class="header__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f6">Gazli generator
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb351e">Газовый генератор</NuxtLink>
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb351f">Инвертерный генератор</NuxtLink>
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb3520">Дизельный генератор</NuxtLink>
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb3521">Карчер</NuxtLink>
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb3522">Бетонасмеситель
                     </NuxtLink>
-                    <NuxtLink class="header__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f7">Inverter generator
-                    </NuxtLink>
-                    <NuxtLink class="header__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f8">Dizel generator
-                    </NuxtLink>
-                    <NuxtLink class="header__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
-                    <NuxtLink class="header__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6fa">Betonameshalka
-                    </NuxtLink>
-                    <NuxtLink class="header__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6fb">Benzinli generator
-                    </NuxtLink>
-                    <NuxtLink class="header__categories-link" to="/ru/category/6596496b757d180fa1fb351d">Stabilizator
-                    </NuxtLink>
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb3523">Бензиновый генератор</NuxtLink>
+                    <NuxtLink class="header__categories-link" to="/ru/category/659649fd757d180fa1fb3524">Стабилизатор</NuxtLink>
                   </div>
                 </div>
               </div>
   
               <form @submit="search" class="header__search-wrapper">
                 <input @input="searchProductsFn" class="header__search-input" id="searchInput" type="text" name="search"
-                  placeholder="Mahsulot nomini yozing..." required />
+                  placeholder="Введите название продукта..." required />
                 <button class="header__search-btn">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -130,7 +125,7 @@
                       d="M18.3326 18.9583C18.1742 18.9583 18.0159 18.9 17.8909 18.775L16.2242 17.1083C15.9826 16.8667 15.9826 16.4667 16.2242 16.225C16.4659 15.9833 16.8659 15.9833 17.1076 16.225L18.7742 17.8917C19.0159 18.1333 19.0159 18.5333 18.7742 18.775C18.6492 18.9 18.4909 18.9583 18.3326 18.9583Z"
                       fill="#000814" />
                   </svg>
-                  <p class="header__search-text">Search</p>
+                  <p class="header__search-text">Поиск</p>
                 </button>
               </form>
               <ul id="searchList" class="search-products">
@@ -141,7 +136,7 @@
                       <h3 class="ellipsis">{{ product.product_title }}</h3>
                       <p class="ellipsis">{{ product.product_desc }}</p>
                     </div>
-                    <p>{{ product.product_price }} So'm</p>
+                    <p>{{ product.product_price }} Сум</p>
                   </NuxtLink>
                 </li>
               </ul>
@@ -152,7 +147,7 @@
                       d="M10.516 17.3417C10.2327 17.4417 9.76602 17.4417 9.48268 17.3417C7.06602 16.5167 1.66602 13.075 1.66602 7.24168C1.66602 4.66668 3.74102 2.58334 6.29935 2.58334C7.81602 2.58334 9.15768 3.31668 9.99935 4.45001C10.841 3.31668 12.191 2.58334 13.6993 2.58334C16.2577 2.58334 18.3327 4.66668 18.3327 7.24168C18.3327 13.075 12.9327 16.5167 10.516 17.3417Z"
                       stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                  <p class="header__storage-text">Sevimlilar</p>
+                  <p class="header__storage-text">Избранное</p>
                   <span class="header__storage-num">{{
                     counterStore.data.favorites
                   }}</span>
@@ -167,7 +162,7 @@
                         d="M10.3257 2.25581C9.05416 2.25581 8.02339 3.2866 8.02339 4.55814V7.48837C8.02339 7.83515 7.74227 8.11628 7.39549 8.11628C7.0487 8.11628 6.76758 7.83515 6.76758 7.48837V4.55814C6.76758 2.59303 8.36061 1 10.3257 1C12.2908 1 13.8839 2.59303 13.8839 4.55814V7.48837C13.8839 7.83515 13.6027 8.11628 13.256 8.11628C12.9092 8.11628 12.628 7.83515 12.628 7.48837V4.55814C12.628 3.2866 11.5973 2.25581 10.3257 2.25581Z"
                         fill="black" />
                     </svg>
-                    <p class="header__storage-text">Savat</p>
+                    <p class="header__storage-text">Корзина</p>
                     <span class="header__storage-num">{{ counterStore.data.basked }}</span>
                   </NuxtLink>
                   <div v-if="counterStore.data.basked > 0" class="header__store-products">
@@ -233,14 +228,14 @@
             </div>
           </section>
           <section class="bottom-header">
-            <NuxtLink class="bottom-header-link" to="/ru">Asosiy sahifa</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
-            <NuxtLink class="bottom-header-link" to="/ru/category/659644bd0d8d7f5636a9c6fb">Benzinli generator</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru">Главная страница</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb351e">Газовый генератор</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb351f">Инвертерный генератор</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb3520">Дизельный генератор</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb3524">Стабилизатор</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb3521">Карчер</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb3522">Бетонасмеситель</NuxtLink>
+            <NuxtLink class="bottom-header-link" to="/ru/category/659649fd757d180fa1fb3523">Бензиновый генератор</NuxtLink>
           </section>
         </div>
       </header>
@@ -253,7 +248,7 @@
         <section class="footer">
           <div class="footer__wrapper">
             <div class="footer__about">
-              <h3 class="footer__about-title">Biz haqimizda</h3>
+              <h3 class="footer__about-title">О нас</h3>
               <p class="footer__about-text">
                 "Generator House" is a product sales company dedicated to
                 providing quality products to our customers. our team works
@@ -270,15 +265,16 @@
             </div>
             <div class="footer__categories">
               <h3 class="footer__categories-title">Katalog</h3>
-              <NuxtLink class="footer__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f9">Karcher</NuxtLink>
-              <NuxtLink class="footer__categories-link" to="/ru/category/6596496b757d180fa1fb351d">Stabilizator</NuxtLink>
-              <NuxtLink class="footer__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6fa">Betonameshalka</NuxtLink>
-              <NuxtLink class="footer__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f7">Inverter generator
+              <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb3521">Карчер</NuxtLink>
+              <NuxtLink class="footer__categories-link" to="/ru/category/6596496b757d180fa1fb351d">Стабилизатор</NuxtLink>
+              <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb3522">Бетонасмеситель</NuxtLink>
+              <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb351f">Инвертерный генератор
               </NuxtLink>
-              <NuxtLink class="footer__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6fb">Benzinli generator
+              <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb3523">Бензиновый генератор
+
               </NuxtLink>
-              <NuxtLink class="footer__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>
-              <NuxtLink class="footer__categories-link" to="/ru/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
+              <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb3520">Дизельный генератор</NuxtLink>
+              <NuxtLink class="footer__categories-link" to="/ru/category/659649fd757d180fa1fb351e">Газовый генератор</NuxtLink>
             </div>
             <div class="footer__contact-wrapper">
               <h3 class="footer__categories-title">Bog'lanish</h3>
@@ -385,7 +381,7 @@
                 <p class="footer__map-text">Toshkent Xalqa Avtomabil Yo'li</p>
                 <a class="footer__map-link" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8" target="_blank"
                   rel="noopener noreferrer">
-                  <p class="footer__map">Xarita</p>
+                  <p class="footer__map">карта</p>
                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="fi_11515688" clip-path="url(#clip0_229_3343)">
                       <g id="Group">
@@ -426,7 +422,7 @@
                 </clipPath>
               </defs>
             </svg>
-            <p class="mobile-footer__text">Bosh sahifa</p>
+            <p class="mobile-footer__text">Главная страница</p>
           </NuxtLink>
           <NuxtLink to="/ru/categories">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
@@ -435,14 +431,14 @@
               <path d="M5.49935 8.95829C3.31602 8.95829 1.54102 7.18329 1.54102 4.99996C1.54102 2.81663 3.31602 1.04163 5.49935 1.04163C7.68268 1.04163 9.45768 2.81663 9.45768 4.99996C9.45768 7.18329 7.68268 8.95829 5.49935 8.95829ZM5.49935 2.29163C4.00768 2.29163 2.79102 3.50829 2.79102 4.99996C2.79102 6.49163 4.00768 7.70829 5.49935 7.70829C6.99102 7.70829 8.20768 6.49163 8.20768 4.99996C8.20768 3.50829 6.99102 2.29163 5.49935 2.29163Z" fill="#787878"/>
               <path d="M15.4993 18.9583C13.316 18.9583 11.541 17.1833 11.541 15C11.541 12.8166 13.316 11.0416 15.4993 11.0416C17.6827 11.0416 19.4577 12.8166 19.4577 15C19.4577 17.1833 17.6827 18.9583 15.4993 18.9583ZM15.4993 12.2916C14.0077 12.2916 12.791 13.5083 12.791 15C12.791 16.4916 14.0077 17.7083 15.4993 17.7083C16.991 17.7083 18.2077 16.4916 18.2077 15C18.2077 13.5083 16.991 12.2916 15.4993 12.2916Z" fill="#787878"/>
             </svg>
-            <p class="mobile-footer__text">Kategoriyalar</p>
+            <p class="mobile-footer__text">Категории</p>
           </NuxtLink>
           <NuxtLink to="/ru/basked">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 15 18" fill="none">
               <path d="M1.46512 5.44185C1.34952 5.44185 1.25581 5.53556 1.25581 5.65115V16.5349C1.25581 16.6505 1.34952 16.7442 1.46512 16.7442H13.186C13.3017 16.7442 13.3953 16.6505 13.3953 16.5349V5.65115C13.3953 5.53556 13.3017 5.44185 13.186 5.44185H1.46512ZM0 5.65115C0 4.84199 0.655954 4.18604 1.46512 4.18604H13.186C13.9952 4.18604 14.6512 4.84199 14.6512 5.65115V16.5349C14.6512 17.344 13.9952 18 13.186 18H1.46512C0.655954 18 0 17.344 0 16.5349V5.65115Z" fill="#787878"/>
               <path d="M7.32572 1.25581C6.05416 1.25581 5.02339 2.2866 5.02339 3.55814V6.48837C5.02339 6.83515 4.74227 7.11628 4.39549 7.11628C4.0487 7.11628 3.76758 6.83515 3.76758 6.48837V3.55814C3.76758 1.59303 5.36061 0 7.32572 0C9.29082 0 10.8839 1.59303 10.8839 3.55814V6.48837C10.8839 6.83515 10.6027 7.11628 10.256 7.11628C9.90918 7.11628 9.62804 6.83515 9.62804 6.48837V3.55814C9.62804 2.2866 8.59727 1.25581 7.32572 1.25581Z" fill="#787878"/>
             </svg>
-            <p class="mobile-footer__text">Savat</p>
+            <p class="mobile-footer__text">Корзина</p>
             <p class="mobile-footer__count">{{ counterStore.data.basked }}</p>
           </NuxtLink>
           <NuxtLink to="/ru/favorites">
@@ -453,7 +449,7 @@
                 </g>
               </g>
             </svg>
-            <p class="mobile-footer__text">Sevimlilar</p>
+            <p class="mobile-footer__text">Избранное</p>
             <p class="mobile-footer__count">{{ counterStore.data.favorites }}</p>
           </NuxtLink>
         </div>
@@ -464,7 +460,7 @@
   <script setup>
   import { useCounterStore } from "~/store/rus/counter";
   import { useCategoriesStore } from "~/store/rus/categories";
-  import { useProductsStore } from "~/store/ru/products";
+  import { useProductsStore } from "~/store/rus/products";
   
   const counterStore = useCounterStore();
   

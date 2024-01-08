@@ -12,7 +12,7 @@ const addBasked = (id) => {
     findProduct.inCart = true;
 
     basked.push(findProduct);
-    localStorage.setItem('basked', JSON.stringify(basked));
+    localStorage.setItem('baskedRus', JSON.stringify(basked));
     productsStore.updateProductIBasked(id, true);
 };
 

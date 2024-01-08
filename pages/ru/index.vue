@@ -16,10 +16,10 @@
                 <div class="categories_container">
                     <div class="categories_item">
                         <p class="category_name">
-                            Gazli generator
+                            Газовый генератор
                         </p>
                         <img class="category_img" src="/gasoline.png" alt="">
-                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f6" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb351e" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -33,10 +33,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Inverter generator
+                            Инвертерный генератор
                         </p>
                         <img class="category_img" src="/invertor.png" alt="">
-                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f7" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb351f" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -50,10 +50,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Dizel generator
+                            Дизельный генератор
                         </p>
                         <img class="category_img" src="/dizel.png" alt="">
-                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f8" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb3520" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -67,10 +67,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Stabilizator
+                            Стабилизатор
                         </p>
                         <img class="category_img" src="/stabilizer.png" alt="">
-                        <NuxtLink to="/rus/category/6596496b757d180fa1fb351d" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb3524" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -84,10 +84,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Karcher
+                            Карчер
                         </p>
                         <img class="category_img" src="/karcher.png" alt="">
-                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6f9" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb3521" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -101,10 +101,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Betonameshalka
+                            Бетонасмеситель
                         </p>
                         <img class="category_img" src="/geshalka.png" alt="">
-                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6fa" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb3522" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -118,10 +118,10 @@
                     </div>
                     <div class="categories_item">
                         <p class="category_name">
-                            Benzinli generator
+                            Бензиновый генератор
                         </p>
                         <img class="category_img" src="/gasgenerator.png" alt="">
-                        <NuxtLink to="/rus/category/659644bd0d8d7f5636a9c6fb" class="category_link">
+                        <NuxtLink to="/ru/category/659649fd757d180fa1fb3523" class="category_link">
                             <p>Tanishish</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="12" viewBox="0 0 31 12" fill="none">
                                 <path
@@ -137,7 +137,7 @@
             </div>
             <div class="popular_brands">
                 <div class="title-wrapper">
-                    <h2>Mashhur brendlar</h2>
+                    <h2>Популярные бренды</h2>
                     <span class="title-wrapper__line"></span>
                 </div>
                 <div class="swipers_wrapper">
@@ -159,7 +159,7 @@
         </div>
         <div>
             <div class="container title-wrapper">
-                <h2>Ommabop mahsulotlar</h2>
+                <h2>Популярные продукты</h2>
                 <span class="title-wrapper__line"></span>
             </div>
             <div class="list-category-wrapper">
@@ -204,15 +204,15 @@
             </div>
 
             <div class="container title-wrapper">
-                <h2>Gazli generator</h2>
+                <h2>Газовый генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f6">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb351e">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f6')"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb351e')"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :brand="product.brand.brand_name" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -221,15 +221,15 @@
             </div>
 
             <div class="container title-wrapper">
-                <h2>Inverter generator</h2>
+                <h2>Инвертерный генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f7">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb351f">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f7').slice(0, 4)"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb351f').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -238,15 +238,15 @@
             </div>
 
             <div class="container title-wrapper">
-                <h2>Karcher</h2>
+                <h2>Карчер</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f9">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3521">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f9').slice(0, 4)"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb3521').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -254,15 +254,15 @@
                 </div>
             </div>
             <div class="container title-wrapper">
-                <h2>Stabilizator</h2>
+                <h2>Стабилизатор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/rus/category/6596496b757d180fa1fb351d">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3524">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '6596496b757d180fa1fb351d').slice(0, 4)"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb3524').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -270,15 +270,15 @@
                 </div>
             </div>
             <div class="container title-wrapper">
-                <h2>Betonameshalka</h2>
+                <h2>Бетонасмеситель</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="rus/category/659644bd0d8d7f5636a9c6fa">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="rus/category/659649fd757d180fa1fb3522">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6fa').slice(0, 4)"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb3522').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :brand="product.brand.brand_name" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -287,15 +287,15 @@
             </div>
 
             <div class="container title-wrapper">
-                <h2>Benzinli generator</h2>
+                <h2>Бензиновый генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6fb">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3523">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6fb').slice(0, 4)"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb3523').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :brand="product.brand.brand_name" :inCart="product.inCart" :inFavorites="product.inFavorites" />
@@ -304,15 +304,15 @@
             </div>
 
             <div class="container title-wrapper">
-                <h2>Dizel generator</h2>
+                <h2>Дизельный генератор</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="/rus/category/659644bd0d8d7f5636a9c6f8">barchasi</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3520">barchasi</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
                     <ul class="cards-list list-category">
                         <card
-                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659644bd0d8d7f5636a9c6f8').slice(0, 4)"
+                            v-for="product in productsStore.data.products.filter(e => e.category._id == '659649fd757d180fa1fb3520').slice(0, 4)"
                             :id="product._id" v-bind:key="product._id" :title="product.product_title"
                             :img="product.product_img" :description="product.product_desc" :views="product.views"
                             :price="product.product_price" :brand="product.brand.brand_name" :inCart="product.inCart" :inFavorites="product.inFavorites" />

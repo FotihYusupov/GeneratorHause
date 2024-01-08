@@ -215,7 +215,7 @@
                 </div>
               </div>
               <div class="translate-panel">
-                <NuxtLink to="/rus" class="uzb-translate">
+                <NuxtLink to="/ru" class="uzb-translate">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                     <mask id="mask0_986_2339" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
                       height="20">
