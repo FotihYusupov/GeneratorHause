@@ -154,7 +154,7 @@
             </div>
             <div class="popular_brands">
                 <div class="title-wrapper">
-                    <h2>Популярные бренды</h2>
+                    <h2>Наши партнеры</h2>
                     <span class="title-wrapper__line"></span>
                 </div>
                 <div class="swipers_wrapper">

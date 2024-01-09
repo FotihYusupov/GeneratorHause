@@ -154,7 +154,7 @@
             </div>
             <div class="popular_brands">
                 <div class="title-wrapper">
-                    <h2>Mashhur brendlar</h2>
+                    <h2>Bizning hamkorlarimiz</h2>
                     <span class="title-wrapper__line"></span>
                 </div>
                 <div class="swipers_wrapper">
