@@ -112,11 +112,11 @@
                 }
                 padding: 5px;
                 border-radius: 5px;
-                border: 2px solid #959595;
+                border: 1px solid #959595;
                 width: 100%;
                 &:focus {
                     outline: none;
-                    border: 2px solid $primary-yellow;
+                    border: 1px solid $primary-yellow;
                 }
             }
         }
@@ -344,11 +344,11 @@
                 }
                 padding: 5px;
                 border-radius: 5px;
-                border: 2px solid #959595;
+                border: 1px solid #959595;
                 width: 100%;
                 &:focus {
                     outline: none;
-                    border: 2px solid $primary-yellow;
+                    border: 1px solid $primary-yellow;
                 }
             }
         }

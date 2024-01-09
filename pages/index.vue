@@ -1,4 +1,3 @@
-
 <template>
     <Loader v-if="productsStore.data.loading" />
     <div v-else class="main">

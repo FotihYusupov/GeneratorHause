@@ -289,7 +289,7 @@
             <div class="container title-wrapper">
                 <h2>Бетонасмеситель</h2>
                 <span class="title-wrapper__line"></span>
-                <NuxtLink class="SeeAll" to="rus/category/659649fd757d180fa1fb3522">Все</NuxtLink>
+                <NuxtLink class="SeeAll" to="/ru/category/659649fd757d180fa1fb3522">Все</NuxtLink>
             </div>
             <div class="list-category-wrapper">
                 <div class="container">
@@ -345,6 +345,7 @@ import { useCategoriesStore } from '~/store/rus/categories';
 import { useProductsStore } from '~/store/rus/products';
 
 import card from '~/components/rus/cardComponent.vue'
+import SaleProducts from '~/components/rus/SaleProducts.vue'
 
 const categoriesStore = useCategoriesStore();
 const productsStore = useProductsStore();
