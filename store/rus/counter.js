@@ -15,7 +15,6 @@ export const useCounterStore = defineStore({
         async getCounter() {
             try {
                 const productsStore = useProductsStore()
-                console.log(productsStore.data);
                 if (typeof localStorage !== "undefined") {
                     await productsStore.getProducts()
                     const basked = productsStore.data.products.filter(e => e.inCart === true);
