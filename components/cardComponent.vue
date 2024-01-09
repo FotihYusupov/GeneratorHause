@@ -35,7 +35,7 @@
                 </div>
                 <button @click="e => addBasked(e.target.closest('.card').id)" class="card__basked-btn" id="addBaskedBtn"
                     :disabled="inCart">
-                    <p>Add to card</p>
+                    <p>Savatga qo'shish</p>
                     <svg class="pointer-events" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                         viewBox="0 0 20 20" fill="none">
                         <g id="Icons">
