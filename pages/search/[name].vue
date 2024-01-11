@@ -3,8 +3,8 @@
         <Loader v-if="productsStore.data.loading"/>
         <div v-else>
             <div v-if="data.length > 0">
-                <h1>Search</h1>
-                <ul class="cards-list">
+                <h1>{{ name }} so'rovi bo'yicha qidiruv natijalari</h1>
+                <ul class="search-cards-list">
                     <card v-for="product in data" :id="product._id"
                         v-bind:key="product._id" :title="product.product_title" :img="product.product_img"
                         :description="product.product_desc" :views="product.views" :price="product.product_price"

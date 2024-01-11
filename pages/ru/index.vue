@@ -344,6 +344,8 @@
 import { useCategoriesStore } from '~/store/rus/categories';
 import { useProductsStore } from '~/store/rus/products';
 
+import HeroSwiper from "~/components/rus/HeroSwiper.vue";
+
 import card from '~/components/rus/cardComponent.vue'
 import SaleProducts from '~/components/rus/SaleProducts.vue'
 

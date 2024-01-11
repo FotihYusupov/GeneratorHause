@@ -19,7 +19,7 @@
         }" :modules="modules" class="brand_swiper">
 
         <swiper-slide v-for="brand in nonOrder" v-bind:key="brand.id">
-            <img :src="brand.url" alt="">
+            <img class="brand-img" :src="brand.url" alt="">
         </swiper-slide>
     </swiper>
 </template>

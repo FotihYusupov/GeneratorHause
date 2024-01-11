@@ -43,6 +43,22 @@ export const brands = [
         id: 11,
         url: '/brand11.png'
     },
+    {
+        id: 12,
+        url: '/covax.png'
+    },
+    {
+        id: 13,
+        url: '/rolf.png'
+    },
+    {
+        id: 14,
+        url: '/karcher.png'
+    },
+    {
+        id: 15,
+        url: '/brand12.png'
+    },
 ]
 const itemToMove = brands[2]; // Store the element at index 2
 export let nonOrder = brands.slice(0, 2).concat(brands.slice(3)); // Exclude item from index 2 and concatenate slices
