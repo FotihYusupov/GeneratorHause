@@ -670,7 +670,7 @@ const openModal = ref(false)
         totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true).filter(e => e._id !== id));
         productsStore.data.products.forEach(element => {
             if(element._id == id) {
-                element.inCart = falseremoveAllBasked
+                element.inCart = false
             }
         }) 
     }
