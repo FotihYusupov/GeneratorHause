@@ -14,10 +14,7 @@
                     </p>
                 </div>
             </div>
-            <div class="about__img">
-                <img src="/about.jpg" alt="" width="352" height="400">
-                <img src="/about.jpg" alt="" width="352" height="400">
-            </div>
+            <img class="about__img" src="/about.jpg" alt="" width="800" height="480">
         </div>
         <p class="partners-title">Наши клиенты</p>
         <div class="partners">
