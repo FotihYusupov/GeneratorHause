@@ -6,12 +6,10 @@
                 <div class="about__text-wrapper">
                     <span class="about__text-line"></span>
                     <p class="about__text">
-                        <b>"Generator House"</b>
-                        <br>
-                        kompaniyasi generatorlar va stabilizatorlardan boshlab murakkab qurilmalar sotish sohasida 10 yillik tajribaga ega. Ularining ushbu sohada malakalari kompaniyaga mijozlarining turli talablari uchun turli jihozlar taklif etish imkoniyatini beradi.
+                        Generator House bu - generatorlar va stabilizatorlarni sotish sohasida 10 yillik tajribaga ega bo'lgan yirik kompaniyadir.
                         <br>
                         <br>
-                        Generator House mijozlarga sifatli generatorlar, stabilizatorlar va shunga o'xshash qurilmalar bilan ta'minlashda mutaxassislik qiladi. Turli modellari va xususiyatlarini yillar davomida testlash natijasida, kompaniya mijozlarning turli talablari uchun mos yechimlar taklif etadi.
+                        Bizning mahsulotlar kuchli mutaxasislar tomonidan yillar davomida sinovdan o'tkazilgan. Biz sifatli generatorlar, stabilizatorlar va shunga o'xshash qurilmalar bilan mijozlarmizni bahramand qilishdan mamnunmiz.
                     </p>
                 </div>
             </div>
@@ -20,7 +18,7 @@
                 <img src="/about.jpg" alt="" width="352" height="400">
             </div>
         </div>
-        <p class="partners-title">Bizning hamkorlarimiz</p>
+        <p class="partners-title">Bizning mijozlarimiz</p>
         <div class="partners">
             <div>
                 <img src="/partner1.png" alt="" width="227" height="180">

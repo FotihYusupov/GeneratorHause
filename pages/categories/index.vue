@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="categories">
-            <NuxtLink class="categories__link" to="/">Asosiy sahifa</NuxtLink>
+            <NuxtLink class="categories__link" to="/about">Biz haqimizda</NuxtLink>
             <NuxtLink class="categories__link" to="/category/659644bd0d8d7f5636a9c6f6">Gazli generator</NuxtLink>
             <NuxtLink class="categories__link" to="/category/659644bd0d8d7f5636a9c6f7">Inverter generator</NuxtLink>
             <NuxtLink class="categories__link" to="/category/659644bd0d8d7f5636a9c6f8">Dizel generator</NuxtLink>

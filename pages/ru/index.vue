@@ -6,7 +6,7 @@
                 <HeroSwiper :data="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
             <div class="scroll-middle">
-                <a href="/#categories">
+                <a href="/ru/#categoriesRu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <g clip-path="url(#clip0_1192_13798)">
                             <circle cx="16" cy="16" r="10" fill="white" />
@@ -25,7 +25,7 @@
             <div class="sales_wrapper">
                 <SaleProducts :sale="productsStore.data.products.filter(product => product.offer === true)" />
             </div>
-            <div id="categories" class="categories_wrapper">
+            <div id="categoriesRu" class="categories_wrapper">
                 <div class="title-wrapper">
                     <h2>Через каталог</h2>
                     <span class="title-wrapper__line"></span>

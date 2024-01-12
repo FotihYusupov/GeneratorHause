@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="categories">
-            <NuxtLink class="categories__link" to="/ru">Главная страница</NuxtLink>
+            <NuxtLink class="categories__link" to="/ru">О нас</NuxtLink>
             <NuxtLink class="categories__link" to="/ru/category/659649fd757d180fa1fb351e">Газовый генератор</NuxtLink>
             <NuxtLink class="categories__link" to="/ru/category/659649fd757d180fa1fb351f">Инвертерный генератор</NuxtLink>
             <NuxtLink class="categories__link" to="/ru/category/659649fd757d180fa1fb3520">Дизельный генератор</NuxtLink>

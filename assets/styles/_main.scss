@@ -1444,6 +1444,14 @@
     .footer__contact-wrapper {
       display: flex;
       flex-direction: column;
+      .footer__tel-wrapper {
+        :first-child {
+          margin-bottom: 10px;
+        }
+        a {
+          display: block;
+        }
+      }
     }
 
     .footer__contact-link {

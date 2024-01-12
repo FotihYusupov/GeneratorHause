@@ -19,7 +19,7 @@
                 <img src="/about.jpg" alt="" width="352" height="400">
             </div>
         </div>
-        <p class="partners-title">Наши партнеры</p>
+        <p class="partners-title">Наши клиенты</p>
         <div class="partners">
             <div>
                 <img src="/partner1.png" alt="" width="227" height="180">
