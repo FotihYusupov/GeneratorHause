@@ -153,7 +153,7 @@
                     stroke="#000814" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <p class="header__storage-text">Sevimlilar</p>
-                <span class="header__storage-num">{{
+                <span v-if="counterStore.data.favorites != 0" class="header__storage-num">{{
                   counterStore.data.favorites
                 }}</span>
               </NuxtLink>
@@ -168,7 +168,7 @@
                       fill="black" />
                   </svg>
                   <p class="header__storage-text">Savat</p>
-                  <span class="header__storage-num">{{ counterStore.data.basked }}</span>
+                  <span v-if="counterStore.data.basked != 0" class="header__storage-num">{{ counterStore.data.basked }}</span>
                 </NuxtLink>
                 <div v-if="counterStore.data.basked > 0" class="header__store-products">
                   <ul class="header__store-products-list">
@@ -495,7 +495,7 @@
             <path d="M7.32572 1.25581C6.05416 1.25581 5.02339 2.2866 5.02339 3.55814V6.48837C5.02339 6.83515 4.74227 7.11628 4.39549 7.11628C4.0487 7.11628 3.76758 6.83515 3.76758 6.48837V3.55814C3.76758 1.59303 5.36061 0 7.32572 0C9.29082 0 10.8839 1.59303 10.8839 3.55814V6.48837C10.8839 6.83515 10.6027 7.11628 10.256 7.11628C9.90918 7.11628 9.62804 6.83515 9.62804 6.48837V3.55814C9.62804 2.2866 8.59727 1.25581 7.32572 1.25581Z" fill="#787878"/>
           </svg>
           <p class="mobile-footer__text">Savat</p>
-          <p class="mobile-footer__count">{{ counterStore.data.basked }}</p>
+          <p v-if="counterStore.data.basked != 0" class="mobile-footer__count">{{ counterStore.data.basked }}</p>
         </NuxtLink>
         <NuxtLink to="/favorites">
           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,7 +506,7 @@
             </g>
           </svg>
           <p class="mobile-footer__text">Sevimlilar</p>
-          <p class="mobile-footer__count">{{ counterStore.data.favorites }}</p>
+          <p v-if="counterStore.data.favorites != 0" class="mobile-footer__count">{{ counterStore.data.favorites }}</p>
         </NuxtLink>
       </div>
     </div>
