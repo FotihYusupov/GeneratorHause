@@ -657,7 +657,7 @@
 
   const brands = ref([])
   const getBrands = async () => {
-    const res = await axios.get('https://api.generatorhouse.uz/api/brands')
+    const res = await axios.get('https://generator2.hypernova.uz/api/brands')
     brands.value = res.data
   }
   getBrands()

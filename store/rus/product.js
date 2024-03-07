@@ -18,7 +18,7 @@ export const useProductStore = defineStore({
         if(typeof localStorage !== 'undefined') {
           const basked = JSON.parse(localStorage.getItem('baskedRus'));
           const favorites = JSON.parse(localStorage.getItem('favoritesRus'));
-          const response = await axios.get(`https://api.generatorhouse.uz/api/ru/product/${id}`);
+          const response = await axios.get(`https://generator2.hypernova.uz/api/ru/product/${id}`);
           if(response.status == 200) {
             response.data.inCart = basked.some(e => e._id == response.data._id);
             if(response.data.inCart) {
