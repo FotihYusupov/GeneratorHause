@@ -14,7 +14,7 @@ export const useCategoriesStore = defineStore({
     async getCategories() {
       try {
         this.data.loading = true;
-        const response = await axios.get('https://generator2.hypernova.uz/api/categories');
+        const response = await axios.get('https://api.generatorhouse.uz/api/categories');
         if(response.status == 200) {
           this.data.categories = response.data;
           this.data.loading = false;
