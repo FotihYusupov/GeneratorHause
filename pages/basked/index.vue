@@ -569,7 +569,7 @@
         </div>
         <h2>Ommabop mahsulotlar</h2>
         <ul class="cards-list">
-            <card v-for="product in productsStore.data.products.slice(0, 4)" v-bind:key="product._id"
+            <card v-for="product in productsStore.data.products.filter(e => e.inCart !== true).slice(0, 4)" v-bind:key="product._id"
                 :id="product._id" :title="product.product_title" :img="product.product_img"
                 :description="product.product_desc" :views="product.views" :price="product.product_price"
                 :inCart="product.inCart" :inFavorites="product.inFavorites" />

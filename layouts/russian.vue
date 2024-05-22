@@ -151,7 +151,7 @@
                         </button>
                       </li>
                     </ul>
-                    <NuxtLink class="header__store-products-btn" to="/basked">Купить</NuxtLink>
+                    <NuxtLink class="header__store-products-btn" to="/ru/basked">Купить</NuxtLink>
                   </div>
                 </div>
                 <div class="translate-panel">
@@ -322,7 +322,7 @@
                 <p class="footer__map-text">Ташкентская Народная Автодорога</p>
                 <a class="footer__map-link" href="https://maps.app.goo.gl/gZYbQJWEhLAwo4kH8" target="_blank"
                   rel="noopener noreferrer">
-                  <p class="footer__map">карта</p>
+                  <p class="footer__map">Карта</p>
                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="fi_11515688" clip-path="url(#clip0_229_3343)">
                       <g id="Group">

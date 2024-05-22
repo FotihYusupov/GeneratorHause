@@ -121,7 +121,7 @@
         </div>
         <h2 class="product-footer-title">Похожие продукты</h2>
         <ul class="cards-list list-category">
-            <card v-for="product in products.slice(0, 8)" :id="product._id" v-bind:key="product._id"
+            <card v-for="product in products.filter(e => e._id !== findProduct._id).slice(0, 8)" :id="product._id" v-bind:key="product._id"
                 :title="product.product_title" :img="product.product_img" :description="product.product_desc"
                 :views="product.views" :price="product.product_price" :inCart="product.inCart"
                 :inFavorites="product.inFavorites" />
