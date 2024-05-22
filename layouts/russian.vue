@@ -151,7 +151,7 @@
                         </button>
                       </li>
                     </ul>
-                    <NuxtLink class="header__store-products-btn" to="/basked">Sotib olish</NuxtLink>
+                    <NuxtLink class="header__store-products-btn" to="/basked">Купить</NuxtLink>
                   </div>
                 </div>
                 <div class="translate-panel">
