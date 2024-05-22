@@ -149,7 +149,7 @@
               :views="product.views" :price="product.product_price" :newPrice="product.new_price" :inCart="product.inCart"
               :inFavorites="product.inFavorites" />
           </ul>
-          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Tanishish</button>
+          <button v-if="filteredProducts.length > 0" class="show-btn" :disabled="filteredProducts.length <= end" @click="clickFn">Yana</button>
         </div>
       </div>
       <div v-if="!filteredProducts.length > 0" class="category-not-found">
