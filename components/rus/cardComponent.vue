@@ -26,10 +26,10 @@
             </NuxtLink>
 
             <div class="card_footer">
-                <p v-if="!newPrice" class="card__price">{{ price }} Сум</p>
+                <p v-if="!newPrice" class="card__price">{{ formatNumber(price) }} Сум</p>
                 <div v-if="newPrice" class="card__newPrice-wrapper">
-                    <p>{{ newPrice }} Сум</p>
-                    <p>{{ price }} Сум</p>
+                    <p>{{ formatNumber(newPrice) }} Сум</p>
+                    <p>{{ formatNumber(price) }} Сум</p>
                 </div>
                 <button @click="e => addBasked(e.target.closest('.card').id)" class="card__basked-btn" id="addBaskedBtn"
                     :disabled="inCart">
@@ -105,6 +105,10 @@ const favorites = ref(null);
 onMounted(async () => {
     favorites.value = await JSON.parse(localStorage.getItem('favoritesRus'));
 });
+
+function formatNumber(number) {
+    return number.toLocaleString('de-DE');
+}
 
 const { img, id, title, description, views, price, brand, inCart, inFavorites, removeBtn, newPrice } =
     defineProps(['id', 'brand', 'img', 'title', 'description', 'views', 'price', 'inCart', 'inFavorites', 'removeBtn', 'newPrice']);

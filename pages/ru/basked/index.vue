@@ -41,9 +41,9 @@
                             </button>
                         </div>
                         <div class="item__price-wrapper">
-                            <p v-if="!product.new_price" class="item__price"><b>{{ product.count * product.product_price
+                            <p v-if="!product.new_price" class="item__price"><b>{{ formatNumber(product.count * product.product_price)
                             }}</b> Сум</p>
-                            <p v-if="product.new_price" class="item__price"><b>{{ product.count * product.new_price }}</b>
+                            <p v-if="product.new_price" class="item__price"><b>{{ formatNumber(product.count * product.new_price) }}</b>
                                 Сум</p>
                         </div>
                         <button @click="removeBasked" class="item__remove-btn">
@@ -635,6 +635,10 @@ const openModal = ref(false)
         totalSum.value = calculateTotalCost(productsStore.data.products.filter(e => e.inCart === true));
     })
 
+    function formatNumber(number) {
+        return number.toLocaleString('de-DE');
+    }
+
     const addOne = (id) => {
         try {
             addCount(id)
@@ -688,6 +692,7 @@ const openModal = ref(false)
             const price = product.new_price !== 0 ? product.new_price : product.product_price;
             totalCost += price * product.count;
         }
+        totalCost = formatNumber(totalCost)
         return totalCost;
     }
 

@@ -98,11 +98,11 @@
                 </div>
                 <h5 class="product__price-title">Narxi:</h5>
                 <span v-if="findProduct.new_price" class="product__price-wrapper">
-                    <p>{{ findProduct.new_price * (findProduct.count || 1) }} So'm</p>
-                    <p v-if="findProduct.product_price">{{ findProduct.product_price }} So'm</p>
+                    <p>{{ formatNumber(findProduct.new_price * (findProduct.count || 1)) }} So'm</p>
+                    <p v-if="findProduct.product_price">{{ formatNumber(findProduct.product_price) }} So'm</p>
                 </span>
-                <p class="product__price" v-if="!findProduct.new_price">{{ findProduct.product_price * (findProduct.count ||
-                    1) }} So'm</p>
+                <p class="product__price" v-if="!findProduct.new_price">{{ formatNumber(findProduct.product_price * (findProduct.count ||
+                    1)) }} So'm</p>
                 <span class="product__basked-wrapper">
                     <button @click="addBasked" :disabled="findProduct.inCart">Savatga qo'shish</button>
                     <button @click="buyNow">Sotib olish</button>
@@ -157,6 +157,10 @@ const getProduct = async () => {
     products.value = productsStore.data.products
 }
 getProduct()
+
+function formatNumber(number) {
+    return number.toLocaleString('de-DE');
+}
 
 const favorites = (e) => {
     const id = e.target.id
